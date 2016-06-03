@@ -204,7 +204,7 @@ Learning Ed. 2&#8221;, Springer, 2009.</td></tr>
 <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
 <span class="c"># map labels from {-1, 1} to {0, 1}</span>
-<span class="n">labels</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+<span class="n">labels</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.unique.html#numpy.unique"><span class="n">np</span><span class="o">.</span><span class="n">unique</span></a><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:</span><span class="mi">2000</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="mi">2000</span><span class="p">:]</span>
 <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:</span><span class="mi">2000</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">2000</span><span class="p">:]</span>
@@ -231,13 +231,13 @@ Learning Ed. 2&#8221;, Springer, 2009.</td></tr>
     <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
     <span class="c"># compute test set deviance</span>
-    <span class="n">test_deviance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">params</span><span class="p">[</span><span class="s">&#39;n_estimators&#39;</span><span class="p">],),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="n">test_deviance</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="n">params</span><span class="p">[</span><span class="s">&#39;n_estimators&#39;</span><span class="p">],),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_pred</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">staged_decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)):</span>
         <span class="c"># clf.loss_ assumes that y_test[i] in {0, 1}</span>
         <span class="n">test_deviance</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">loss_</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
-    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">test_deviance</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)[::</span><span class="mi">5</span><span class="p">],</span> <span class="n">test_deviance</span><span class="p">[::</span><span class="mi">5</span><span class="p">],</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">((</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">test_deviance</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)[::</span><span class="mi">5</span><span class="p">],</span> <span class="n">test_deviance</span><span class="p">[::</span><span class="mi">5</span><span class="p">],</span>
             <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
 
 <a href="http://matplotlib.org/api/legend_api.html#matplotlib.legend"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">&#39;upper left&#39;</span><span class="p">)</span>
@@ -247,8 +247,8 @@ Learning Ed. 2&#8221;, Springer, 2009.</td></tr>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  15.11 seconds
-( 0 minutes  15.11 seconds)</p>
+<p><strong>Total running time of the example:</strong>  14.01 seconds
+( 0 minutes  14.01 seconds)</p>
 </div>
 
 

@@ -22,6 +22,6 @@ Shows how shrinkage improves classification.
 .. literalinclude:: plot_lda.py
     :lines: 8-
 
-**Total running time of the example:**  6.66 seconds
-( 0 minutes  6.66 seconds)
+**Total running time of the example:**  5.37 seconds
+( 0 minutes  5.37 seconds)
     

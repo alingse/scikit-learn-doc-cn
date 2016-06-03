@@ -173,7 +173,7 @@ for each segmented region to be in one piece.</p>
 <img alt="../../_images/plot_lena_ward_segmentation_001.png" class="align-center" src="../../_images/plot_lena_ward_segmentation_001.png" />
 <p><strong>Script output</strong>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="n">Compute</span> <span class="n">structured</span> <span class="n">hierarchical</span> <span class="n">clustering</span><span class="o">...</span>
-<span class="n">Elapsed</span> <span class="n">time</span><span class="p">:</span>  <span class="mf">8.42197799683</span>
+<span class="n">Elapsed</span> <span class="n">time</span><span class="p">:</span>  <span class="mf">6.61399507523</span>
 <span class="n">Number</span> <span class="n">of</span> <span class="n">pixels</span><span class="p">:</span>  <span class="mi">65536</span>
 <span class="n">Number</span> <span class="n">of</span> <span class="n">clusters</span><span class="p">:</span>  <span class="mi">15</span>
 </pre></div>
@@ -195,10 +195,10 @@ for each segmented region to be in one piece.</p>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Generate data</span>
-<span class="n">lena</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">lena</span><span class="p">()</span>
+<span class="n">lena</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.misc.lena.html#scipy.misc.lena"><span class="n">sp</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">lena</span></a><span class="p">()</span>
 <span class="c"># Downsample the image by a factor of 4</span>
 <span class="n">lena</span> <span class="o">=</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">lena</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.reshape.html#numpy.reshape"><span class="n">np</span><span class="o">.</span><span class="n">reshape</span></a><span class="p">(</span><span class="n">lena</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Define the structure A of the data. Pixels connected to their neighbors.</span>
@@ -211,10 +211,10 @@ for each segmented region to be in one piece.</p>
 <span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c"># number of regions</span>
 <span class="n">ward</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering"><span class="n">AgglomerativeClustering</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">,</span>
         <span class="n">linkage</span><span class="o">=</span><span class="s">&#39;ward&#39;</span><span class="p">,</span> <span class="n">connectivity</span><span class="o">=</span><span class="n">connectivity</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">ward</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">lena</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.reshape.html#numpy.reshape"><span class="n">np</span><span class="o">.</span><span class="n">reshape</span></a><span class="p">(</span><span class="n">ward</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">lena</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Elapsed time: &quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">st</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Number of pixels: &quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s">&quot;Number of clusters: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s">&quot;Number of clusters: &quot;</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.unique.html#numpy.unique"><span class="n">np</span><span class="o">.</span><span class="n">unique</span></a><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Plot the results on an image</span>
@@ -228,8 +228,8 @@ for each segmented region to be in one piece.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  9.05 seconds
-( 0 minutes  9.05 seconds)</p>
+<p><strong>Total running time of the example:</strong>  7.13 seconds
+( 0 minutes  7.13 seconds)</p>
 </div>
 
 

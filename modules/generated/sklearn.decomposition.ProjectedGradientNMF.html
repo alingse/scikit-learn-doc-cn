@@ -169,7 +169,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.decomposition" title="sklearn.decomposition"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.decomposition</span></code></a>.ProjectedGradientNMF<a class="headerlink" href="#sklearn-decomposition-projectedgradientnmf" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn.decomposition.ProjectedGradientNMF">
-<em class="property">class </em><code class="descclassname">sklearn.decomposition.</code><code class="descname">ProjectedGradientNMF</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/decomposition/nmf.py#L1114"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn.decomposition.</code><code class="descname">ProjectedGradientNMF</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/decomposition/nmf.py#L1114"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Non-Negative Matrix Factorization (NMF)</p>
 <p>Find two non-negative matrices (W, H) whose product approximates the non-
 negative matrix X. This factorization can be used for example for
@@ -392,13 +392,13 @@ computer sciences 92.3: 708-721, 2009.</p>
 </table>
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/utils/__init__.py#L74"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/utils/__init__.py#L74"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED: It will be removed in release 0.19. Use NMF instead.&#8217;pg&#8217; solver is still available until release 0.19.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/decomposition/nmf.py#L1055"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/decomposition/nmf.py#L1055"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Learn a NMF model for the data X.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -429,7 +429,7 @@ computer sciences 92.3: 708-721, 2009.</p>
 
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.fit_transform">
-<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>W=None</em>, <em>H=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/decomposition/nmf.py#L1002"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.fit_transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>W=None</em>, <em>H=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/decomposition/nmf.py#L1002"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.fit_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Learn a NMF model for the data X and returns the transformed data.</p>
 <p>This is more efficient than calling fit followed by transform.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -472,7 +472,7 @@ computer sciences 92.3: 708-721, 2009.</p>
 
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -497,7 +497,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form
@@ -515,7 +515,7 @@ component of a nested object.</p>
 
 <dl class="method">
 <dt id="sklearn.decomposition.ProjectedGradientNMF.transform">
-<code class="descname">transform</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/decomposition/nmf.py#L1078"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">transform</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/decomposition/nmf.py#L1078"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.decomposition.ProjectedGradientNMF.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform the data X according to the fitted NMF model</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

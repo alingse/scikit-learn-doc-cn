@@ -25,6 +25,6 @@ shifted to avoid overlapping.
 .. literalinclude:: plot_mds.py
     :lines: 11-
 
-**Total running time of the example:**  0.14 seconds
-( 0 minutes  0.14 seconds)
+**Total running time of the example:**  0.12 seconds
+( 0 minutes  0.12 seconds)
     

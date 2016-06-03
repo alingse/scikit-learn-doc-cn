@@ -176,7 +176,7 @@ data and that in the case of sparse data the speed is improved.</p>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">sparse</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">linalg</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.datasets.samples_generator</span> <span class="k">import</span> <span class="n">make_regression</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets.samples_generator</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.datasets.make_regression.html#sklearn.datasets.make_regression"><span class="n">make_regression</span></a>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso"><span class="n">Lasso</span></a>
 
 
@@ -184,7 +184,7 @@ data and that in the case of sparse data the speed is improved.</p>
 <span class="c"># The two Lasso implementations on Dense data</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;--- Dense matrices&quot;</span><span class="p">)</span>
 
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.make_regression.html#sklearn.datasets.make_regression"><span class="n">make_regression</span></a><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">X_sp</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">coo_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
 <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span>
@@ -200,7 +200,7 @@ data and that in the case of sparse data the speed is improved.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Dense Lasso done in %fs&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Distance between coefficients : %s&quot;</span>
-      <span class="o">%</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">sparse_lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">-</span> <span class="n">dense_lasso</span><span class="o">.</span><span class="n">coef_</span><span class="p">))</span>
+      <span class="o">%</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.linalg.norm.html#scipy.linalg.norm"><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">sparse_lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">-</span> <span class="n">dense_lasso</span><span class="o">.</span><span class="n">coef_</span><span class="p">))</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># The two Lasso implementations on Sparse data</span>
@@ -226,7 +226,7 @@ data and that in the case of sparse data the speed is improved.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Dense Lasso done in %fs&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Distance between coefficients : %s&quot;</span>
-      <span class="o">%</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">sparse_lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">-</span> <span class="n">dense_lasso</span><span class="o">.</span><span class="n">coef_</span><span class="p">))</span>
+      <span class="o">%</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.linalg.norm.html#scipy.linalg.norm"><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">sparse_lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">-</span> <span class="n">dense_lasso</span><span class="o">.</span><span class="n">coef_</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

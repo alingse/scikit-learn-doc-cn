@@ -35,6 +35,6 @@ whereas real SAMME.R uses the predicted class probabilities.
 .. literalinclude:: plot_adaboost_hastie_10_2.py
     :lines: 21-
 
-**Total running time of the example:**  6.91 seconds
-( 0 minutes  6.91 seconds)
+**Total running time of the example:**  8.60 seconds
+( 0 minutes  8.60 seconds)
     

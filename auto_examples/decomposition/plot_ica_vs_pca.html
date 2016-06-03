@@ -205,9 +205,9 @@ identify the directions of largest non-Gaussianity (lower right).</p>
 <span class="n">S</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">2.</span>
 
 <span class="c"># Mix data</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>  <span class="c"># Mixing matrix</span>
+<span class="n">A</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.array.html#numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>  <span class="c"># Mixing matrix</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="c"># Generate observations</span>
+<span class="n">X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.dot.html#numpy.dot"><span class="n">np</span><span class="o">.</span><span class="n">dot</span></a><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="c"># Generate observations</span>
 
 <span class="n">pca</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA"><span class="n">PCA</span></a><span class="p">()</span>
 <span class="n">S_pca_</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -248,26 +248,26 @@ identify the directions of largest non-Gaussianity (lower right).</p>
 
 <span class="n">axis_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">ica</span><span class="o">.</span><span class="n">mixing_</span><span class="p">]</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">plot_samples</span><span class="p">(</span><span class="n">X</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">axis_list</span><span class="o">=</span><span class="n">axis_list</span><span class="p">)</span>
+<span class="n">plot_samples</span><span class="p">(</span><span class="n">X</span> <span class="o">/</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.std.html#numpy.std"><span class="n">np</span><span class="o">.</span><span class="n">std</span></a><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">axis_list</span><span class="o">=</span><span class="n">axis_list</span><span class="p">)</span>
 <span class="n">legend</span> <span class="o">=</span> <a href="http://matplotlib.org/api/legend_api.html#matplotlib.legend"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">([</span><span class="s">&#39;PCA&#39;</span><span class="p">,</span> <span class="s">&#39;ICA&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s">&#39;upper right&#39;</span><span class="p">)</span>
 <span class="n">legend</span><span class="o">.</span><span class="n">set_zorder</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s">&#39;Observations&#39;</span><span class="p">)</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">plot_samples</span><span class="p">(</span><span class="n">S_pca_</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">S_pca_</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">plot_samples</span><span class="p">(</span><span class="n">S_pca_</span> <span class="o">/</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.std.html#numpy.std"><span class="n">np</span><span class="o">.</span><span class="n">std</span></a><span class="p">(</span><span class="n">S_pca_</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s">&#39;PCA recovered signals&#39;</span><span class="p">)</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">plot_samples</span><span class="p">(</span><span class="n">S_ica_</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">S_ica_</span><span class="p">))</span>
+<span class="n">plot_samples</span><span class="p">(</span><span class="n">S_ica_</span> <span class="o">/</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.std.html#numpy.std"><span class="n">np</span><span class="o">.</span><span class="n">std</span></a><span class="p">(</span><span class="n">S_ica_</span><span class="p">))</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s">&#39;ICA recovered signals&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.94</span><span class="p">,</span> <span class="mf">0.94</span><span class="p">,</span> <span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.36</span><span class="p">)</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.51 seconds
-( 0 minutes  0.51 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.45 seconds
+( 0 minutes  0.45 seconds)</p>
 </div>
 
 

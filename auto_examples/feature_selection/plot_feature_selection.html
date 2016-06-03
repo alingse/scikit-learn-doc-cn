@@ -194,27 +194,27 @@ thus improve classification.</p>
 <span class="c"># import some data to play with</span>
 
 <span class="c"># The iris dataset</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">iris</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris"><span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span></a><span class="p">()</span>
 
 <span class="c"># Some noisy data not correlated</span>
 <span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="mi">20</span><span class="p">))</span>
 
 <span class="c"># Add the noisy data to the informative features</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">E</span><span class="p">))</span>
+<span class="n">X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.hstack.html#numpy.hstack"><span class="n">np</span><span class="o">.</span><span class="n">hstack</span></a><span class="p">((</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">E</span><span class="p">))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
 
 <span class="c">###############################################################################</span>
 <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.clf"><span class="n">plt</span><span class="o">.</span><span class="n">clf</span></a><span class="p">()</span>
 
-<span class="n">X_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">X_indices</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Univariate feature selection with F-test for feature scoring</span>
 <span class="c"># We use the default selection function: the 10% most significant features</span>
 <span class="n">selector</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile"><span class="n">SelectPercentile</span></a><span class="p">(</span><a href="../../modules/generated/sklearn.feature_selection.f_classif.html#sklearn.feature_selection.f_classif"><span class="n">f_classif</span></a><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">selector</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">selector</span><span class="o">.</span><span class="n">pvalues_</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="o">-</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.log10.html#numpy.log10"><span class="n">np</span><span class="o">.</span><span class="n">log10</span></a><span class="p">(</span><span class="n">selector</span><span class="o">.</span><span class="n">pvalues_</span><span class="p">)</span>
 <span class="n">scores</span> <span class="o">/=</span> <span class="n">scores</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.bar"><span class="n">plt</span><span class="o">.</span><span class="n">bar</span></a><span class="p">(</span><span class="n">X_indices</span> <span class="o">-</span> <span class="o">.</span><span class="mi">45</span><span class="p">,</span> <span class="n">scores</span><span class="p">,</span> <span class="n">width</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span>
         <span class="n">label</span><span class="o">=</span><span class="s">r&#39;Univariate score ($-Log(p_{value})$)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;g&#39;</span><span class="p">)</span>
@@ -247,8 +247,8 @@ thus improve classification.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.12 seconds
-( 0 minutes  0.12 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.10 seconds
+( 0 minutes  0.10 seconds)</p>
 </div>
 
 

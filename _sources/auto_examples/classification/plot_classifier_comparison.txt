@@ -34,6 +34,6 @@ set.
 .. literalinclude:: plot_classifier_comparison.py
     :lines: 23-
 
-**Total running time of the example:**  5.48 seconds
-( 0 minutes  5.48 seconds)
+**Total running time of the example:**  4.43 seconds
+( 0 minutes  4.43 seconds)
     

@@ -188,13 +188,13 @@
 <span class="n">n_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 <span class="c"># add 200 non-informative features</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="mi">200</span><span class="p">))))</span>
+<span class="n">X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.hstack.html#numpy.hstack"><span class="n">np</span><span class="o">.</span><span class="n">hstack</span></a><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="mi">200</span><span class="p">))))</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Create a feature-selection transform and an instance of SVM that we</span>
 <span class="c"># combine together to have an full-blown estimator</span>
 
-<span class="n">transform</span> <span class="o">=</span> <span class="n">feature_selection</span><span class="o">.</span><span class="n">SelectPercentile</span><span class="p">(</span><a href="../../modules/generated/sklearn.feature_selection.f_classif.html#sklearn.feature_selection.f_classif"><span class="n">feature_selection</span><span class="o">.</span><span class="n">f_classif</span></a><span class="p">)</span>
+<span class="n">transform</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile"><span class="n">feature_selection</span><span class="o">.</span><span class="n">SelectPercentile</span></a><span class="p">(</span><a href="../../modules/generated/sklearn.feature_selection.f_classif.html#sklearn.feature_selection.f_classif"><span class="n">feature_selection</span><span class="o">.</span><span class="n">f_classif</span></a><span class="p">)</span>
 
 <span class="n">clf</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline"><span class="n">Pipeline</span></a><span class="p">([(</span><span class="s">&#39;anova&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;svc&#39;</span><span class="p">,</span> <a href="../../modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC"><span class="n">svm</span><span class="o">.</span><span class="n">SVC</span></a><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">))])</span>
 
@@ -211,7 +211,7 @@
     <span class="n">score_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">this_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
     <span class="n">score_stds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">this_scores</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
 
-<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.errorbar"><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span></a><span class="p">(</span><span class="n">percentiles</span><span class="p">,</span> <span class="n">score_means</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">score_stds</span><span class="p">))</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.errorbar"><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span></a><span class="p">(</span><span class="n">percentiles</span><span class="p">,</span> <span class="n">score_means</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.array.html#numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><span class="n">score_stds</span><span class="p">))</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span>
     <span class="s">&#39;Performance of the SVM-Anova varying the percentile of features selected&#39;</span><span class="p">)</span>
@@ -222,8 +222,8 @@
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.68 seconds
-( 0 minutes  0.68 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.71 seconds
+( 0 minutes  0.71 seconds)</p>
 </div>
 
 

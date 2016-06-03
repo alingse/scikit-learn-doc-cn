@@ -28,6 +28,6 @@ clusters per class.
 .. literalinclude:: plot_random_dataset.py
     :lines: 14-
 
-**Total running time of the example:**  0.35 seconds
-( 0 minutes  0.35 seconds)
+**Total running time of the example:**  0.27 seconds
+( 0 minutes  0.27 seconds)
     

@@ -169,7 +169,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.multiclass" title="sklearn.multiclass"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.multiclass</span></code></a>.OneVsOneClassifier<a class="headerlink" href="#sklearn-multiclass-onevsoneclassifier" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn.multiclass.OneVsOneClassifier">
-<em class="property">class </em><code class="descclassname">sklearn.multiclass.</code><code class="descname">OneVsOneClassifier</code><span class="sig-paren">(</span><em>estimator</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/multiclass.py#L454"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn.multiclass.</code><code class="descname">OneVsOneClassifier</code><span class="sig-paren">(</span><em>estimator</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/multiclass.py#L454"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>One-vs-one multiclass strategy</p>
 <p>This strategy consists in fitting one classifier per class pair.
 At prediction time, the class which received the most votes is selected.
@@ -240,12 +240,12 @@ used. Thus for n_jobs = -2, all CPUs but one are used.</p>
 </table>
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>estimator</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/multiclass.py#L490"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>estimator</em>, <em>n_jobs=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/multiclass.py#L490"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.decision_function">
-<code class="descname">decision_function</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/multiclass.py#L541"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.decision_function" title="Permalink to this definition">¶</a></dt>
+<code class="descname">decision_function</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/multiclass.py#L541"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.decision_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decision function for the OneVsOneClassifier.</p>
 <p>The decision values for the samples are computed by adding the
 normalized sum of pair-wise classification confidence levels to the
@@ -265,7 +265,7 @@ votes for all the classes are equal leading to a tie.</p>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/multiclass.py#L494"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/multiclass.py#L494"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit underlying estimators.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -290,7 +290,7 @@ votes for all the classes are equal leading to a tie.</p>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -315,7 +315,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.predict">
-<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/multiclass.py#L521"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/multiclass.py#L521"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate the best class label for each sample in X.</p>
 <p>This is implemented as <code class="docutils literal"><span class="pre">argmax(decision_function(X),</span> <span class="pre">axis=1)</span></code> which
 will return the label of the class with most votes by estimators
@@ -342,7 +342,7 @@ predicting the outcome of a decision for each possible class pair.</p>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.score">
-<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.score" title="Permalink to this definition">¶</a></dt>
+<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the mean accuracy on the given test data and labels.</p>
 <p>In multi-label classification, this is the subset accuracy
 which is a harsh metric since you require for each sample that
@@ -377,7 +377,7 @@ each label set be correctly predicted.</p>
 
 <dl class="method">
 <dt id="sklearn.multiclass.OneVsOneClassifier.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.multiclass.OneVsOneClassifier.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form

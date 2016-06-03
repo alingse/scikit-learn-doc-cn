@@ -57,6 +57,6 @@ percolation instability.
 .. literalinclude:: plot_agglomerative_clustering.py
     :lines: 23-
 
-**Total running time of the example:**  20.26 seconds
-( 0 minutes  20.26 seconds)
+**Total running time of the example:**  15.43 seconds
+( 0 minutes  15.43 seconds)
     

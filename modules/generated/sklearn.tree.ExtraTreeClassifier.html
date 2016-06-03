@@ -169,7 +169,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.tree" title="sklearn.tree"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.tree</span></code></a>.ExtraTreeClassifier<a class="headerlink" href="#sklearn-tree-extratreeclassifier" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn.tree.ExtraTreeClassifier">
-<em class="property">class </em><code class="descclassname">sklearn.tree.</code><code class="descname">ExtraTreeClassifier</code><span class="sig-paren">(</span><em>criterion='gini'</em>, <em>splitter='random'</em>, <em>max_depth=None</em>, <em>min_samples_split=2</em>, <em>min_samples_leaf=1</em>, <em>min_weight_fraction_leaf=0.0</em>, <em>max_features='auto'</em>, <em>random_state=None</em>, <em>max_leaf_nodes=None</em>, <em>class_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L867"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn.tree.</code><code class="descname">ExtraTreeClassifier</code><span class="sig-paren">(</span><em>criterion='gini'</em>, <em>splitter='random'</em>, <em>max_depth=None</em>, <em>min_samples_split=2</em>, <em>min_samples_leaf=1</em>, <em>min_weight_fraction_leaf=0.0</em>, <em>max_features='auto'</em>, <em>random_state=None</em>, <em>max_leaf_nodes=None</em>, <em>class_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L867"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>An extremely randomized tree classifier.</p>
 <p>Extra-trees differ from classic decision trees in the way they are built.
 When looking for the best split to separate the samples of a node into two
@@ -232,12 +232,12 @@ Machine Learning, 63(1), 3-42, 2006.</td></tr>
 </table>
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>criterion='gini'</em>, <em>splitter='random'</em>, <em>max_depth=None</em>, <em>min_samples_split=2</em>, <em>min_samples_leaf=1</em>, <em>min_weight_fraction_leaf=0.0</em>, <em>max_features='auto'</em>, <em>random_state=None</em>, <em>max_leaf_nodes=None</em>, <em>class_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L891"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>criterion='gini'</em>, <em>splitter='random'</em>, <em>max_depth=None</em>, <em>min_samples_split=2</em>, <em>min_samples_leaf=1</em>, <em>min_weight_fraction_leaf=0.0</em>, <em>max_features='auto'</em>, <em>random_state=None</em>, <em>max_leaf_nodes=None</em>, <em>class_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L891"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L431"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.apply" title="Permalink to this definition">¶</a></dt>
+<code class="descname">apply</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L431"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the index of the leaf that each sample is predicted as.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.17.</span></p>
@@ -291,7 +291,7 @@ It is also known as the Gini importance.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em>, <em>check_input=True</em>, <em>X_idx_sorted=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L113"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em>, <em>check_input=True</em>, <em>X_idx_sorted=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L113"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a decision tree from the training set (X, y).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -343,7 +343,7 @@ Don&#8217;t use this parameter unless you know what to do.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.fit_transform">
-<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**fit_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L431"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.fit_transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**fit_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L431"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.fit_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit to data, then transform it.</p>
 <p>Fits transformer to X and y with optional parameters fit_params
 and returns a transformed version of X.</p>
@@ -373,7 +373,7 @@ and returns a transformed version of X.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -398,7 +398,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.predict">
-<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L380"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L380"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict class or regression value for X.</p>
 <p>For a classification model, the predicted class for each sample in X is
 returned. For a regression model, the predicted value based on X is
@@ -432,7 +432,7 @@ Don&#8217;t use this parameter unless you know what you do.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.predict_log_proba">
-<code class="descname">predict_log_proba</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L695"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict_log_proba" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict_log_proba</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L695"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict_log_proba" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict class log-probabilities of the input samples X.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,7 +460,7 @@ classes corresponds to that in the attribute <cite>classes_</cite>.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.predict_proba">
-<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/tree/tree.py#L648"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>X</em>, <em>check_input=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/tree/tree.py#L648"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict class probabilities of the input samples X.</p>
 <p>The predicted class probability is the fraction of samples of the same
 class in a leaf.</p>
@@ -495,7 +495,7 @@ classes corresponds to that in the attribute <cite>classes_</cite>.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.score">
-<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.score" title="Permalink to this definition">¶</a></dt>
+<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the mean accuracy on the given test data and labels.</p>
 <p>In multi-label classification, this is the subset accuracy
 which is a harsh metric since you require for each sample that
@@ -530,7 +530,7 @@ each label set be correctly predicted.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form
@@ -548,7 +548,7 @@ component of a nested object.</p>
 
 <dl class="method">
 <dt id="sklearn.tree.ExtraTreeClassifier.transform">
-<code class="descname">transform</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/utils/__init__.py#L92"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.transform" title="Permalink to this definition">¶</a></dt>
+<code class="descname">transform</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/utils/__init__.py#L92"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.tree.ExtraTreeClassifier.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED: Support to use estimators as feature selectors will be removed in version 0.19. Use SelectFromModel instead.</p>
 <p>Reduce X to its most important features.</p>
 <blockquote>

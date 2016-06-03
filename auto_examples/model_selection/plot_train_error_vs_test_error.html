@@ -190,11 +190,11 @@ measured using the explained variance a.k.a. R^2.</p>
 <span class="c">###############################################################################</span>
 <span class="c"># Generate sample data</span>
 <span class="n">n_samples_train</span><span class="p">,</span> <span class="n">n_samples_test</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">500</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.random.seed.html#numpy.random.seed"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span></a><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">coef</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
 <span class="n">coef</span><span class="p">[</span><span class="mi">50</span><span class="p">:]</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c"># only the top 10 features are impacting the model</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples_train</span> <span class="o">+</span> <span class="n">n_samples_test</span><span class="p">,</span> <span class="n">n_features</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">coef</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.dot.html#numpy.dot"><span class="n">np</span><span class="o">.</span><span class="n">dot</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">coef</span><span class="p">)</span>
 
 <span class="c"># Split train and test data</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:</span><span class="n">n_samples_train</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">n_samples_train</span><span class="p">:]</span>
@@ -202,8 +202,8 @@ measured using the explained variance a.k.a. R^2.</p>
 
 <span class="c">###############################################################################</span>
 <span class="c"># Compute train and test errors</span>
-<span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-<span class="n">enet</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">ElasticNet</span><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">alphas</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.logspace.html#numpy.logspace"><span class="n">np</span><span class="o">.</span><span class="n">logspace</span></a><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">enet</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet"><span class="n">linear_model</span><span class="o">.</span><span class="n">ElasticNet</span></a><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">train_errors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 <span class="n">test_errors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">:</span>
@@ -212,7 +212,7 @@ measured using the explained variance a.k.a. R^2.</p>
     <span class="n">train_errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enet</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
     <span class="n">test_errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enet</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 
-<span class="n">i_alpha_optim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">test_errors</span><span class="p">)</span>
+<span class="n">i_alpha_optim</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.argmax.html#numpy.argmax"><span class="n">np</span><span class="o">.</span><span class="n">argmax</span></a><span class="p">(</span><span class="n">test_errors</span><span class="p">)</span>
 <span class="n">alpha_optim</span> <span class="o">=</span> <span class="n">alphas</span><span class="p">[</span><span class="n">i_alpha_optim</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Optimal regularization parameter : %s&quot;</span> <span class="o">%</span> <span class="n">alpha_optim</span><span class="p">)</span>
 
@@ -243,8 +243,8 @@ measured using the explained variance a.k.a. R^2.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  2.23 seconds
-( 0 minutes  2.23 seconds)</p>
+<p><strong>Total running time of the example:</strong>  2.42 seconds
+( 0 minutes  2.42 seconds)</p>
 </div>
 
 

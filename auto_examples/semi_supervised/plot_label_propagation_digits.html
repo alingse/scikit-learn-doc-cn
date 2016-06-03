@@ -223,7 +223,7 @@ class will be very good.</p>
 
 <span class="n">digits</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.load_digits.html#sklearn.datasets.load_digits"><span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span></a><span class="p">()</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+<span class="n">indices</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
 <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">indices</span><span class="p">[:</span><span class="mi">330</span><span class="p">]]</span>
@@ -233,12 +233,12 @@ class will be very good.</p>
 <span class="n">n_total_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">n_labeled_points</span> <span class="o">=</span> <span class="mi">30</span>
 
-<span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_total_samples</span><span class="p">)</span>
+<span class="n">indices</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">n_total_samples</span><span class="p">)</span>
 
 <span class="n">unlabeled_set</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">n_labeled_points</span><span class="p">:]</span>
 
 <span class="c"># shuffle everything around</span>
-<span class="n">y_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">y_train</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.copy.html#numpy.copy"><span class="n">np</span><span class="o">.</span><span class="n">copy</span></a><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">y_train</span><span class="p">[</span><span class="n">unlabeled_set</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
 <span class="c">###############################################################################</span>
@@ -262,7 +262,7 @@ class will be very good.</p>
 <span class="n">pred_entropies</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">entropy</span><span class="p">(</span><span class="n">lp_model</span><span class="o">.</span><span class="n">label_distributions_</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
 <span class="c"># pick the top 10 most uncertain labels</span>
-<span class="n">uncertainty_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">pred_entropies</span><span class="p">)[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">uncertainty_index</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.argsort.html#numpy.argsort"><span class="n">np</span><span class="o">.</span><span class="n">argsort</span></a><span class="p">(</span><span class="n">pred_entropies</span><span class="p">)[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># plot</span>
@@ -281,8 +281,8 @@ class will be very good.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.65 seconds
-( 0 minutes  0.65 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.58 seconds
+( 0 minutes  0.58 seconds)</p>
 </div>
 
 

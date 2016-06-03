@@ -61,6 +61,6 @@ This example is commented in the
 .. literalinclude:: plot_digits_classification.py
     :lines: 13-
 
-**Total running time of the example:**  0.59 seconds
-( 0 minutes  0.59 seconds)
+**Total running time of the example:**  0.49 seconds
+( 0 minutes  0.49 seconds)
     

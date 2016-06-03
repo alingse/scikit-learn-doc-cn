@@ -200,7 +200,7 @@ space to the embedding space.</li>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction</span> <span class="k">import</span> <span class="n">image</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.cluster.spectral_clustering.html#sklearn.cluster.spectral_clustering"><span class="n">spectral_clustering</span></a>
 
-<span class="n">lena</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">lena</span><span class="p">()</span>
+<span class="n">lena</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.misc.lena.html#scipy.misc.lena"><span class="n">sp</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">lena</span></a><span class="p">()</span>
 <span class="c"># Downsample the image by a factor of 4</span>
 <span class="n">lena</span> <span class="o">=</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">lena</span> <span class="o">=</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">lena</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
@@ -214,7 +214,7 @@ space to the embedding space.</li>
 <span class="c"># actual image. For beta=1, the segmentation is close to a voronoi</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">eps</span> <span class="o">=</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">6</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">lena</span><span class="o">.</span><span class="n">std</span><span class="p">())</span> <span class="o">+</span> <span class="n">eps</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.exp.html#numpy.exp"><span class="n">np</span><span class="o">.</span><span class="n">exp</span></a><span class="p">(</span><span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">lena</span><span class="o">.</span><span class="n">std</span><span class="p">())</span> <span class="o">+</span> <span class="n">eps</span>
 
 <span class="c"># Apply spectral clustering (this step goes much faster if you have pyamg</span>
 <span class="c"># installed)</span>
@@ -243,8 +243,8 @@ space to the embedding space.</li>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  71.53 seconds
-( 1 minutes  11.53 seconds)</p>
+<p><strong>Total running time of the example:</strong>  4086.45 seconds
+( 68 minutes  6.45 seconds)</p>
 </div>
 
 

@@ -214,11 +214,11 @@ initialization.</p>
 <span class="n">Computing</span> <span class="n">LLE</span> <span class="n">embedding</span>
 <span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">1.63526e-06</span>
 <span class="n">Computing</span> <span class="n">modified</span> <span class="n">LLE</span> <span class="n">embedding</span>
-<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.353072</span>
+<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.35506</span>
 <span class="n">Computing</span> <span class="n">Hessian</span> <span class="n">LLE</span> <span class="n">embedding</span>
-<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.212952</span>
+<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.212537</span>
 <span class="n">Computing</span> <span class="n">LTSA</span> <span class="n">embedding</span>
-<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.212805</span>
+<span class="n">Done</span><span class="o">.</span> <span class="n">Reconstruction</span> <span class="n">error</span><span class="p">:</span> <span class="mf">0.212808</span>
 <span class="n">Computing</span> <span class="n">MDS</span> <span class="n">embedding</span>
 <span class="n">Done</span><span class="o">.</span> <span class="n">Stress</span><span class="p">:</span> <span class="mf">139938660.361369</span>
 <span class="n">Computing</span> <span class="n">Totally</span> <span class="n">Random</span> <span class="n">Trees</span> <span class="n">embedding</span>
@@ -265,13 +265,13 @@ initialization.</p>
 
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><a href="http://matplotlib.org/api/offsetbox_api.html#matplotlib.offsetbox"><span class="n">offsetbox</span></a><span class="p">,</span> <span class="s">&#39;AnnotationBbox&#39;</span><span class="p">):</span>
         <span class="c"># only print thumbnails with matplotlib &gt; 1.0</span>
-        <span class="n">shown_images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])</span>  <span class="c"># just something big</span>
+        <span class="n">shown_images</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.array.html#numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])</span>  <span class="c"># just something big</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-            <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">shown_images</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">dist</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">((</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">shown_images</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="n">e</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span>
                 <span class="c"># don&#39;t show points that are too close</span>
                 <span class="k">continue</span>
-            <span class="n">shown_images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">shown_images</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]]]</span>
+            <span class="n">shown_images</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.r_.html#numpy.r_"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><span class="n">shown_images</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]]]</span>
             <span class="n">imagebox</span> <span class="o">=</span> <a href="http://matplotlib.org/api/offsetbox_api.html#matplotlib.offsetbox.AnnotationBbox"><span class="n">offsetbox</span><span class="o">.</span><span class="n">AnnotationBbox</span></a><span class="p">(</span>
                 <a href="http://matplotlib.org/api/offsetbox_api.html#matplotlib.offsetbox.OffsetImage"><span class="n">offsetbox</span><span class="o">.</span><span class="n">OffsetImage</span></a><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">),</span>
                 <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -284,7 +284,7 @@ initialization.</p>
 <span class="c">#----------------------------------------------------------------------</span>
 <span class="c"># Plot images of the digits</span>
 <span class="n">n_img_per_row</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span> <span class="o">*</span> <span class="n">n_img_per_row</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">n_img_per_row</span><span class="p">))</span>
+<span class="n">img</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">10</span> <span class="o">*</span> <span class="n">n_img_per_row</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">n_img_per_row</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_img_per_row</span><span class="p">):</span>
     <span class="n">ix</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_img_per_row</span><span class="p">):</span>
@@ -441,8 +441,8 @@ initialization.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  30.25 seconds
-( 0 minutes  30.25 seconds)</p>
+<p><strong>Total running time of the example:</strong>  26.13 seconds
+( 0 minutes  26.13 seconds)</p>
 </div>
 
 

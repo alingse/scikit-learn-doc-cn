@@ -54,6 +54,6 @@ would have resulted in a similar decrease in log-loss.
 .. literalinclude:: plot_calibration_multiclass.py
     :lines: 24-
 
-**Total running time of the example:**  0.66 seconds
-( 0 minutes  0.66 seconds)
+**Total running time of the example:**  0.52 seconds
+( 0 minutes  0.52 seconds)
     

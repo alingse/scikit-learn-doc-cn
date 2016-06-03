@@ -29,6 +29,6 @@ This example fits a Gradient Boosting model with least squares loss and
 .. literalinclude:: plot_gradient_boosting_regression.py
     :lines: 11-
 
-**Total running time of the example:**  0.62 seconds
-( 0 minutes  0.62 seconds)
+**Total running time of the example:**  0.60 seconds
+( 0 minutes  0.60 seconds)
     

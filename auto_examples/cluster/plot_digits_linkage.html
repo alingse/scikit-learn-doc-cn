@@ -187,9 +187,9 @@ that ends up with a couple of singleton clusters.</p>
 <p><strong>Script output</strong>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="n">Computing</span> <span class="n">embedding</span>
 <span class="n">Done</span><span class="o">.</span>
-<span class="n">ward</span> <span class="p">:</span> <span class="mf">41.61</span><span class="n">s</span>
-<span class="n">average</span> <span class="p">:</span> <span class="mf">40.30</span><span class="n">s</span>
-<span class="n">complete</span> <span class="p">:</span> <span class="mf">41.91</span><span class="n">s</span>
+<span class="n">ward</span> <span class="p">:</span> <span class="mf">30.95</span><span class="n">s</span>
+<span class="n">average</span> <span class="p">:</span> <span class="mf">37.59</span><span class="n">s</span>
+<span class="n">complete</span> <span class="p">:</span> <span class="mf">33.37</span><span class="n">s</span>
 </pre></div>
 </div>
 <p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/plot_digits_linkage.py" download=""><code class="xref download docutils literal"><span class="pre">plot_digits_linkage.py</span></code></a></p>
@@ -211,7 +211,7 @@ that ends up with a couple of singleton clusters.</p>
 <span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
 <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.random.seed.html#numpy.random.seed"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span></a><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">nudge_images</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="c"># Having a larger dataset shows more clearly the behavior of the</span>
@@ -222,8 +222,8 @@ that ends up with a couple of singleton clusters.</p>
                                   <span class="o">.</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
                                   <span class="n">mode</span><span class="o">=</span><span class="s">&#39;constant&#39;</span><span class="p">,</span>
                                   <span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">shift</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="p">)])</span>
-    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.concatenate.html#numpy.concatenate"><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">([</span><span class="n">X</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.apply_along_axis.html#numpy.apply_along_axis"><span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span></a><span class="p">(</span><span class="n">shift</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="p">)])</span>
+    <span class="n">Y</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.concatenate.html#numpy.concatenate"><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span>
 
 
@@ -239,7 +239,7 @@ that ends up with a couple of singleton clusters.</p>
     <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_red</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
         <a href="http://matplotlib.org/api/text_api.html#matplotlib.text"><span class="n">plt</span><span class="o">.</span><span class="n">text</span></a><span class="p">(</span><span class="n">X_red</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_red</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
-                 <span class="n">color</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">spectral</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mf">10.</span><span class="p">),</span>
+                 <span class="n">color</span><span class="o">=</span><a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.spectral"><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">spectral</span></a><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mf">10.</span><span class="p">),</span>
                  <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;weight&#39;</span><span class="p">:</span> <span class="s">&#39;bold&#39;</span><span class="p">,</span> <span class="s">&#39;size&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">})</span>
 
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xticks"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span></a><span class="p">([])</span>
@@ -269,8 +269,8 @@ that ends up with a couple of singleton clusters.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  146.27 seconds
-( 2 minutes  26.27 seconds)</p>
+<p><strong>Total running time of the example:</strong>  119.75 seconds
+( 1 minutes  59.75 seconds)</p>
 </div>
 
 

@@ -33,6 +33,6 @@ exhibit big oscillations.
 .. literalinclude:: plot_ridge_path.py
     :lines: 19-
 
-**Total running time of the example:**  0.22 seconds
-( 0 minutes  0.22 seconds)
+**Total running time of the example:**  0.17 seconds
+( 0 minutes  0.17 seconds)
     

@@ -263,7 +263,7 @@ in <a class="reference internal" href="../modules/kernel_approximation.html#kern
 <span class="n">linear_svm_score</span> <span class="o">=</span> <span class="n">linear_svm</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">data_test</span><span class="p">,</span> <span class="n">targets_test</span><span class="p">)</span>
 <span class="n">linear_svm_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">linear_svm_time</span>
 
-<span class="n">sample_sizes</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">sample_sizes</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">fourier_scores</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">nystroem_scores</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">fourier_times</span> <span class="o">=</span> <span class="p">[]</span>
@@ -332,13 +332,13 @@ in <a class="reference internal" href="../modules/kernel_approximation.html#kern
 <span class="n">X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data_train</span><span class="p">)</span>
 
 <span class="c"># Gemerate grid along first two principal components</span>
-<span class="n">multiples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">multiples</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="c"># steps along first component</span>
-<span class="n">first</span> <span class="o">=</span> <span class="n">multiples</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">*</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">first</span> <span class="o">=</span> <span class="n">multiples</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">]</span> <span class="o">*</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
 <span class="c"># steps along second component</span>
-<span class="n">second</span> <span class="o">=</span> <span class="n">multiples</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">*</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">second</span> <span class="o">=</span> <span class="n">multiples</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">]</span> <span class="o">*</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
 <span class="c"># combine</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">first</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">second</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">first</span><span class="p">[</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">second</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">,</span> <span class="p">:]</span>
 <span class="n">flat_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="c"># title for the plots</span>
@@ -372,8 +372,8 @@ in <a class="reference internal" href="../modules/kernel_approximation.html#kern
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  2.36 seconds
-( 0 minutes  2.36 seconds)</p>
+<p><strong>Total running time of the example:</strong>  1.86 seconds
+( 0 minutes  1.86 seconds)</p>
 </div>
 
 

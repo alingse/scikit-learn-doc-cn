@@ -79,6 +79,6 @@ verified from the labelled scatter plot on the right.
 .. literalinclude:: plot_kmeans_silhouette_analysis.py
     :lines: 32-
 
-**Total running time of the example:**  1.88 seconds
-( 0 minutes  1.88 seconds)
+**Total running time of the example:**  1.63 seconds
+( 0 minutes  1.63 seconds)
     

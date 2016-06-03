@@ -208,7 +208,7 @@ separating the objects one from the other, and not from the background.</p>
 
 <span class="c">###############################################################################</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">((</span><span class="n">l</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.indices.html#numpy.indices"><span class="n">np</span><span class="o">.</span><span class="n">indices</span></a><span class="p">((</span><span class="n">l</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>
 
 <span class="n">center1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
 <span class="n">center2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -236,16 +236,16 @@ separating the objects one from the other, and not from the background.</p>
 
 <span class="c"># Take a decreasing function of the gradient: we take it weakly</span>
 <span class="c"># dependent from the gradient the segmentation is close to a voronoi</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.exp.html#numpy.exp"><span class="n">np</span><span class="o">.</span><span class="n">exp</span></a><span class="p">(</span><span class="o">-</span><span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
 
 <span class="c"># Force the solver to be arpack, since amg is numerically</span>
 <span class="c"># unstable on this example</span>
 <span class="n">labels</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.spectral_clustering.html#sklearn.cluster.spectral_clustering"><span class="n">spectral_clustering</span></a><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">eigen_solver</span><span class="o">=</span><span class="s">&#39;arpack&#39;</span><span class="p">)</span>
-<span class="n">label_im</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">label_im</span> <span class="o">=</span> <span class="o">-</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.ones.html#numpy.ones"><span class="n">np</span><span class="o">.</span><span class="n">ones</span></a><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">label_im</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">label_im</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow"><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span></a><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow"><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span></a><span class="p">(</span><span class="n">label_im</span><span class="p">)</span>
 
 <span class="c">###############################################################################</span>
 <span class="c"># 2 circles</span>
@@ -256,20 +256,20 @@ separating the objects one from the other, and not from the background.</p>
 <span class="n">img</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="o">*</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="n">graph</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">img_to_graph</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.exp.html#numpy.exp"><span class="n">np</span><span class="o">.</span><span class="n">exp</span></a><span class="p">(</span><span class="o">-</span><span class="n">graph</span><span class="o">.</span><span class="n">data</span> <span class="o">/</span> <span class="n">graph</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
 
 <span class="n">labels</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.spectral_clustering.html#sklearn.cluster.spectral_clustering"><span class="n">spectral_clustering</span></a><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">eigen_solver</span><span class="o">=</span><span class="s">&#39;arpack&#39;</span><span class="p">)</span>
-<span class="n">label_im</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">label_im</span> <span class="o">=</span> <span class="o">-</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.ones.html#numpy.ones"><span class="n">np</span><span class="o">.</span><span class="n">ones</span></a><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">label_im</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">label_im</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow"><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span></a><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow"><span class="n">plt</span><span class="o">.</span><span class="n">matshow</span></a><span class="p">(</span><span class="n">label_im</span><span class="p">)</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  1.25 seconds
-( 0 minutes  1.25 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.96 seconds
+( 0 minutes  0.96 seconds)</p>
 </div>
 
 

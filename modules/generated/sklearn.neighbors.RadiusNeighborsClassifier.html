@@ -169,7 +169,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.neighbors" title="sklearn.neighbors"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.neighbors</span></code></a>.RadiusNeighborsClassifier<a class="headerlink" href="#sklearn-neighbors-radiusneighborsclassifier" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier">
-<em class="property">class </em><code class="descclassname">sklearn.neighbors.</code><code class="descname">RadiusNeighborsClassifier</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>weights='uniform'</em>, <em>algorithm='auto'</em>, <em>leaf_size=30</em>, <em>p=2</em>, <em>metric='minkowski'</em>, <em>outlier_label=None</em>, <em>metric_params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/classification.py#L229"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn.neighbors.</code><code class="descname">RadiusNeighborsClassifier</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>weights='uniform'</em>, <em>algorithm='auto'</em>, <em>leaf_size=30</em>, <em>p=2</em>, <em>metric='minkowski'</em>, <em>outlier_label=None</em>, <em>metric_params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/classification.py#L229"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classifier implementing a vote among neighbors within a given radius</p>
 <p>Read more in the <a class="reference internal" href="../neighbors.html#classification"><span class="std std-ref">User Guide</span></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -294,12 +294,12 @@ for a discussion of the choice of <code class="docutils literal"><span class="pr
 </table>
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>weights='uniform'</em>, <em>algorithm='auto'</em>, <em>leaf_size=30</em>, <em>p=2</em>, <em>metric='minkowski'</em>, <em>outlier_label=None</em>, <em>metric_params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/classification.py#L318"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>weights='uniform'</em>, <em>algorithm='auto'</em>, <em>leaf_size=30</em>, <em>p=2</em>, <em>metric='minkowski'</em>, <em>outlier_label=None</em>, <em>metric_params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/classification.py#L318"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/base.py#L764"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/base.py#L764"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit the model using X as training data and y as target values</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -322,7 +322,7 @@ or [n_samples, n_samples] if metric=&#8217;precomputed&#8217;.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -347,7 +347,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.predict">
-<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/classification.py#L329"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/classification.py#L329"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict the class labels for the provided data</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -371,7 +371,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors">
-<code class="descname">radius_neighbors</code><span class="sig-paren">(</span><em>X=None</em>, <em>radius=None</em>, <em>return_distance=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/base.py#L520"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radius_neighbors</code><span class="sig-paren">(</span><em>X=None</em>, <em>radius=None</em>, <em>return_distance=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/base.py#L520"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the neighbors within a given radius of a point or points.</p>
 <p>Return the indices and distances of each point from the dataset
 lying in a ball with size <code class="docutils literal"><span class="pre">radius</span></code> around the points of the query
@@ -445,7 +445,7 @@ indices.  In general, multiple points can be queried at the same time.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors_graph">
-<code class="descname">radius_neighbors_graph</code><span class="sig-paren">(</span><em>X=None</em>, <em>radius=None</em>, <em>mode='connectivity'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/neighbors/base.py#L666"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors_graph" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radius_neighbors_graph</code><span class="sig-paren">(</span><em>X=None</em>, <em>radius=None</em>, <em>mode='connectivity'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/neighbors/base.py#L666"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors_graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the (weighted) graph of Neighbors for points in X</p>
 <p>Neighborhoods are restricted the points at a distance lower than
 radius.</p>
@@ -501,7 +501,7 @@ edges are Euclidean distance between points.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.score">
-<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.score" title="Permalink to this definition">¶</a></dt>
+<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the mean accuracy on the given test data and labels.</p>
 <p>In multi-label classification, this is the subset accuracy
 which is a harsh metric since you require for each sample that
@@ -536,7 +536,7 @@ each label set be correctly predicted.</p>
 
 <dl class="method">
 <dt id="sklearn.neighbors.RadiusNeighborsClassifier.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.neighbors.RadiusNeighborsClassifier.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form

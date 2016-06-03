@@ -191,24 +191,24 @@ the RANSAC algorithm.</p>
                                       <span class="n">coef</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c"># Add outlier data</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.random.seed.html#numpy.random.seed"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span></a><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">X</span><span class="p">[:</span><span class="n">n_outliers</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_outliers</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">y</span><span class="p">[:</span><span class="n">n_outliers</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n_outliers</span><span class="p">)</span>
 
 <span class="c"># Fit line using all data</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression"><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span></a><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="c"># Robustly fit linear model with RANSAC algorithm</span>
-<span class="n">model_ransac</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.linear_model.RANSACRegressor.html#sklearn.linear_model.RANSACRegressor"><span class="n">linear_model</span><span class="o">.</span><span class="n">RANSACRegressor</span></a><span class="p">(</span><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">())</span>
+<span class="n">model_ransac</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.linear_model.RANSACRegressor.html#sklearn.linear_model.RANSACRegressor"><span class="n">linear_model</span><span class="o">.</span><span class="n">RANSACRegressor</span></a><span class="p">(</span><a href="../../modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression"><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span></a><span class="p">())</span>
 <span class="n">model_ransac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">inlier_mask</span> <span class="o">=</span> <span class="n">model_ransac</span><span class="o">.</span><span class="n">inlier_mask_</span>
-<span class="n">outlier_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">inlier_mask</span><span class="p">)</span>
+<span class="n">outlier_mask</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.logical_not.html#numpy.logical_not"><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span></a><span class="p">(</span><span class="n">inlier_mask</span><span class="p">)</span>
 
 <span class="c"># Predict data of estimated models</span>
-<span class="n">line_X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">line_y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">line_X</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
-<span class="n">line_y_ransac</span> <span class="o">=</span> <span class="n">model_ransac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">line_X</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
+<span class="n">line_X</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">line_y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">line_X</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">])</span>
+<span class="n">line_y_ransac</span> <span class="o">=</span> <span class="n">model_ransac</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">line_X</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">])</span>
 
 <span class="c"># Compare estimated coefficients</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Estimated coefficients (true, normal, RANSAC):&quot;</span><span class="p">)</span>
@@ -222,8 +222,8 @@ the RANSAC algorithm.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.09 seconds
-( 0 minutes  0.09 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.07 seconds
+( 0 minutes  0.07 seconds)</p>
 </div>
 
 

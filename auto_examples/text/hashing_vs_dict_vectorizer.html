@@ -188,7 +188,7 @@ for FeatureHasher is to be expected due to hash collisions.</p>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">fetch_20newsgroups</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.datasets.fetch_20newsgroups.html#sklearn.datasets.fetch_20newsgroups"><span class="n">fetch_20newsgroups</span></a>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.feature_extraction.DictVectorizer.html#sklearn.feature_extraction.DictVectorizer"><span class="n">DictVectorizer</span></a><span class="p">,</span> <a href="../../modules/generated/sklearn.feature_extraction.FeatureHasher.html#sklearn.feature_extraction.FeatureHasher"><span class="n">FeatureHasher</span></a>
 
 
@@ -241,7 +241,7 @@ for FeatureHasher is to be expected due to hash collisions.</p>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Loading 20 newsgroups training data&quot;</span><span class="p">)</span>
-<span class="n">raw_data</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s">&#39;train&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">raw_data</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.fetch_20newsgroups.html#sklearn.datasets.fetch_20newsgroups"><span class="n">fetch_20newsgroups</span></a><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s">&#39;train&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
 <span class="n">data_size_mb</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">raw_data</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span><span class="n">e6</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;%d documents - %0.3fMB&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw_data</span><span class="p">),</span> <span class="n">data_size_mb</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>

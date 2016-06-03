@@ -44,6 +44,6 @@ of the standard linear regression
 .. literalinclude:: plot_ols_ridge_variance.py
     :lines: 23-
 
-**Total running time of the example:**  0.29 seconds
-( 0 minutes  0.29 seconds)
+**Total running time of the example:**  0.22 seconds
+( 0 minutes  0.22 seconds)
     

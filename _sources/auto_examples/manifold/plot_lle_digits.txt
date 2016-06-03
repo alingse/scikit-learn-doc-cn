@@ -101,11 +101,11 @@ initialization.
   Computing LLE embedding
   Done. Reconstruction error: 1.63526e-06
   Computing modified LLE embedding
-  Done. Reconstruction error: 0.353072
+  Done. Reconstruction error: 0.35506
   Computing Hessian LLE embedding
-  Done. Reconstruction error: 0.212952
+  Done. Reconstruction error: 0.212537
   Computing LTSA embedding
-  Done. Reconstruction error: 0.212805
+  Done. Reconstruction error: 0.212808
   Computing MDS embedding
   Done. Stress: 139938660.361369
   Computing Totally Random Trees embedding
@@ -119,6 +119,6 @@ initialization.
 .. literalinclude:: plot_lle_digits.py
     :lines: 19-
 
-**Total running time of the example:**  30.25 seconds
-( 0 minutes  30.25 seconds)
+**Total running time of the example:**  26.13 seconds
+( 0 minutes  26.13 seconds)
     

@@ -35,6 +35,6 @@ Between Data Points", Science Feb. 2007
 .. literalinclude:: plot_affinity_propagation.py
     :lines: 11-
 
-**Total running time of the example:**  0.80 seconds
-( 0 minutes  0.80 seconds)
+**Total running time of the example:**  0.59 seconds
+( 0 minutes  0.59 seconds)
     

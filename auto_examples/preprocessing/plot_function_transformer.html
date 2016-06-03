@@ -182,7 +182,7 @@ PCA transformed data.</p>
 
 
 <span class="k">def</span> <span class="nf">_generate_vector</span><span class="p">(</span><span class="n">shift</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">-</span> <span class="n">shift</span><span class="p">)</span> <span class="o">*</span> <span class="n">noise</span>
+    <span class="k">return</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">-</span> <span class="n">shift</span><span class="p">)</span> <span class="o">*</span> <span class="n">noise</span>
 
 
 <span class="k">def</span> <span class="nf">generate_dataset</span><span class="p">():</span>
@@ -190,16 +190,16 @@ PCA transformed data.</p>
 <span class="sd">    This dataset is two lines with a slope ~ 1, where one has</span>
 <span class="sd">    a y offset of ~100</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span>
+    <span class="k">return</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.vstack.html#numpy.vstack"><span class="n">np</span><span class="o">.</span><span class="n">vstack</span></a><span class="p">((</span>
+        <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.vstack.html#numpy.vstack"><span class="n">np</span><span class="o">.</span><span class="n">vstack</span></a><span class="p">((</span>
             <span class="n">_generate_vector</span><span class="p">(),</span>
             <span class="n">_generate_vector</span><span class="p">()</span> <span class="o">+</span> <span class="mi">100</span><span class="p">,</span>
         <span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span>
+        <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.vstack.html#numpy.vstack"><span class="n">np</span><span class="o">.</span><span class="n">vstack</span></a><span class="p">((</span>
             <span class="n">_generate_vector</span><span class="p">(),</span>
             <span class="n">_generate_vector</span><span class="p">(),</span>
         <span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
-    <span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1000</span><span class="p">)))</span>
+    <span class="p">)),</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.hstack.html#numpy.hstack"><span class="n">np</span><span class="o">.</span><span class="n">hstack</span></a><span class="p">((</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.ones.html#numpy.ones"><span class="n">np</span><span class="o">.</span><span class="n">ones</span></a><span class="p">(</span><span class="mi">1000</span><span class="p">)))</span>
 
 
 <span class="k">def</span> <span class="nf">all_but_first_column</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -221,12 +221,12 @@ PCA transformed data.</p>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">generate_dataset</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.scatter"><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span></a><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
     <span class="n">X_transformed</span><span class="p">,</span> <span class="n">y_transformed</span> <span class="o">=</span> <span class="n">drop_first_component</span><span class="p">(</span><span class="o">*</span><span class="n">generate_dataset</span><span class="p">())</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.scatter"><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span></a><span class="p">(</span>
         <span class="n">X_transformed</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_transformed</span><span class="p">)),</span>
+        <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_transformed</span><span class="p">)),</span>
         <span class="n">c</span><span class="o">=</span><span class="n">y_transformed</span><span class="p">,</span>
         <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
     <span class="p">)</span>

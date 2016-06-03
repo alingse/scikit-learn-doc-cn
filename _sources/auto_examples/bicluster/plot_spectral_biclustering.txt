@@ -56,6 +56,6 @@ representation of the checkerboard structure.
 .. literalinclude:: plot_spectral_biclustering.py
     :lines: 18-
 
-**Total running time of the example:**  0.74 seconds
-( 0 minutes  0.74 seconds)
+**Total running time of the example:**  0.58 seconds
+( 0 minutes  0.58 seconds)
     

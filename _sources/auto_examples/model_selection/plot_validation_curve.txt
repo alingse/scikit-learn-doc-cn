@@ -28,6 +28,6 @@ is good but the validation score is poor.
 .. literalinclude:: plot_validation_curve.py
     :lines: 14-
 
-**Total running time of the example:**  38.92 seconds
-( 0 minutes  38.92 seconds)
+**Total running time of the example:**  39.97 seconds
+( 0 minutes  39.97 seconds)
     

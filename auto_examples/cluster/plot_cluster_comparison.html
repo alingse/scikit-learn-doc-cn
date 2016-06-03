@@ -203,10 +203,10 @@ behavior.</p>
                                       <span class="n">noise</span><span class="o">=.</span><span class="mi">05</span><span class="p">)</span>
 <span class="n">noisy_moons</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.make_moons.html#sklearn.datasets.make_moons"><span class="n">datasets</span><span class="o">.</span><span class="n">make_moons</span></a><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">noise</span><span class="o">=.</span><span class="mi">05</span><span class="p">)</span>
 <span class="n">blobs</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.make_blobs.html#sklearn.datasets.make_blobs"><span class="n">datasets</span><span class="o">.</span><span class="n">make_blobs</span></a><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">no_structure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="k">None</span>
+<span class="n">no_structure</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.random.rand.html#numpy.random.rand"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="k">None</span>
 
-<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s">&#39;bgrcmykbgrcmykbgrcmykbgrcmyk&#39;</span><span class="p">])</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">colors</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.array.html#numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s">&#39;bgrcmykbgrcmykbgrcmykbgrcmyk&#39;</span><span class="p">])</span>
+<span class="n">colors</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.hstack.html#numpy.hstack"><span class="n">np</span><span class="o">.</span><span class="n">hstack</span></a><span class="p">([</span><span class="n">colors</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">clustering_names</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">&#39;MiniBatchKMeans&#39;</span><span class="p">,</span> <span class="s">&#39;AffinityPropagation&#39;</span><span class="p">,</span> <span class="s">&#39;MeanShift&#39;</span><span class="p">,</span>
@@ -236,7 +236,7 @@ behavior.</p>
     <span class="c"># create clustering estimators</span>
     <span class="n">ms</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.MeanShift.html#sklearn.cluster.MeanShift"><span class="n">cluster</span><span class="o">.</span><span class="n">MeanShift</span></a><span class="p">(</span><span class="n">bandwidth</span><span class="o">=</span><span class="n">bandwidth</span><span class="p">,</span> <span class="n">bin_seeding</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
     <span class="n">two_means</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.MiniBatchKMeans.html#sklearn.cluster.MiniBatchKMeans"><span class="n">cluster</span><span class="o">.</span><span class="n">MiniBatchKMeans</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">ward</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="s">&#39;ward&#39;</span><span class="p">,</span>
+    <span class="n">ward</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering"><span class="n">cluster</span><span class="o">.</span><span class="n">AgglomerativeClustering</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="s">&#39;ward&#39;</span><span class="p">,</span>
                                            <span class="n">connectivity</span><span class="o">=</span><span class="n">connectivity</span><span class="p">)</span>
     <span class="n">spectral</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.SpectralClustering.html#sklearn.cluster.SpectralClustering"><span class="n">cluster</span><span class="o">.</span><span class="n">SpectralClustering</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
                                           <span class="n">eigen_solver</span><span class="o">=</span><span class="s">&#39;arpack&#39;</span><span class="p">,</span>
@@ -245,7 +245,7 @@ behavior.</p>
     <span class="n">affinity_propagation</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.AffinityPropagation.html#sklearn.cluster.AffinityPropagation"><span class="n">cluster</span><span class="o">.</span><span class="n">AffinityPropagation</span></a><span class="p">(</span><span class="n">damping</span><span class="o">=.</span><span class="mi">9</span><span class="p">,</span>
                                                        <span class="n">preference</span><span class="o">=-</span><span class="mi">200</span><span class="p">)</span>
 
-    <span class="n">average_linkage</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">AgglomerativeClustering</span><span class="p">(</span>
+    <span class="n">average_linkage</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering"><span class="n">cluster</span><span class="o">.</span><span class="n">AgglomerativeClustering</span></a><span class="p">(</span>
         <span class="n">linkage</span><span class="o">=</span><span class="s">&quot;average&quot;</span><span class="p">,</span> <span class="n">affinity</span><span class="o">=</span><span class="s">&quot;cityblock&quot;</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
         <span class="n">connectivity</span><span class="o">=</span><span class="n">connectivity</span><span class="p">)</span>
 
@@ -286,8 +286,8 @@ behavior.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  32.73 seconds
-( 0 minutes  32.73 seconds)</p>
+<p><strong>Total running time of the example:</strong>  27.07 seconds
+( 0 minutes  27.07 seconds)</p>
 </div>
 
 

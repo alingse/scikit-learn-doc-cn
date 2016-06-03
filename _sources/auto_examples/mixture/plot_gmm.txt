@@ -37,6 +37,6 @@ regularization properties of the inference algorithm.
 .. literalinclude:: plot_gmm.py
     :lines: 23-
 
-**Total running time of the example:**  0.28 seconds
-( 0 minutes  0.28 seconds)
+**Total running time of the example:**  0.24 seconds
+( 0 minutes  0.24 seconds)
     

@@ -219,8 +219,8 @@ the biclusters.</p>
 
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;consensus score: {:.3f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 
-<span class="n">fit_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">row_labels_</span><span class="p">)]</span>
-<span class="n">fit_data</span> <span class="o">=</span> <span class="n">fit_data</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">column_labels_</span><span class="p">)]</span>
+<span class="n">fit_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.argsort.html#numpy.argsort"><span class="n">np</span><span class="o">.</span><span class="n">argsort</span></a><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">row_labels_</span><span class="p">)]</span>
+<span class="n">fit_data</span> <span class="o">=</span> <span class="n">fit_data</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.argsort.html#numpy.argsort"><span class="n">np</span><span class="o">.</span><span class="n">argsort</span></a><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">column_labels_</span><span class="p">)]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">fit_data</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">)</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s">&quot;After biclustering; rearranged to show biclusters&quot;</span><span class="p">)</span>
@@ -228,8 +228,8 @@ the biclusters.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.22 seconds
-( 0 minutes  0.22 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.16 seconds
+( 0 minutes  0.16 seconds)</p>
 </div>
 
 

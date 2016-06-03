@@ -23,7 +23,7 @@ of the predictions can be parallelized within multiple jobs.
 **Script output**::
 
   Fitting ExtraTreesClassifier on faces data with 1 cores...
-  done in 2.268s
+  done in 2.690s
 
 
 
@@ -32,6 +32,6 @@ of the predictions can be parallelized within multiple jobs.
 .. literalinclude:: plot_forest_importances_faces.py
     :lines: 13-
 
-**Total running time of the example:**  2.44 seconds
-( 0 minutes  2.44 seconds)
+**Total running time of the example:**  2.86 seconds
+( 0 minutes  2.86 seconds)
     

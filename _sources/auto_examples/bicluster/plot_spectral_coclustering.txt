@@ -50,6 +50,6 @@ the biclusters.
 .. literalinclude:: plot_spectral_coclustering.py
     :lines: 17-
 
-**Total running time of the example:**  0.22 seconds
-( 0 minutes  0.22 seconds)
+**Total running time of the example:**  0.16 seconds
+( 0 minutes  0.16 seconds)
     

@@ -27,6 +27,6 @@ number of features selected with cross-validation.
 .. literalinclude:: plot_rfe_with_cross_validation.py
     :lines: 9-
 
-**Total running time of the example:**  2.92 seconds
-( 0 minutes  2.92 seconds)
+**Total running time of the example:**  2.47 seconds
+( 0 minutes  2.47 seconds)
     

@@ -51,6 +51,6 @@ to a normalized variance:  That is
 .. literalinclude:: plot_gp_regression.py
     :lines: 30-
 
-**Total running time of the example:**  1.27 seconds
-( 0 minutes  1.27 seconds)
+**Total running time of the example:**  1.04 seconds
+( 0 minutes  1.04 seconds)
     

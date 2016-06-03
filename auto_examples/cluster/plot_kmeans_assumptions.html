@@ -200,7 +200,7 @@ returns intuitive clusters despite unevenly sized blobs.</p>
 
 <span class="c"># Anisotropicly distributed data</span>
 <span class="n">transformation</span> <span class="o">=</span> <span class="p">[[</span> <span class="mf">0.60834549</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.63667341</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.40887718</span><span class="p">,</span> <span class="mf">0.85253229</span><span class="p">]]</span>
-<span class="n">X_aniso</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">transformation</span><span class="p">)</span>
+<span class="n">X_aniso</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.dot.html#numpy.dot"><span class="n">np</span><span class="o">.</span><span class="n">dot</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">transformation</span><span class="p">)</span>
 <span class="n">y_pred</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans"><span class="n">KMeans</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_aniso</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
@@ -218,7 +218,7 @@ returns intuitive clusters despite unevenly sized blobs.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s">&quot;Unequal Variance&quot;</span><span class="p">)</span>
 
 <span class="c"># Unevenly sized blobs</span>
-<span class="n">X_filtered</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">][:</span><span class="mi">500</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">][:</span><span class="mi">100</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">2</span><span class="p">][:</span><span class="mi">10</span><span class="p">]))</span>
+<span class="n">X_filtered</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.vstack.html#numpy.vstack"><span class="n">np</span><span class="o">.</span><span class="n">vstack</span></a><span class="p">((</span><span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">][:</span><span class="mi">500</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">][:</span><span class="mi">100</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="mi">2</span><span class="p">][:</span><span class="mi">10</span><span class="p">]))</span>
 <span class="n">y_pred</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans"><span class="n">KMeans</span></a><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_filtered</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
@@ -228,8 +228,8 @@ returns intuitive clusters despite unevenly sized blobs.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.36 seconds
-( 0 minutes  0.36 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.28 seconds
+( 0 minutes  0.28 seconds)</p>
 </div>
 
 

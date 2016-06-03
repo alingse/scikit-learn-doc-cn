@@ -31,6 +31,6 @@ In that case, the model with 2 components and full covariance
 .. literalinclude:: plot_gmm_selection.py
     :lines: 17-
 
-**Total running time of the example:**  1.14 seconds
-( 0 minutes  1.14 seconds)
+**Total running time of the example:**  1.03 seconds
+( 0 minutes  1.03 seconds)
     

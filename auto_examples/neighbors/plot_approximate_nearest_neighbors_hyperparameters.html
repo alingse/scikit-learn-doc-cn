@@ -222,13 +222,13 @@ neighbors.</p>
 <span class="n">neighbors_exact</span> <span class="o">=</span> <span class="n">nbrs</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X_query</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
 
 <span class="c"># Set `n_candidate` values</span>
-<span class="n">n_candidates_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">n_candidates_values</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.linspace.html#numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
 <span class="n">n_estimators_for_candidate_value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">n_iter</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">stds_accuracies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_for_candidate_value</span><span class="p">),</span>
+<span class="n">stds_accuracies</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_for_candidate_value</span><span class="p">),</span>
                             <span class="n">n_candidates_values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
                            <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">accuracies_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_for_candidate_value</span><span class="p">),</span>
+<span class="n">accuracies_c</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_for_candidate_value</span><span class="p">),</span>
                          <span class="n">n_candidates_values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 
 <span class="c"># LSH Forest is a stochastic index: perform several iteration to estimate</span>
@@ -246,16 +246,16 @@ neighbors.</p>
             <span class="c"># Get neighbors</span>
             <span class="n">neighbors_approx</span> <span class="o">=</span> <span class="n">lshf</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X_query</span><span class="p">,</span>
                                                <span class="n">return_distance</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
-            <span class="n">accuracy_c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">neighbors_approx</span><span class="p">,</span>
+            <span class="n">accuracy_c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.equal.html#numpy.equal"><span class="n">np</span><span class="o">.</span><span class="n">equal</span></a><span class="p">(</span><span class="n">neighbors_approx</span><span class="p">,</span>
                                               <span class="n">neighbors_exact</span><span class="p">))</span> <span class="o">/</span>
                               <span class="n">n_queries</span><span class="p">)</span>
 
-        <span class="n">stds_accuracies</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">accuracy_c</span><span class="p">)</span>
-        <span class="n">accuracies_c</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">accuracy_c</span><span class="p">)</span>
+        <span class="n">stds_accuracies</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.std.html#numpy.std"><span class="n">np</span><span class="o">.</span><span class="n">std</span></a><span class="p">(</span><span class="n">accuracy_c</span><span class="p">)</span>
+        <span class="n">accuracies_c</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.mean.html#numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">accuracy_c</span><span class="p">)</span>
 
 <span class="c"># Set `n_estimators` values</span>
 <span class="n">n_estimators_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
-<span class="n">accuracies_trees</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">accuracies_trees</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">n_estimators_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 
 <span class="c"># Calculate average accuracy for each value of `n_estimators`</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n_estimators</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">n_estimators_values</span><span class="p">):</span>
@@ -264,7 +264,7 @@ neighbors.</p>
     <span class="n">lshf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_index</span><span class="p">)</span>
     <span class="c"># Get neighbors</span>
     <span class="n">neighbors_approx</span> <span class="o">=</span> <span class="n">lshf</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X_query</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
-    <span class="n">accuracies_trees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">neighbors_approx</span><span class="p">,</span>
+    <span class="n">accuracies_trees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.equal.html#numpy.equal"><span class="n">np</span><span class="o">.</span><span class="n">equal</span></a><span class="p">(</span><span class="n">neighbors_approx</span><span class="p">,</span>
                                           <span class="n">neighbors_exact</span><span class="p">))</span><span class="o">/</span><span class="n">n_queries</span>
 
 <span class="c">###############################################################################</span>
@@ -300,8 +300,8 @@ neighbors.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  28.82 seconds
-( 0 minutes  28.82 seconds)</p>
+<p><strong>Total running time of the example:</strong>  28.43 seconds
+( 0 minutes  28.43 seconds)</p>
 </div>
 
 

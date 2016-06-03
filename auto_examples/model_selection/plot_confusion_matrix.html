@@ -212,7 +212,7 @@ using <a class="reference internal" href="../../modules/grid_search.html#grid-se
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.metrics.confusion_matrix.html#sklearn.metrics.confusion_matrix"><span class="n">confusion_matrix</span></a>
 
 <span class="c"># import some data to play with</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">iris</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris"><span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span></a><span class="p">()</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
 
@@ -229,7 +229,7 @@ using <a class="reference internal" href="../../modules/grid_search.html#grid-se
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="n">title</span><span class="p">)</span>
     <a href="http://matplotlib.org/api/colorbar_api.html#matplotlib.colorbar"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span></a><span class="p">()</span>
-    <span class="n">tick_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+    <span class="n">tick_marks</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xticks"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span></a><span class="p">(</span><span class="n">tick_marks</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
     <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.yticks"><span class="n">plt</span><span class="o">.</span><span class="n">yticks</span></a><span class="p">(</span><span class="n">tick_marks</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
     <a href="http://matplotlib.org/api/tight_layout_api.html#matplotlib.tight_layout"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
@@ -247,7 +247,7 @@ using <a class="reference internal" href="../../modules/grid_search.html#grid-se
 
 <span class="c"># Normalize the confusion matrix by row (i.e by the number of samples</span>
 <span class="c"># in each class)</span>
-<span class="n">cm_normalized</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">cm</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="n">cm_normalized</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">cm</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/arrays.indexing.html#numpy.newaxis"><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span></a><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s">&#39;Normalized confusion matrix&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cm_normalized</span><span class="p">)</span>
 <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
@@ -256,8 +256,8 @@ using <a class="reference internal" href="../../modules/grid_search.html#grid-se
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.32 seconds
-( 0 minutes  0.32 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.31 seconds
+( 0 minutes  0.31 seconds)</p>
 </div>
 
 

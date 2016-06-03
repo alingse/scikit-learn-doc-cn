@@ -201,7 +201,7 @@
 <span class="c">##############################################################################</span>
 <span class="c"># Compute DBSCAN</span>
 <span class="n">db</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN"><span class="n">DBSCAN</span></a><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">core_samples_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="n">core_samples_mask</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros_like.html#numpy.zeros_like"><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span></a><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
 <span class="n">core_samples_mask</span><span class="p">[</span><span class="n">db</span><span class="o">.</span><span class="n">core_sample_indices_</span><span class="p">]</span> <span class="o">=</span> <span class="k">True</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">labels_</span>
 
@@ -225,7 +225,7 @@
 
 <span class="c"># Black removed and is used for noise instead.</span>
 <span class="n">unique_labels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)))</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span><span class="p">(</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.linspace.html#numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">)))</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
         <span class="c"># Black used for noise.</span>
@@ -245,8 +245,8 @@
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.28 seconds
-( 0 minutes  0.28 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.24 seconds
+( 0 minutes  0.24 seconds)</p>
 </div>
 
 

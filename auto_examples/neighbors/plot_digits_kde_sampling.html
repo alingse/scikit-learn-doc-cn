@@ -196,7 +196,7 @@ of the data.</p>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c"># use grid search cross-validation to optimize the bandwidth</span>
-<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;bandwidth&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)}</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;bandwidth&#39;</span><span class="p">:</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.logspace.html#numpy.logspace"><span class="n">np</span><span class="o">.</span><span class="n">logspace</span></a><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)}</span>
 <span class="n">grid</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.grid_search.GridSearchCV.html#sklearn.grid_search.GridSearchCV"><span class="n">GridSearchCV</span></a><span class="p">(</span><a href="../../modules/generated/sklearn.neighbors.KernelDensity.html#sklearn.neighbors.KernelDensity"><span class="n">KernelDensity</span></a><span class="p">(),</span> <span class="n">params</span><span class="p">)</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
@@ -231,8 +231,8 @@ of the data.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  10.28 seconds
-( 0 minutes  10.28 seconds)</p>
+<p><strong>Total running time of the example:</strong>  8.74 seconds
+( 0 minutes  8.74 seconds)</p>
 </div>
 
 

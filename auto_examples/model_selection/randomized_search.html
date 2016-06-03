@@ -185,18 +185,18 @@ simultaneously using grid search, but pick only the ones deemed most important.<
 
 <span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
 <span class="kn">from</span> <span class="nn">operator</span> <span class="k">import</span> <span class="n">itemgetter</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">randint</span> <span class="k">as</span> <span class="n">sp_randint</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">randint</span> <span class="k">as</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.stats.randint.html#scipy.stats.randint"><span class="n">sp_randint</span></a>
 
 <span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.grid_search.GridSearchCV.html#sklearn.grid_search.GridSearchCV"><span class="n">GridSearchCV</span></a><span class="p">,</span> <a href="../../modules/generated/sklearn.grid_search.RandomizedSearchCV.html#sklearn.grid_search.RandomizedSearchCV"><span class="n">RandomizedSearchCV</span></a>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.datasets.load_digits.html#sklearn.datasets.load_digits"><span class="n">load_digits</span></a>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <a href="../../modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier"><span class="n">RandomForestClassifier</span></a>
 
 <span class="c"># get some data</span>
 <span class="n">digits</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.datasets.load_digits.html#sklearn.datasets.load_digits"><span class="n">load_digits</span></a><span class="p">()</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
 
 <span class="c"># build a classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier"><span class="n">RandomForestClassifier</span></a><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 
 <span class="c"># Utility function to report best scores</span>
@@ -213,9 +213,9 @@ simultaneously using grid search, but pick only the ones deemed most important.<
 
 <span class="c"># specify parameters and distributions to sample from</span>
 <span class="n">param_dist</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="k">None</span><span class="p">],</span>
-              <span class="s">&quot;max_features&quot;</span><span class="p">:</span> <span class="n">sp_randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
-              <span class="s">&quot;min_samples_split&quot;</span><span class="p">:</span> <span class="n">sp_randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
-              <span class="s">&quot;min_samples_leaf&quot;</span><span class="p">:</span> <span class="n">sp_randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
+              <span class="s">&quot;max_features&quot;</span><span class="p">:</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.stats.randint.html#scipy.stats.randint"><span class="n">sp_randint</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
+              <span class="s">&quot;min_samples_split&quot;</span><span class="p">:</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.stats.randint.html#scipy.stats.randint"><span class="n">sp_randint</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
+              <span class="s">&quot;min_samples_leaf&quot;</span><span class="p">:</span> <a href="http://docs.scipy.org/doc/scipy-0.11.0/reference/generated/scipy.stats.randint.html#scipy.stats.randint"><span class="n">sp_randint</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
               <span class="s">&quot;bootstrap&quot;</span><span class="p">:</span> <span class="p">[</span><span class="k">True</span><span class="p">,</span> <span class="k">False</span><span class="p">],</span>
               <span class="s">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;gini&quot;</span><span class="p">,</span> <span class="s">&quot;entropy&quot;</span><span class="p">]}</span>
 

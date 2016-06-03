@@ -188,11 +188,11 @@ randomly) is also shown.</p>
 </ul>
 <p><strong>Script output</strong>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="n">Fitting</span> <span class="n">model</span> <span class="n">on</span> <span class="n">a</span> <span class="n">small</span> <span class="n">sub</span><span class="o">-</span><span class="n">sample</span> <span class="n">of</span> <span class="n">the</span> <span class="n">data</span>
-<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.412</span><span class="n">s</span><span class="o">.</span>
+<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.587</span><span class="n">s</span><span class="o">.</span>
 <span class="n">Predicting</span> <span class="n">color</span> <span class="n">indices</span> <span class="n">on</span> <span class="n">the</span> <span class="n">full</span> <span class="n">image</span> <span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="n">means</span><span class="p">)</span>
-<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.373</span><span class="n">s</span><span class="o">.</span>
+<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.409</span><span class="n">s</span><span class="o">.</span>
 <span class="n">Predicting</span> <span class="n">color</span> <span class="n">indices</span> <span class="n">on</span> <span class="n">the</span> <span class="n">full</span> <span class="n">image</span> <span class="p">(</span><span class="n">random</span><span class="p">)</span>
-<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.237</span><span class="n">s</span><span class="o">.</span>
+<span class="n">done</span> <span class="ow">in</span> <span class="mf">0.254</span><span class="n">s</span><span class="o">.</span>
 </pre></div>
 </div>
 <p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/plot_color_quantization.py" download=""><code class="xref download docutils literal"><span class="pre">plot_color_quantization.py</span></code></a></p>
@@ -219,12 +219,12 @@ randomly) is also shown.</p>
 <span class="c"># Convert to floats instead of the default 8 bits integer coding. Dividing by</span>
 <span class="c"># 255 is important so that plt.imshow behaves works well on float data (need to</span>
 <span class="c"># be in the range [0-1]</span>
-<span class="n">china</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">china</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
+<span class="n">china</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.array.html#numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><span class="n">china</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
 
 <span class="c"># Load Image and transform to a 2D numpy array.</span>
 <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">original_shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">china</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">3</span>
-<span class="n">image_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">china</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+<span class="n">image_array</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.reshape.html#numpy.reshape"><span class="n">np</span><span class="o">.</span><span class="n">reshape</span></a><span class="p">(</span><span class="n">china</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Fitting model on a small sub-sample of the data&quot;</span><span class="p">)</span>
 <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
@@ -251,7 +251,7 @@ randomly) is also shown.</p>
 <span class="k">def</span> <span class="nf">recreate_image</span><span class="p">(</span><span class="n">codebook</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Recreate the (compressed) image from the code book &amp; labels&quot;&quot;&quot;</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">codebook</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+    <span class="n">image</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.zeros.html#numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
     <span class="n">label_idx</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
@@ -283,8 +283,8 @@ randomly) is also shown.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  1.93 seconds
-( 0 minutes  1.93 seconds)</p>
+<p><strong>Total running time of the example:</strong>  2.45 seconds
+( 0 minutes  2.45 seconds)</p>
 </div>
 
 

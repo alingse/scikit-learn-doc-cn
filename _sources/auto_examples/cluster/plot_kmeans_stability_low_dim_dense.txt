@@ -55,6 +55,6 @@ clusters widely spaced.
 .. literalinclude:: plot_kmeans_stability_low_dim_dense.py
     :lines: 24-
 
-**Total running time of the example:**  3.74 seconds
-( 0 minutes  3.74 seconds)
+**Total running time of the example:**  3.53 seconds
+( 0 minutes  3.53 seconds)
     

@@ -197,7 +197,7 @@ of the regularization parameter.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Computing regularization path using the LARS ...&quot;</span><span class="p">)</span>
 <span class="n">alphas</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">coefs</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path"><span class="n">linear_model</span><span class="o">.</span><span class="n">lars_path</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&#39;lasso&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 
-<span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">xx</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">xx</span> <span class="o">/=</span> <span class="n">xx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">coefs</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
@@ -210,8 +210,8 @@ of the regularization parameter.</p>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the example:</strong>  0.15 seconds
-( 0 minutes  0.15 seconds)</p>
+<p><strong>Total running time of the example:</strong>  0.12 seconds
+( 0 minutes  0.12 seconds)</p>
 </div>
 
 

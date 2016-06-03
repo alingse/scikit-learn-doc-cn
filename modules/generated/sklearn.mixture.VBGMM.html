@@ -169,7 +169,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.mixture" title="sklearn.mixture"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.mixture</span></code></a>.VBGMM<a class="headerlink" href="#sklearn-mixture-vbgmm" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sklearn.mixture.VBGMM">
-<em class="property">class </em><code class="descclassname">sklearn.mixture.</code><code class="descname">VBGMM</code><span class="sig-paren">(</span><em>n_components=1</em>, <em>covariance_type='diag'</em>, <em>alpha=1.0</em>, <em>random_state=None</em>, <em>thresh=None</em>, <em>tol=0.001</em>, <em>verbose=0</em>, <em>min_covar=None</em>, <em>n_iter=10</em>, <em>params='wmc'</em>, <em>init_params='wmc'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/dpgmm.py#L615"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sklearn.mixture.</code><code class="descname">VBGMM</code><span class="sig-paren">(</span><em>n_components=1</em>, <em>covariance_type='diag'</em>, <em>alpha=1.0</em>, <em>random_state=None</em>, <em>thresh=None</em>, <em>tol=0.001</em>, <em>verbose=0</em>, <em>min_covar=None</em>, <em>n_iter=10</em>, <em>params='wmc'</em>, <em>init_params='wmc'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/dpgmm.py#L615"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variational Inference for the Gaussian Mixture Model</p>
 <p>Variational inference for a Gaussian mixture model probability
 distribution. This class allows for easy and efficient inference
@@ -321,12 +321,12 @@ otherwise.</p>
 </table>
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>n_components=1</em>, <em>covariance_type='diag'</em>, <em>alpha=1.0</em>, <em>random_state=None</em>, <em>thresh=None</em>, <em>tol=0.001</em>, <em>verbose=0</em>, <em>min_covar=None</em>, <em>n_iter=10</em>, <em>params='wmc'</em>, <em>init_params='wmc'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/dpgmm.py#L700"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>n_components=1</em>, <em>covariance_type='diag'</em>, <em>alpha=1.0</em>, <em>random_state=None</em>, <em>thresh=None</em>, <em>tol=0.001</em>, <em>verbose=0</em>, <em>min_covar=None</em>, <em>n_iter=10</em>, <em>params='wmc'</em>, <em>init_params='wmc'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/dpgmm.py#L700"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.aic">
-<code class="descname">aic</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L648"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.aic" title="Permalink to this definition">¶</a></dt>
+<code class="descname">aic</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L648"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.aic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Akaike information criterion for the current model fit
 and the proposed data</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -343,7 +343,7 @@ and the proposed data</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.bic">
-<code class="descname">bic</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L633"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.bic" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bic</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L633"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.bic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bayesian information criterion for the current model fit
 and the proposed data</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -360,7 +360,7 @@ and the proposed data</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L579"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.fit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L579"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate model parameters with the EM algorithm.</p>
 <p>A initialization step is performed before entering the
 expectation-maximization (EM) algorithm. If you want to avoid
@@ -387,7 +387,7 @@ corresponds to a single data point.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.fit_predict">
-<code class="descname">fit_predict</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L426"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.fit_predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fit_predict</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L426"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.fit_predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit and then predict labels for data.</p>
 <p>Warning: due to the final maximization step in the EM algorithm,
 with low iterations the prediction may not be 100% accurate</p>
@@ -408,7 +408,7 @@ with low iterations the prediction may not be 100% accurate</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.get_params">
-<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.get_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.get_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get parameters for this estimator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -433,13 +433,13 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.lower_bound">
-<code class="descname">lower_bound</code><span class="sig-paren">(</span><em>X</em>, <em>z</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/dpgmm.py#L462"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.lower_bound" title="Permalink to this definition">¶</a></dt>
+<code class="descname">lower_bound</code><span class="sig-paren">(</span><em>X</em>, <em>z</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/dpgmm.py#L462"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.lower_bound" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a lower bound on model evidence based on X and membership</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.predict">
-<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L353"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.predict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L353"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict label for data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -455,7 +455,7 @@ contained subobjects that are estimators.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.predict_proba">
-<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L367"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.predict_proba" title="Permalink to this definition">¶</a></dt>
+<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L367"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.predict_proba" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict posterior probability of data under each Gaussian
 in the model.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -478,7 +478,7 @@ in the model.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.sample">
-<code class="descname">sample</code><span class="sig-paren">(</span><em>n_samples=1</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L384"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.sample" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sample</code><span class="sig-paren">(</span><em>n_samples=1</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L384"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate random samples from the model.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -502,7 +502,7 @@ in the model.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.score">
-<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/gmm.py#L336"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.score" title="Permalink to this definition">¶</a></dt>
+<code class="descname">score</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/gmm.py#L336"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the log probability under the model.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -527,7 +527,7 @@ corresponds to a single data point.</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.score_samples">
-<code class="descname">score_samples</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/mixture/dpgmm.py#L709"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.score_samples" title="Permalink to this definition">¶</a></dt>
+<code class="descname">score_samples</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/mixture/dpgmm.py#L709"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.score_samples" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the likelihood of the data under the model.</p>
 <p>Compute the bound on log probability of X under the model
 and return the posterior distribution (responsibilities) of
@@ -562,7 +562,7 @@ observation</p>
 
 <dl class="method">
 <dt id="sklearn.mixture.VBGMM.set_params">
-<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/effe7a1/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.set_params" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/base.py#L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.mixture.VBGMM.set_params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the parameters of this estimator.</p>
 <p>The method works on simple estimators as well as on nested objects
 (such as pipelines). The former have parameters of the form

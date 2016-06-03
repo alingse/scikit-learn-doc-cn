@@ -77,6 +77,6 @@ a BayesianRidge as supervised estimator.
 .. literalinclude:: plot_feature_agglomeration_vs_univariate_selection.py
     :lines: 15-
 
-**Total running time of the example:**  1.37 seconds
-( 0 minutes  1.37 seconds)
+**Total running time of the example:**  1.15 seconds
+( 0 minutes  1.15 seconds)
     

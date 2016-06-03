@@ -28,6 +28,6 @@ regression and ridge regression complete the lower half of those faces.
 .. literalinclude:: plot_multioutput_face_completion.py
     :lines: 14-
 
-**Total running time of the example:**  8.01 seconds
-( 0 minutes  8.01 seconds)
+**Total running time of the example:**  6.18 seconds
+( 0 minutes  6.18 seconds)
     

@@ -45,6 +45,6 @@ how `k`-means is used for vector quantization.
 .. literalinclude:: plot_lena_compress.py
     :lines: 14-
 
-**Total running time of the example:**  2.26 seconds
-( 0 minutes  2.26 seconds)
+**Total running time of the example:**  1.81 seconds
+( 0 minutes  1.81 seconds)
     
