@@ -167,7 +167,7 @@
 </li>
 <li><a class="reference internal" href="#elastic-net">1.1.4. Elastic Net弹性网络</a></li>
 <li><a class="reference internal" href="#multi-task-lasso">1.1.5. Multi-task Lasso</a></li>
-<li><a class="reference internal" href="#least-angle-regression">1.1.6. Least Angle Regression</a></li>
+<li><a class="reference internal" href="#least-angle-regression">1.1.6. Least Angle Regression最小角回归</a></li>
 <li><a class="reference internal" href="#lars-lasso">1.1.7. LARS Lasso</a><ul>
 <li><a class="reference internal" href="#mathematical-formulation">1.1.7.1. Mathematical formulation</a></li>
 </ul>
@@ -226,7 +226,7 @@ Across the module, we designate the vector <img class="math" src="../_images/mat
 <a class="reference internal" href="#logistic-regression"><span class="std std-ref">Logistic regression</span></a>.</p>
 <div class="section" id="ordinary-least-squares">
 <span id="id1"></span><h2>1.1.1. 普通最小二乘法<a class="headerlink" href="#ordinary-least-squares" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression" title="sklearn.linear_model.LinearRegression"><code class="xref py py-class docutils literal"><span class="pre">LinearRegression</span></code></a> 用系数：math: <cite>w = (w_1,...,w_p)</cite> 来拟合一个线性模型,
+<p><a class="reference internal" href="generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression" title="sklearn.linear_model.LinearRegression"><code class="xref py py-class docutils literal"><span class="pre">LinearRegression</span></code></a> 用系数 ：math:<cite>w = (w_1,...,w_p)</cite> 来拟合一个线性模型,
 使得数据集实际观测数据和预测数据（估计值）之间残差平方和最小。数学形式可表达为:</p>
 <div class="math">
 <p><img src="../_images/math/7ea171d25d2e56505bcf3fcc6b09674676d91d0e.png" alt="\underset{w}{min\,} {|| X w - y||_2}^2"/></p>
@@ -261,7 +261,7 @@ Across the module, we designate the vector <img class="math" src="../_images/mat
 <p><a class="reference internal" href="generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge" title="sklearn.linear_model.Ridge"><code class="xref py py-class docutils literal"><span class="pre">Ridge</span></code></a> 岭回归通过对回归稀疏增加罚项来解决 <a class="reference internal" href="#ordinary-least-squares"><span class="std std-ref">普通最小二乘法</span></a> 的一些问题.岭回归系数通过最小化带罚项的残差平方和</p>
 <div class="math">
 <p><img src="../_images/math/5ec08243d51e4685a16c6a6c3031469dd2608855.png" alt="\underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2}"/></p>
-</div><p>上述公式中,:math:<cite>alpha geq 0</cite> 是控制模型复杂度的因子(可看做收缩率的大小) : <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 越大，收缩率越大，那么系数对于共线性的鲁棒性更强</p>
+</div><p>上述公式中, <img class="math" src="../_images/math/c8b8590ededc6cdd4c311a1c5584090e60b95be4.png" alt="\alpha \geq 0"/> 是控制模型复杂度的因子(可看做收缩率的大小) : <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 越大，收缩率越大，那么系数对于共线性的鲁棒性更强</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_ridge_path.html"><img alt="../_images/plot_ridge_path_0011.png" src="../_images/plot_ridge_path_0011.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
@@ -319,7 +319,7 @@ Across the module, we designate the vector <img class="math" src="../_images/mat
 <div class="math">
 <p><img src="../_images/math/a5af894a1f681f0853cbd7983b22c6e9d42d15ab.png" alt="\underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1}"/></p>
 </div><p>lasso 解决带 <img class="math" src="../_images/math/984dfa7241b6cabdc9e84f69458e973887308820.png" alt="\alpha ||w||_1"/> 罚项的最小平方和，其中 <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 是一个常量，<img class="math" src="../_images/math/a31e290885e74a51fa7f4d3e382e257a552587c8.png" alt="||w||_1"/> 是参数向量的 <img class="math" src="../_images/math/ed1224e5faf752a5cd66f7e2468ecc4f14208cf9.png" alt="\ell_1"/>-norm</p>
-<p><a class="reference internal" href="generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso" title="sklearn.linear_model.Lasso"><code class="xref py py-class docutils literal"><span class="pre">Lasso</span></code></a> 类实现使用了坐标下降法(一种非梯度优化算法) 来拟合系数.参考另一种实现 <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression</span></a></p>
+<p><a class="reference internal" href="generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso" title="sklearn.linear_model.Lasso"><code class="xref py py-class docutils literal"><span class="pre">Lasso</span></code></a> 类实现使用了坐标下降法(一种非梯度优化算法) 来拟合系数.参考另一种实现 <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression最小角回归</span></a></p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">linear_model</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -357,7 +357,7 @@ use <a class="reference internal" href="feature_selection.html#randomized-l1"><s
 <div class="section" id="id8">
 <h4>1.1.3.1.1. 使用交叉验证<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>scikit-learn 暴露以下两个类 <a class="reference internal" href="generated/sklearn.linear_model.LassoCV.html#sklearn.linear_model.LassoCV" title="sklearn.linear_model.LassoCV"><code class="xref py py-class docutils literal"><span class="pre">LassoCV</span></code></a> 和 <a class="reference internal" href="generated/sklearn.linear_model.LassoLarsCV.html#sklearn.linear_model.LassoLarsCV" title="sklearn.linear_model.LassoLarsCV"><code class="xref py py-class docutils literal"><span class="pre">LassoLarsCV</span></code></a> 可以设置 Lasso <code class="docutils literal"><span class="pre">alpha</span></code> 参数.
-<a class="reference internal" href="generated/sklearn.linear_model.LassoCV.html#sklearn.linear_model.LassoCV" title="sklearn.linear_model.LassoCV"><code class="xref py py-class docutils literal"><span class="pre">LassoCV</span></code></a> 基于下面解释的算法 <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression</span></a></p>
+<a class="reference internal" href="generated/sklearn.linear_model.LassoCV.html#sklearn.linear_model.LassoCV" title="sklearn.linear_model.LassoCV"><code class="xref py py-class docutils literal"><span class="pre">LassoCV</span></code></a> 基于下面解释的算法 <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression最小角回归</span></a></p>
 <p>对于含有很多共线性的高维的数据集，<a class="reference internal" href="generated/sklearn.linear_model.LassoCV.html#sklearn.linear_model.LassoCV" title="sklearn.linear_model.LassoCV"><code class="xref py py-class docutils literal"><span class="pre">LassoCV</span></code></a> 是最合适不过了。然而，<a class="reference internal" href="generated/sklearn.linear_model.LassoLarsCV.html#sklearn.linear_model.LassoLarsCV" title="sklearn.linear_model.LassoLarsCV"><code class="xref py py-class docutils literal"><span class="pre">LassoLarsCV</span></code></a> 在寻找 <cite>alpha</cite> 参数更相关的值时更具有优势，
 并且如果样本相比于观测的数量时，通常比  <a class="reference internal" href="generated/sklearn.linear_model.LassoCV.html#sklearn.linear_model.LassoCV" title="sklearn.linear_model.LassoCV"><code class="xref py py-class docutils literal"><span class="pre">LassoCV</span></code></a> 更快.</p>
 <p class="centered">
@@ -405,14 +405,10 @@ use <a class="reference internal" href="feature_selection.html#randomized-l1"><s
 </div>
 <div class="section" id="multi-task-lasso">
 <span id="id11"></span><h2>1.1.5. Multi-task Lasso<a class="headerlink" href="#multi-task-lasso" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso" title="sklearn.linear_model.MultiTaskLasso"><code class="xref py py-class docutils literal"><span class="pre">MultiTaskLasso</span></code></a> is a linear model that estimates sparse
-coefficients for multiple regression problems jointly: <code class="docutils literal"><span class="pre">y</span></code> is a 2D array,
-of shape (n_samples, n_tasks). The constraint is that the selected
-features are the same for all the regression problems, also called tasks.</p>
-<p>The following figure compares the location of the non-zeros in W obtained
-with a simple Lasso or a MultiTaskLasso. The Lasso estimates yields
-scattered non-zeros while the non-zeros of the MultiTaskLasso are full
-columns.</p>
+<p><a class="reference internal" href="generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso" title="sklearn.linear_model.MultiTaskLasso"><code class="xref py py-class docutils literal"><span class="pre">MultiTaskLasso</span></code></a> 是一种估计多元回归系数的线性模型， <code class="docutils literal"><span class="pre">y</span></code> 是一个2D数组，形式为(n_samples,n_tasks).
+其限制条件是和其他回归问题一样，是选择的特征，同样称为 tasks.</p>
+<p>接下来的图示比较了通过使用一个简单的Lasso或者MultiTaskLasso得到的W中非零的位置。
+Lasso 估计量分散着非零值而MultiTaskLasso所有的列全部是非零的。</p>
 <p class="centered">
 <strong><a class="reference external" href="../auto_examples/linear_model/plot_multi_task_lasso_support.html"><img alt="multi_task_lasso_1" src="../_images/plot_multi_task_lasso_support_0011.png" style="width: 384.0px; height: 240.0px;" /></a> <a class="reference external" href="../auto_examples/linear_model/plot_multi_task_lasso_support.html"><img alt="multi_task_lasso_2" src="../_images/plot_multi_task_lasso_support_0021.png" style="width: 384.0px; height: 288.0px;" /></a></strong></p><p class="centered">
 <strong>Fitting a time-series model, imposing that any active feature be active at all times.</strong></p><div class="topic">
@@ -421,59 +417,42 @@ columns.</p>
 <li><a class="reference internal" href="../auto_examples/linear_model/plot_multi_task_lasso_support.html#example-linear-model-plot-multi-task-lasso-support-py"><span class="std std-ref">Joint feature selection with multi-task Lasso</span></a></li>
 </ul>
 </div>
-<p>Mathematically, it consists of a linear model trained with a mixed
-<img class="math" src="../_images/math/ed1224e5faf752a5cd66f7e2468ecc4f14208cf9.png" alt="\ell_1"/> <img class="math" src="../_images/math/00534d854d26fe2a55c1065948f9b94f66255a4a.png" alt="\ell_2"/> prior as regularizer.
-The objective function to minimize is:</p>
+<p>数学表达上，它包含了一个使用 <img class="math" src="../_images/math/ed1224e5faf752a5cd66f7e2468ecc4f14208cf9.png" alt="\ell_1"/> <img class="math" src="../_images/math/00534d854d26fe2a55c1065948f9b94f66255a4a.png" alt="\ell_2"/> 先验作为正则化因子。其目标函数是最小化:</p>
 <div class="math">
 <p><img src="../_images/math/8b905c7a16b7b5bc5a25379a4b6c7672955821e7.png" alt="\underset{w}{min\,} { \frac{1}{2n_{samples}} ||X W - Y||_2 ^ 2 + \alpha ||W||_{21}}"/></p>
 </div><p>where;</p>
 <div class="math">
 <p><img src="../_images/math/6edca30f77dc31f69800c7fbfff9829666e2264f.png" alt="||W||_{2 1} = \sum_i \sqrt{\sum_j w_{ij}^2}"/></p>
-</div><p>The implementation in the class <a class="reference internal" href="generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso" title="sklearn.linear_model.MultiTaskLasso"><code class="xref py py-class docutils literal"><span class="pre">MultiTaskLasso</span></code></a> uses coordinate descent as
-the algorithm to fit the coefficients.</p>
+</div><p><a class="reference internal" href="generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso" title="sklearn.linear_model.MultiTaskLasso"><code class="xref py py-class docutils literal"><span class="pre">MultiTaskLasso</span></code></a> 类的实现使用了坐标下降算法来拟合系数。</p>
 </div>
 <div class="section" id="least-angle-regression">
-<span id="id12"></span><h2>1.1.6. Least Angle Regression<a class="headerlink" href="#least-angle-regression" title="Permalink to this headline">¶</a></h2>
-<p>Least-angle regression (LARS) is a regression algorithm for
-high-dimensional data, developed by Bradley Efron, Trevor Hastie, Iain
-Johnstone and Robert Tibshirani.</p>
-<p>The advantages of LARS are:</p>
-<blockquote>
-<div><ul class="simple">
-<li>It is numerically efficient in contexts where p &gt;&gt; n (i.e., when the
-number of dimensions is significantly greater than the number of
-points)</li>
-<li>It is computationally just as fast as forward selection and has
-the same order of complexity as an ordinary least squares.</li>
-<li>It produces a full piecewise linear solution path, which is
-useful in cross-validation or similar attempts to tune the model.</li>
-<li>If two variables are almost equally correlated with the response,
-then their coefficients should increase at approximately the same
-rate. The algorithm thus behaves as intuition would expect, and
-also is more stable.</li>
+<span id="id12"></span><h2>1.1.6. Least Angle Regression最小角回归<a class="headerlink" href="#least-angle-regression" title="Permalink to this headline">¶</a></h2>
+<p>最小角回归是针对高维数据的回归算法，由Bradley Efron, Trevor Hastie, Iain Johnstone and Robert Tibshirani开发。</p>
+<dl class="docutils">
+<dt>LARS的优势如下:</dt>
+<dd><ul class="first last simple">
+<li>当 p &gt;&gt; n 时计算是非常高效的。（比如当维数远大于点数）</li>
+<li>它和前向选择计算速度差不多一样块，并且和普通最小二乘复杂度一样。</li>
+<li>它生成一个完整的分段线性的解的路径，这对于交叉验证或者类似的尝试来调整模型是有效的。</li>
+<li>如果两个变量的相应总是相同，那么它们的系数应该有近似相同的增长速率。因此这算法和直觉判断一样，并且增长总是稳定的。</li>
+<li>这个算法对于其他评估模型来说很容易被修改来产生解，和Lasso差不多。（待修改）</li>
 <li>It is easily modified to produce solutions for other estimators,
 like the Lasso.</li>
 </ul>
-</div></blockquote>
-<p>The disadvantages of the LARS method include:</p>
+</dd>
+</dl>
+<p>LARS方法的缺点包括：</p>
 <blockquote>
 <div><ul class="simple">
-<li>Because LARS is based upon an iterative refitting of the
-residuals, it would appear to be especially sensitive to the
-effects of noise. This problem is discussed in detail by Weisberg
-in the discussion section of the Efron et al. (2004) Annals of
-Statistics article.</li>
+<li>因为LARS是基于剩余误差多次迭代拟合,所以对噪声的影响比较敏感。这个问题在 Efron et al. (2004) Annals of Statistics article这篇文章中讨论部分详细谈论了。</li>
 </ul>
 </div></blockquote>
-<p>The LARS model can be used using estimator <a class="reference internal" href="generated/sklearn.linear_model.Lars.html#sklearn.linear_model.Lars" title="sklearn.linear_model.Lars"><code class="xref py py-class docutils literal"><span class="pre">Lars</span></code></a>, or its
-low-level implementation <a class="reference internal" href="generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path" title="sklearn.linear_model.lars_path"><code class="xref py py-func docutils literal"><span class="pre">lars_path</span></code></a>.</p>
+<p>LARS模型可以使用estimator <a class="reference internal" href="generated/sklearn.linear_model.Lars.html#sklearn.linear_model.Lars" title="sklearn.linear_model.Lars"><code class="xref py py-class docutils literal"><span class="pre">Lars</span></code></a> ，或者底层实现 <a class="reference internal" href="generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path" title="sklearn.linear_model.lars_path"><code class="xref py py-func docutils literal"><span class="pre">lars_path</span></code></a> 。</p>
 </div>
 <div class="section" id="lars-lasso">
 <h2>1.1.7. LARS Lasso<a class="headerlink" href="#lars-lasso" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="generated/sklearn.linear_model.LassoLars.html#sklearn.linear_model.LassoLars" title="sklearn.linear_model.LassoLars"><code class="xref py py-class docutils literal"><span class="pre">LassoLars</span></code></a> is a lasso model implemented using the LARS
-algorithm, and unlike the implementation based on coordinate_descent,
-this yields the exact solution, which is piecewise linear as a
-function of the norm of its coefficients.</p>
+<p><a class="reference internal" href="generated/sklearn.linear_model.LassoLars.html#sklearn.linear_model.LassoLars" title="sklearn.linear_model.LassoLars"><code class="xref py py-class docutils literal"><span class="pre">LassoLars</span></code></a> 是一个使用LARS算法实现的lasso模型。和基于坐标下降的实现不同的是，它产生的是精确的解，和一个函数标准系数一样是精确线性的。
+which is piecewise linear as a function of the norm of its coefficients.（待修正）</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_lasso_lars.html"><img alt="../_images/plot_lasso_lars_0011.png" src="../_images/plot_lasso_lars_0011.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
@@ -498,10 +477,7 @@ the regularization parameter almost for free, thus a common operation
 consist of retrieving the path with function <a class="reference internal" href="generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path" title="sklearn.linear_model.lars_path"><code class="xref py py-func docutils literal"><span class="pre">lars_path</span></code></a></p>
 <div class="section" id="mathematical-formulation">
 <h3>1.1.7.1. Mathematical formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this headline">¶</a></h3>
-<p>The algorithm is similar to forward stepwise regression, but instead
-of including variables at each step, the estimated parameters are
-increased in a direction equiangular to each one&#8217;s correlations with
-the residual.</p>
+<p>这个算法和逐步回归很相似，但是除了在每一步包含变量之外，估计的参数沿着每一个对应的残差的对角方向增长。（待校正）</p>
 <p>Instead of giving a vector result, the LARS solution consists of a
 curve denoting the solution for each value of the L1 norm of the
 parameter vector. The full coefficients path is stored in the array
@@ -521,7 +497,7 @@ by Hastie et al.</li>
 <p><a class="reference internal" href="generated/sklearn.linear_model.OrthogonalMatchingPursuit.html#sklearn.linear_model.OrthogonalMatchingPursuit" title="sklearn.linear_model.OrthogonalMatchingPursuit"><code class="xref py py-class docutils literal"><span class="pre">OrthogonalMatchingPursuit</span></code></a> and <a class="reference internal" href="generated/sklearn.linear_model.orthogonal_mp.html#sklearn.linear_model.orthogonal_mp" title="sklearn.linear_model.orthogonal_mp"><code class="xref py py-func docutils literal"><span class="pre">orthogonal_mp</span></code></a> implements the OMP
 algorithm for approximating the fit of a linear model with constraints imposed
 on the number of non-zero coefficients (ie. the L <sub>0</sub> pseudo-norm).</p>
-<p>Being a forward feature selection method like <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression</span></a>,
+<p>Being a forward feature selection method like <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression最小角回归</span></a>,
 orthogonal matching pursuit can approximate the optimum solution vector with a
 fixed number of non-zero elements:</p>
 <div class="math">

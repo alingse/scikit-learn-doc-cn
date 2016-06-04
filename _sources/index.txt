@@ -7,11 +7,11 @@
         <div class="container index-upper">
         <div class="row-fluid">
 
-        <!-- Classification -->
+        <!-- 分类 -->
         <div class="span4 box">
         <h2 >
 
-    :ref:`Classification <supervised-learning>`
+    :ref:`Classification分类 <supervised-learning>`
 
     .. raw:: html
 
@@ -37,7 +37,7 @@
         </blockquote>
         </div>
 
-        <!-- Regression -->
+        <!-- 回归 -->
         <div class="span4 box">
         <h2>
 

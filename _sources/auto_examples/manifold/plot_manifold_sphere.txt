@@ -29,9 +29,20 @@ that of representing a flat map of the Earth, as with
 
 
 
-.. rst-class:: horizontal
+.. image:: images/plot_manifold_sphere_001.png
+    :align: center
 
 
+**Script output**::
+
+  standard: 0.091 sec
+  ltsa: 0.19 sec
+  hessian: 0.26 sec
+  modified: 0.22 sec
+  ISO: 0.29 sec
+  MDS: 1.8 sec
+  Spectral Embedding: 0.098 sec
+  t-SNE: 2.8 sec
 
 
 
@@ -40,6 +51,6 @@ that of representing a flat map of the Earth, as with
 .. literalinclude:: plot_manifold_sphere.py
     :lines: 29-
 
-**Total running time of the example:**  0.00 seconds
-( 0 minutes  0.00 seconds)
+**Total running time of the example:**  6.40 seconds
+( 0 minutes  6.40 seconds)
     

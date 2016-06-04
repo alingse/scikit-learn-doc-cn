@@ -24,9 +24,20 @@ representation of the data in the low-dimensional space.
 
 
 
-.. rst-class:: horizontal
+.. image:: images/plot_compare_methods_001.png
+    :align: center
 
 
+**Script output**::
+
+  standard: 0.16 sec
+  ltsa: 0.3 sec
+  hessian: 0.39 sec
+  modified: 0.34 sec
+  Isomap: 0.54 sec
+  MDS: 3.4 sec
+  SpectralEmbedding: 0.2 sec
+  t-SNE: 4 sec
 
 
 
@@ -35,6 +46,6 @@ representation of the data in the low-dimensional space.
 .. literalinclude:: plot_compare_methods.py
     :lines: 21-
 
-**Total running time of the example:**  0.00 seconds
-( 0 minutes  0.00 seconds)
+**Total running time of the example:**  9.86 seconds
+( 0 minutes  9.86 seconds)
     

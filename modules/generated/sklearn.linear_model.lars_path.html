@@ -172,7 +172,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.linear_model" title="sklearn.linear_model"><code class="xref py py-mod docutils literal"><span class="pre">sklearn.linear_model</span></code></a>.lars_path<a class="headerlink" href="#sklearn-linear-model-lars-path" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="sklearn.linear_model.lars_path">
-<code class="descclassname">sklearn.linear_model.</code><code class="descname">lars_path</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>Xy=None</em>, <em>Gram=None</em>, <em>max_iter=500</em>, <em>alpha_min=0</em>, <em>method='lar'</em>, <em>copy_X=True</em>, <em>eps=2.2204460492503131e-16</em>, <em>copy_Gram=True</em>, <em>verbose=0</em>, <em>return_path=True</em>, <em>return_n_iter=False</em>, <em>positive=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eb5ecde/sklearn/linear_model/least_angle.py#L37"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.linear_model.lars_path" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">sklearn.linear_model.</code><code class="descname">lars_path</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>Xy=None</em>, <em>Gram=None</em>, <em>max_iter=500</em>, <em>alpha_min=0</em>, <em>method='lar'</em>, <em>copy_X=True</em>, <em>eps=2.2204460492503131e-16</em>, <em>copy_Gram=True</em>, <em>verbose=0</em>, <em>return_path=True</em>, <em>return_n_iter=False</em>, <em>positive=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/b634e7c/sklearn/linear_model/least_angle.py#L37"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sklearn.linear_model.lars_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute Least Angle Regression or Lasso path using LARS algorithm [1]</p>
 <p>The optimization objective for the case method=&#8217;lasso&#8217; is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n_samples</span><span class="p">))</span> <span class="o">*</span> <span class="o">||</span><span class="n">y</span> <span class="o">-</span> <span class="n">Xw</span><span class="o">||^</span><span class="mi">2</span><span class="n">_2</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="o">||</span><span class="n">w</span><span class="o">||</span><span class="n">_1</span>
@@ -282,23 +282,23 @@ to True.</p>
 <p class="last"><a class="reference internal" href="sklearn.linear_model.lasso_path.html#sklearn.linear_model.lasso_path" title="sklearn.linear_model.lasso_path"><code class="xref py py-obj docutils literal"><span class="pre">lasso_path</span></code></a>, <a class="reference internal" href="sklearn.linear_model.LassoLars.html#sklearn.linear_model.LassoLars" title="sklearn.linear_model.LassoLars"><code class="xref py py-obj docutils literal"><span class="pre">LassoLars</span></code></a>, <a class="reference internal" href="sklearn.linear_model.Lars.html#sklearn.linear_model.Lars" title="sklearn.linear_model.Lars"><code class="xref py py-obj docutils literal"><span class="pre">Lars</span></code></a>, <a class="reference internal" href="sklearn.linear_model.LassoLarsCV.html#sklearn.linear_model.LassoLarsCV" title="sklearn.linear_model.LassoLarsCV"><code class="xref py py-obj docutils literal"><span class="pre">LassoLarsCV</span></code></a>, <a class="reference internal" href="sklearn.linear_model.LarsCV.html#sklearn.linear_model.LarsCV" title="sklearn.linear_model.LarsCV"><code class="xref py py-obj docutils literal"><span class="pre">LarsCV</span></code></a>, <a class="reference internal" href="sklearn.decomposition.sparse_encode.html#sklearn.decomposition.sparse_encode" title="sklearn.decomposition.sparse_encode"><code class="xref py py-obj docutils literal"><span class="pre">sklearn.decomposition.sparse_encode</span></code></a></p>
 </div>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r144" rules="none">
+<table class="docutils citation" frame="void" id="r30" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[R144]</a></td><td>&#8220;Least Angle Regression&#8221;, Effron et al.
+<tr><td class="label"><a class="fn-backref" href="#id1">[R30]</a></td><td>&#8220;Least Angle Regression&#8221;, Effron et al.
 <a class="reference external" href="http://www-stat.stanford.edu/~tibs/ftp/lars.pdf">http://www-stat.stanford.edu/~tibs/ftp/lars.pdf</a></td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r145" rules="none">
+<table class="docutils citation" frame="void" id="r31" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[R145]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/Least-angle_regression">Wikipedia entry on the Least-angle regression</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[R31]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/Least-angle_regression">Wikipedia entry on the Least-angle regression</a></td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r146" rules="none">
+<table class="docutils citation" frame="void" id="r32" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[R146]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/Lasso_(statistics)#Lasso_method">Wikipedia entry on the Lasso</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[R32]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/Lasso_(statistics)#Lasso_method">Wikipedia entry on the Lasso</a></td></tr>
 </tbody>
 </table>
 </dd></dl>

@@ -17,6 +17,16 @@ comes in to choose a direction that is not flat.
 .. rst-class:: horizontal
 
 
+    *
+
+      .. image:: images/plot_pca_3d_001.png
+            :scale: 47
+
+    *
+
+      .. image:: images/plot_pca_3d_002.png
+            :scale: 47
+
 
 
 
@@ -25,6 +35,6 @@ comes in to choose a direction that is not flat.
 .. literalinclude:: plot_pca_3d.py
     :lines: 14-
 
-**Total running time of the example:**  0.00 seconds
-( 0 minutes  0.00 seconds)
+**Total running time of the example:**  0.28 seconds
+( 0 minutes  0.28 seconds)
     

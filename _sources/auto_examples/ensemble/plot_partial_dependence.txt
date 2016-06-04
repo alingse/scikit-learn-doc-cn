@@ -53,6 +53,26 @@ on age.
 .. rst-class:: horizontal
 
 
+    *
+
+      .. image:: images/plot_partial_dependence_001.png
+            :scale: 47
+
+    *
+
+      .. image:: images/plot_partial_dependence_002.png
+            :scale: 47
+
+
+**Script output**::
+
+  ________________________________________________________________________________
+  Training GBRT...
+  done.
+  ________________________________________________________________________________
+  Convenience plot with ``partial_dependence_plots``
+  ________________________________________________________________________________
+  Custom 3d plot via ``partial_dependence``
 
 
 
@@ -61,6 +81,6 @@ on age.
 .. literalinclude:: plot_partial_dependence.py
     :lines: 47-
 
-**Total running time of the example:**  0.00 seconds
-( 0 minutes  0.00 seconds)
+**Total running time of the example:**  3.15 seconds
+( 0 minutes  3.15 seconds)
     
