@@ -1,0 +1,305 @@
+
+Examples using ``sklearn.datasets.make_blobs``
+----------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="When performing classification you often want to predict not only the class label, but also the...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration.png
+    :target: ./../../auto_examples/calibration/plot_calibration.html
+
+    :ref:`example_calibration_plot_calibration.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example illustrates how sigmoid calibration changes predicted probabilities for a 3-class ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration_multiclass.png
+    :target: ./../../auto_examples/calibration/plot_calibration_multiclass.html
+
+    :ref:`example_calibration_plot_calibration_multiclass.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration_multiclass.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Shows how shrinkage improves classification. ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_lda.png
+    :target: ./../../auto_examples/classification/plot_lda.html
+
+    :ref:`example_classification_plot_lda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_lda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Reference:">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_mean_shift.png
+    :target: ./../../auto_examples/cluster/plot_mean_shift.html
+
+    :ref:`example_cluster_plot_mean_shift.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_mean_shift.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Reference: Brendan J. Frey and Delbert Dueck, "Clustering by Passing Messages Between Data Poin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_affinity_propagation.png
+    :target: ./../../auto_examples/cluster/plot_affinity_propagation.html
+
+    :ref:`example_cluster_plot_affinity_propagation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_affinity_propagation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example is meant to illustrate situations where k-means will produce unintuitive and possi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_assumptions.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_assumptions.html
+
+    :ref:`example_cluster_plot_kmeans_assumptions.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_assumptions.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Finds core samples of high density and expands clusters from them.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_dbscan.png
+    :target: ./../../auto_examples/cluster/plot_dbscan.html
+
+    :ref:`example_cluster_plot_dbscan.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_dbscan.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example compares the timing of Birch (with and without the global clustering step) and Min...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_birch_vs_minibatchkmeans.png
+    :target: ./../../auto_examples/cluster/plot_birch_vs_minibatchkmeans.html
+
+    :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example aims at showing characteristics of different clustering algorithms on datasets tha...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_comparison.png
+    :target: ./../../auto_examples/cluster/plot_cluster_comparison.html
+
+    :ref:`example_cluster_plot_cluster_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We want to compare the performance of the MiniBatchKMeans and KMeans: the MiniBatchKMeans is fa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_mini_batch_kmeans.png
+    :target: ./../../auto_examples/cluster/plot_mini_batch_kmeans.html
+
+    :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Silhouette analysis can be used to study the separation distance between the resulting clusters...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_silhouette_analysis.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_silhouette_analysis.html
+
+    :ref:`example_cluster_plot_kmeans_silhouette_analysis.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_silhouette_analysis.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot several randomly generated 2D classification datasets. This example illustrates the :func:...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/datasets/images/thumb/plot_random_dataset.png
+    :target: ./../../auto_examples/datasets/plot_random_dataset.html
+
+    :ref:`example_datasets_plot_random_dataset.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_datasets_plot_random_dataset.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the maximum margin separating hyperplane within a two-class separable dataset using a line...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_separating_hyperplane.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_separating_hyperplane.html
+
+    :ref:`example_linear_model_plot_sgd_separating_hyperplane.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_separating_hyperplane.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the behaviour of the accuracy of the nearest neighbor queries of Loca...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_approximate_nearest_neighbors_hyperparameters.png
+    :target: ./../../auto_examples/neighbors/plot_approximate_nearest_neighbors_hyperparameters.html
+
+    :ref:`example_neighbors_plot_approximate_nearest_neighbors_hyperparameters.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_approximate_nearest_neighbors_hyperparameters.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example studies the scalability profile of approximate 10-neighbors queries using the LSHF...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_approximate_nearest_neighbors_scalability.png
+    :target: ./../../auto_examples/neighbors/plot_approximate_nearest_neighbors_scalability.html
+
+    :ref:`example_neighbors_plot_approximate_nearest_neighbors_scalability.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_approximate_nearest_neighbors_scalability.py`

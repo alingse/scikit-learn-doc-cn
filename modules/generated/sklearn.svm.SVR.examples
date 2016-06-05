@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.svm.SVR``
+----------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Both kernel ridge regression (KRR) and SVR learn a non-linear function by employing the kernel ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_kernel_ridge_regression.png
+    :target: ./../../auto_examples/./plot_kernel_ridge_regression.html
+
+    :ref:`example_plot_kernel_ridge_regression.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_kernel_ridge_regression.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing the prediction latency of various scikit-learn estimators.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_prediction_latency.png
+    :target: ./../../auto_examples/applications/plot_prediction_latency.html
+
+    :ref:`example_applications_plot_prediction_latency.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_prediction_latency.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Toy example of 1D regression using linear, polynomial and RBF kernels.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_svm_regression.png
+    :target: ./../../auto_examples/svm/plot_svm_regression.html
+
+    :ref:`example_svm_plot_svm_regression.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_svm_regression.py`

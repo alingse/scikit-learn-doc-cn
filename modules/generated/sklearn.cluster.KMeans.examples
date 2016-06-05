@@ -1,0 +1,185 @@
+
+Examples using ``sklearn.cluster.KMeans``
+-----------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example is meant to illustrate situations where k-means will produce unintuitive and possi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_assumptions.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_assumptions.html
+
+    :ref:`example_cluster_plot_kmeans_assumptions.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_assumptions.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The classic image processing example, Lena, an 8-bit grayscale bit-depth, 512 x 512 sized image...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_lena_compress.png
+    :target: ./../../auto_examples/cluster/plot_lena_compress.html
+
+    :ref:`example_cluster_plot_lena_compress.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_lena_compress.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The plots display firstly what a K-means algorithm would yield using three clusters. It is then...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_iris.png
+    :target: ./../../auto_examples/cluster/plot_cluster_iris.html
+
+    :ref:`example_cluster_plot_cluster_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Performs a pixel-wise Vector Quantization (VQ) of an image of the summer palace (China), reduci...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_color_quantization.png
+    :target: ./../../auto_examples/cluster/plot_color_quantization.html
+
+    :ref:`example_cluster_plot_color_quantization.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_color_quantization.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Evaluate the ability of k-means initializations strategies to make the algorithm convergence ro...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_stability_low_dim_dense.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_stability_low_dim_dense.html
+
+    :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In this example we compare the various initialization strategies for K-means in terms of runtim...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_digits.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_digits.html
+
+    :ref:`example_cluster_plot_kmeans_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_digits.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We want to compare the performance of the MiniBatchKMeans and KMeans: the MiniBatchKMeans is fa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_mini_batch_kmeans.png
+    :target: ./../../auto_examples/cluster/plot_mini_batch_kmeans.html
+
+    :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Silhouette analysis can be used to study the separation distance between the resulting clusters...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_silhouette_analysis.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_silhouette_analysis.html
+
+    :ref:`example_cluster_plot_kmeans_silhouette_analysis.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_silhouette_analysis.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to cluster documents by topics usin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_clustering.png
+    :target: ./../../auto_examples/text/document_clustering.html
+
+    :ref:`example_text_document_clustering.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_clustering.py`

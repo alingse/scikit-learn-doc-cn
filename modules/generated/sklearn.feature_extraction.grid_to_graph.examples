@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.feature_extraction.grid_to_graph``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Compute the segmentation of a 2D image with Ward hierarchical clustering. The clustering is spa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_lena_ward_segmentation.png
+    :target: ./../../auto_examples/cluster/plot_lena_ward_segmentation.html
+
+    :ref:`example_cluster_plot_lena_ward_segmentation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_lena_ward_segmentation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="These images how similar features are merged together using feature agglomeration. ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_digits_agglomeration.png
+    :target: ./../../auto_examples/cluster/plot_digits_agglomeration.html
+
+    :ref:`example_cluster_plot_digits_agglomeration.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_digits_agglomeration.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example compares 2 dimensionality reduction strategies:">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_feature_agglomeration_vs_univariate_selection.png
+    :target: ./../../auto_examples/cluster/plot_feature_agglomeration_vs_univariate_selection.html
+
+    :ref:`example_cluster_plot_feature_agglomeration_vs_univariate_selection.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_feature_agglomeration_vs_univariate_selection.py`

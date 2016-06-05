@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.datasets.make_multilabel_classification``
+------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example simulates a multi-label document classification problem. The dataset is generated ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_multilabel.png
+    :target: ./../../auto_examples/./plot_multilabel.html
+
+    :ref:`example_plot_multilabel.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_multilabel.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This illustrates the `datasets.make_multilabel_classification` dataset generator. Each sample c...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/datasets/images/thumb/plot_random_multilabel_dataset.png
+    :target: ./../../auto_examples/datasets/plot_random_multilabel_dataset.html
+
+    :ref:`example_datasets_plot_random_multilabel_dataset.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_datasets_plot_random_multilabel_dataset.py`

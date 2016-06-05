@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.decomposition.RandomizedPCA``
+------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/face_recognition.png
+    :target: ./../../auto_examples/applications/face_recognition.html
+
+    :ref:`example_applications_face_recognition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_face_recognition.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example applies to :ref:`olivetti_faces` different unsupervised matrix decomposition (dime...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_faces_decomposition.png
+    :target: ./../../auto_examples/decomposition/plot_faces_decomposition.html
+
+    :ref:`example_decomposition_plot_faces_decomposition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_faces_decomposition.py`

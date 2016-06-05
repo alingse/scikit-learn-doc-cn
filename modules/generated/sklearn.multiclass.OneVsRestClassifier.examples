@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.multiclass.OneVsRestClassifier``
+---------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example simulates a multi-label document classification problem. The dataset is generated ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_multilabel.png
+    :target: ./../../auto_examples/./plot_multilabel.html
+
+    :ref:`example_plot_multilabel.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_multilabel.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Precision-Recall metric to evaluate classifier output quality.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_precision_recall.png
+    :target: ./../../auto_examples/model_selection/plot_precision_recall.html
+
+    :ref:`example_model_selection_plot_precision_recall.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_precision_recall.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc.png
+    :target: ./../../auto_examples/model_selection/plot_roc.html
+
+    :ref:`example_model_selection_plot_roc.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc.py`

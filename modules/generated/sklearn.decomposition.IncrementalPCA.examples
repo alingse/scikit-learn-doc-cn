@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.decomposition.IncrementalPCA``
+-------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="=============== Incremental PCA ===============">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_incremental_pca.png
+    :target: ./../../auto_examples/decomposition/plot_incremental_pca.html
+
+    :ref:`example_decomposition_plot_incremental_pca.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_incremental_pca.py`

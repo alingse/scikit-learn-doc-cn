@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.linear_model.RANSACRegressor``
+-------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In this example we see how to robustly fit a linear model to faulty data using the RANSAC algor...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_ransac.png
+    :target: ./../../auto_examples/linear_model/plot_ransac.html
+
+    :ref:`example_linear_model_plot_ransac.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_ransac.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Here a sine function is fit with a polynomial of order 3, for values close to zero.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_robust_fit.png
+    :target: ./../../auto_examples/linear_model/plot_robust_fit.html
+
+    :ref:`example_linear_model_plot_robust_fit.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_robust_fit.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Computes a Theil-Sen Regression on a synthetic dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_theilsen.png
+    :target: ./../../auto_examples/linear_model/plot_theilsen.html
+
+    :ref:`example_linear_model_plot_theilsen.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_theilsen.py`

@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.metrics.euclidean_distances``
+------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip=" The `Johnson-Lindenstrauss lemma`_ states that any high dimensional dataset can be randomly pr...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_johnson_lindenstrauss_bound.png
+    :target: ./../../auto_examples/./plot_johnson_lindenstrauss_bound.html
+
+    :ref:`example_plot_johnson_lindenstrauss_bound.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_johnson_lindenstrauss_bound.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of the metric and non-metric MDS on generated noisy data.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_mds.png
+    :target: ./../../auto_examples/manifold/plot_mds.html
+
+    :ref:`example_manifold_plot_mds.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_mds.py`

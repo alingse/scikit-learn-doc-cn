@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.feature_extraction.FeatureHasher``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Compares FeatureHasher and DictVectorizer by using both to vectorize text documents.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/hashing_vs_dict_vectorizer.png
+    :target: ./../../auto_examples/text/hashing_vs_dict_vectorizer.html
+
+    :ref:`example_text_hashing_vs_dict_vectorizer.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_hashing_vs_dict_vectorizer.py`

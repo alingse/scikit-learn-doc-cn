@@ -1,0 +1,145 @@
+
+Examples using ``sklearn.cross_validation.cross_val_score``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows that imputing the missing values can give better results than discarding the...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/missing_values.png
+    :target: ./../../auto_examples/./missing_values.html
+
+    :ref:`example_missing_values.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_missing_values.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Probabilistic PCA and Factor Analysis are probabilistic models. The consequence is that the lik...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_pca_vs_fa_model_selection.png
+    :target: ./../../auto_examples/decomposition/plot_pca_vs_fa_model_selection.html
+
+    :ref:`example_decomposition_plot_pca_vs_fa_model_selection.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_pca_vs_fa_model_selection.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise using Cross-validation with an SVM on the Digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/plot_cv_digits.png
+    :target: ./../../auto_examples/exercises/plot_cv_digits.html
+
+    :ref:`example_exercises_plot_cv_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_plot_cv_digits.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise which uses cross-validation with linear models.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/plot_cv_diabetes.png
+    :target: ./../../auto_examples/exercises/plot_cv_diabetes.html
+
+    :ref:`example_exercises_plot_cv_diabetes.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_plot_cv_diabetes.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In this example, we fit a Gaussian Process model onto the diabetes dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/gaussian_process/images/thumb/gp_diabetes_dataset.png
+    :target: ./../../auto_examples/gaussian_process/gp_diabetes_dataset.html
+
+    :ref:`example_gaussian_process_gp_diabetes_dataset.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_gaussian_process_gp_diabetes_dataset.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the problems of underfitting and overfitting and how we can use linea...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_underfitting_overfitting.png
+    :target: ./../../auto_examples/model_selection/plot_underfitting_overfitting.html
+
+    :ref:`example_model_selection_plot_underfitting_overfitting.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_underfitting_overfitting.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows how to perform univariate feature before running a SVC (support vector class...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_svm_anova.png
+    :target: ./../../auto_examples/svm/plot_svm_anova.html
+
+    :ref:`example_svm_plot_svm_anova.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_svm_anova.py`

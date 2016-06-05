@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.linear_model.RidgeClassifier``
+-------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

@@ -1,0 +1,125 @@
+
+Examples using ``sklearn.naive_bayes.GaussianNB``
+-------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Well calibrated classifiers are probabilistic classifiers for which the output of the predict_p...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_compare_calibration.png
+    :target: ./../../auto_examples/calibration/plot_compare_calibration.html
+
+    :ref:`example_calibration_plot_compare_calibration.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_compare_calibration.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="When performing classification one often wants to predict not only the class label, but also th...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration_curve.png
+    :target: ./../../auto_examples/calibration/plot_calibration_curve.html
+
+    :ref:`example_calibration_plot_calibration_curve.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration_curve.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="When performing classification you often want to predict not only the class label, but also the...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration.png
+    :target: ./../../auto_examples/calibration/plot_calibration.html
+
+    :ref:`example_calibration_plot_calibration.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A comparison of a several classifiers in scikit-learn on synthetic datasets. The point of this ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classifier_comparison.png
+    :target: ./../../auto_examples/classification/plot_classifier_comparison.html
+
+    :ref:`example_classification_plot_classifier_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classifier_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the class probabilities of the first sample in a toy dataset predicted by three different ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_voting_probas.png
+    :target: ./../../auto_examples/ensemble/plot_voting_probas.html
+
+    :ref:`example_ensemble_plot_voting_probas.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_voting_probas.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="On the left side the learning curve of a naive Bayes classifier is shown for the digits dataset...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_learning_curve.png
+    :target: ./../../auto_examples/model_selection/plot_learning_curve.html
+
+    :ref:`example_model_selection_plot_learning_curve.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_learning_curve.py`

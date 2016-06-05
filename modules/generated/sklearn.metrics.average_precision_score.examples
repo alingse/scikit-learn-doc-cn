@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.metrics.average_precision_score``
+----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Precision-Recall metric to evaluate classifier output quality.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_precision_recall.png
+    :target: ./../../auto_examples/model_selection/plot_precision_recall.html
+
+    :ref:`example_model_selection_plot_precision_recall.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_precision_recall.py`

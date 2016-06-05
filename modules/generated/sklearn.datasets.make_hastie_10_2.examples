@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.datasets.make_hastie_10_2``
+----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Illustration of the effect of different regularization strategies for Gradient Boosting. The ex...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_gradient_boosting_regularization.png
+    :target: ./../../auto_examples/ensemble/plot_gradient_boosting_regularization.html
+
+    :ref:`example_ensemble_plot_gradient_boosting_regularization.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_gradient_boosting_regularization.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example is based on Figure 10.2 from Hastie et al 2009 [1] and illustrates the difference ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_adaboost_hastie_10_2.png
+    :target: ./../../auto_examples/ensemble/plot_adaboost_hastie_10_2.html
+
+    :ref:`example_ensemble_plot_adaboost_hastie_10_2.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_adaboost_hastie_10_2.py`

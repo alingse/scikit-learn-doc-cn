@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.metrics.pairwise_distances_argmin``
+------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Performs a pixel-wise Vector Quantization (VQ) of an image of the summer palace (China), reduci...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_color_quantization.png
+    :target: ./../../auto_examples/cluster/plot_color_quantization.html
+
+    :ref:`example_cluster_plot_color_quantization.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_color_quantization.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We want to compare the performance of the MiniBatchKMeans and KMeans: the MiniBatchKMeans is fa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_mini_batch_kmeans.png
+    :target: ./../../auto_examples/cluster/plot_mini_batch_kmeans.html
+
+    :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_mini_batch_kmeans.py`

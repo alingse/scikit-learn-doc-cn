@@ -1,0 +1,145 @@
+
+Examples using ``sklearn.metrics.confusion_matrix``
+---------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/face_recognition.png
+    :target: ./../../auto_examples/applications/face_recognition.html
+
+    :ref:`example_applications_face_recognition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_face_recognition.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An example showing how the scikit-learn can be used to recognize images of hand-written digits.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_digits_classification.png
+    :target: ./../../auto_examples/classification/plot_digits_classification.html
+
+    :ref:`example_classification_plot_digits_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_digits_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of confusion matrix usage to evaluate the quality of the output of a classifier on the ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_confusion_matrix.png
+    :target: ./../../auto_examples/model_selection/plot_confusion_matrix.html
+
+    :ref:`example_model_selection_plot_confusion_matrix.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_confusion_matrix.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the power of semisupervised learning by training a Label Spreading mo...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/semi_supervised/images/thumb/plot_label_propagation_digits.png
+    :target: ./../../auto_examples/semi_supervised/plot_label_propagation_digits.html
+
+    :ref:`example_semi_supervised_plot_label_propagation_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_semi_supervised_plot_label_propagation_digits.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstrates an active learning technique to learn handwritten digits using label propagation.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/semi_supervised/images/thumb/plot_label_propagation_digits_active_learning.png
+    :target: ./../../auto_examples/semi_supervised/plot_label_propagation_digits_active_learning.html
+
+    :ref:`example_semi_supervised_plot_label_propagation_digits_active_learning.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_semi_supervised_plot_label_propagation_digits_active_learning.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to classify documents by topics usi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/mlcomp_sparse_document_classification.png
+    :target: ./../../auto_examples/text/mlcomp_sparse_document_classification.html
+
+    :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

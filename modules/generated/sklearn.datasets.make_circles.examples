@@ -1,0 +1,105 @@
+
+Examples using ``sklearn.datasets.make_circles``
+------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A comparison of a several classifiers in scikit-learn on synthetic datasets. The point of this ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classifier_comparison.png
+    :target: ./../../auto_examples/classification/plot_classifier_comparison.html
+
+    :ref:`example_classification_plot_classifier_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classifier_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example aims at showing characteristics of different clustering algorithms on datasets tha...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_comparison.png
+    :target: ./../../auto_examples/cluster/plot_cluster_comparison.html
+
+    :ref:`example_cluster_plot_cluster_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows that Kernel PCA is able to find a projection of the data that makes data lin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_kernel_pca.png
+    :target: ./../../auto_examples/decomposition/plot_kernel_pca.html
+
+    :ref:`example_decomposition_plot_kernel_pca.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_kernel_pca.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="RandomTreesEmbedding provides a way to map data to a very high-dimensional, sparse representati...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_random_forest_embedding.png
+    :target: ./../../auto_examples/ensemble/plot_random_forest_embedding.html
+
+    :ref:`example_ensemble_plot_random_forest_embedding.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_random_forest_embedding.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of LabelPropagation learning a complex internal structure to demonstrate "manifold lear...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/semi_supervised/images/thumb/plot_label_propagation_structure.png
+    :target: ./../../auto_examples/semi_supervised/plot_label_propagation_structure.html
+
+    :ref:`example_semi_supervised_plot_label_propagation_structure.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_semi_supervised_plot_label_propagation_structure.py`

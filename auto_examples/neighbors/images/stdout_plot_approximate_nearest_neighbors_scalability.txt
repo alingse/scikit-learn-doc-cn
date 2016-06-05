@@ -1,0 +1,9 @@
+**Script output**::
+
+  Index size: 1000, exact: 0.001s, LSHF: 0.012s, speedup: 0.1, accuracy: 1.00 +/-0.00
+  Index size: 2511, exact: 0.003s, LSHF: 0.012s, speedup: 0.2, accuracy: 1.00 +/-0.00
+  Index size: 6309, exact: 0.007s, LSHF: 0.011s, speedup: 0.7, accuracy: 1.00 +/-0.00
+  Index size: 15848, exact: 0.018s, LSHF: 0.012s, speedup: 1.6, accuracy: 1.00 +/-0.00
+  Index size: 39810, exact: 0.053s, LSHF: 0.014s, speedup: 3.8, accuracy: 1.00 +/-0.00
+  Index size: 100000, exact: 0.132s, LSHF: 0.020s, speedup: 6.7, accuracy: 0.94 +/-0.08
+

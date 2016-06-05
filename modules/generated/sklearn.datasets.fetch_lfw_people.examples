@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.datasets.fetch_lfw_people``
+----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/face_recognition.png
+    :target: ./../../auto_examples/applications/face_recognition.html
+
+    :ref:`example_applications_face_recognition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_face_recognition.py`

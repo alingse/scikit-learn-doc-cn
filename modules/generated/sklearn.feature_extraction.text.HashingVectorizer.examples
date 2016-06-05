@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.feature_extraction.text.HashingVectorizer``
+--------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used for classification using an out-of-core...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_out_of_core_classification.png
+    :target: ./../../auto_examples/applications/plot_out_of_core_classification.html
+
+    :ref:`example_applications_plot_out_of_core_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_out_of_core_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to cluster documents by topics usin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_clustering.png
+    :target: ./../../auto_examples/text/document_clustering.html
+
+    :ref:`example_text_document_clustering.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_clustering.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

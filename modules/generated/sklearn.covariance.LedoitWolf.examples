@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.covariance.LedoitWolf``
+------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The usual covariance maximum likelihood estimate can be regularized using shrinkage. Ledoit and...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/covariance/images/thumb/plot_lw_vs_oas.png
+    :target: ./../../auto_examples/covariance/plot_lw_vs_oas.html
+
+    :ref:`example_covariance_plot_lw_vs_oas.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_covariance_plot_lw_vs_oas.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="When working with covariance estimation, the usual approach is to use a maximum likelihood esti...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/covariance/images/thumb/plot_covariance_estimation.png
+    :target: ./../../auto_examples/covariance/plot_covariance_estimation.html
+
+    :ref:`example_covariance_plot_covariance_estimation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_covariance_plot_covariance_estimation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Probabilistic PCA and Factor Analysis are probabilistic models. The consequence is that the lik...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_pca_vs_fa_model_selection.png
+    :target: ./../../auto_examples/decomposition/plot_pca_vs_fa_model_selection.html
+
+    :ref:`example_decomposition_plot_pca_vs_fa_model_selection.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_pca_vs_fa_model_selection.py`

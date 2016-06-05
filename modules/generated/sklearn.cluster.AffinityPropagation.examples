@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.cluster.AffinityPropagation``
+------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Reference: Brendan J. Frey and Delbert Dueck, "Clustering by Passing Messages Between Data Poin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_affinity_propagation.png
+    :target: ./../../auto_examples/cluster/plot_affinity_propagation.html
+
+    :ref:`example_cluster_plot_affinity_propagation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_affinity_propagation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example aims at showing characteristics of different clustering algorithms on datasets tha...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_comparison.png
+    :target: ./../../auto_examples/cluster/plot_cluster_comparison.html
+
+    :ref:`example_cluster_plot_cluster_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_comparison.py`

@@ -1,0 +1,85 @@
+
+Examples using ``sklearn.cross_validation.StratifiedKFold``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A recursive feature elimination example with automatic tuning of the number of features selecte...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_rfe_with_cross_validation.png
+    :target: ./../../auto_examples/feature_selection/plot_rfe_with_cross_validation.html
+
+    :ref:`example_feature_selection_plot_rfe_with_cross_validation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_rfe_with_cross_validation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In order to test if a classification score is significative a technique in repeating the classi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_permutation_test_for_classification.png
+    :target: ./../../auto_examples/feature_selection/plot_permutation_test_for_classification.html
+
+    :ref:`example_feature_selection_plot_permutation_test_for_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_permutation_test_for_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstration of Gaussian mixture models for classification.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/mixture/images/thumb/plot_gmm_classifier.png
+    :target: ./../../auto_examples/mixture/plot_gmm_classifier.html
+
+    :ref:`example_mixture_plot_gmm_classifier.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_mixture_plot_gmm_classifier.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc_crossval.png
+    :target: ./../../auto_examples/model_selection/plot_roc_crossval.html
+
+    :ref:`example_model_selection_plot_roc_crossval.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc_crossval.py`

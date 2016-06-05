@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.cross_validation.ShuffleSplit``
+--------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="On the left side the learning curve of a naive Bayes classifier is shown for the digits dataset...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_learning_curve.png
+    :target: ./../../auto_examples/model_selection/plot_learning_curve.html
+
+    :ref:`example_model_selection_plot_learning_curve.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_learning_curve.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The following example illustrates the effect of scaling the regularization parameter when using...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_svm_scale_c.png
+    :target: ./../../auto_examples/svm/plot_svm_scale_c.html
+
+    :ref:`example_svm_plot_svm_scale_c.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_svm_scale_c.py`

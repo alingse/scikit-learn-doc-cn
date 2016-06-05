@@ -1,0 +1,105 @@
+
+Examples using ``sklearn.linear_model.Ridge``
+---------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows the reconstruction of an image from a set of parallel projections, acquired ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_tomography_l1_reconstruction.png
+    :target: ./../../auto_examples/applications/plot_tomography_l1_reconstruction.html
+
+    :ref:`example_applications_plot_tomography_l1_reconstruction.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_tomography_l1_reconstruction.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing the prediction latency of various scikit-learn estimators.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_prediction_latency.png
+    :target: ./../../auto_examples/applications/plot_prediction_latency.html
+
+    :ref:`example_applications_plot_prediction_latency.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_prediction_latency.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Shows the effect of collinearity in the coefficients of an estimator.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_ridge_path.png
+    :target: ./../../auto_examples/linear_model/plot_ridge_path.html
+
+    :ref:`example_linear_model_plot_ridge_path.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_ridge_path.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates how to approximate a function with a polynomial of degree n_degree by...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_polynomial_interpolation.png
+    :target: ./../../auto_examples/linear_model/plot_polynomial_interpolation.html
+
+    :ref:`example_linear_model_plot_polynomial_interpolation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_polynomial_interpolation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Ridge regression is basically minimizing a penalised version of the least-squared function. The...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_ols_ridge_variance.png
+    :target: ./../../auto_examples/linear_model/plot_ols_ridge_variance.html
+
+    :ref:`example_linear_model_plot_ols_ridge_variance.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_ols_ridge_variance.py`

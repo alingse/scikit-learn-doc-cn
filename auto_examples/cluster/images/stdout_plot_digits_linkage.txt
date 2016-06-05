@@ -1,0 +1,8 @@
+**Script output**::
+
+  Computing embedding
+  Done.
+  ward : 30.95s
+  average : 37.59s
+  complete : 33.37s
+

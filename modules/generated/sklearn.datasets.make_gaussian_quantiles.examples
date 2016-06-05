@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.datasets.make_gaussian_quantiles``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot several randomly generated 2D classification datasets. This example illustrates the :func:...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/datasets/images/thumb/plot_random_dataset.png
+    :target: ./../../auto_examples/datasets/plot_random_dataset.html
+
+    :ref:`example_datasets_plot_random_dataset.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_datasets_plot_random_dataset.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example fits an AdaBoosted decision stump on a non-linearly separable classification datas...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_adaboost_twoclass.png
+    :target: ./../../auto_examples/ensemble/plot_adaboost_twoclass.html
+
+    :ref:`example_ensemble_plot_adaboost_twoclass.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_adaboost_twoclass.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example reproduces Figure 1 of Zhu et al [1] and shows how boosting can improve prediction...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_adaboost_multiclass.png
+    :target: ./../../auto_examples/ensemble/plot_adaboost_multiclass.html
+
+    :ref:`example_ensemble_plot_adaboost_multiclass.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_adaboost_multiclass.py`

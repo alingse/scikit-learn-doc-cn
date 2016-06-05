@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.clone``
+--------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision surfaces of forests of randomized trees trained on pairs of features of the i...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_forest_iris.png
+    :target: ./../../auto_examples/ensemble/plot_forest_iris.html
+
+    :ref:`example_ensemble_plot_forest_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_forest_iris.py`

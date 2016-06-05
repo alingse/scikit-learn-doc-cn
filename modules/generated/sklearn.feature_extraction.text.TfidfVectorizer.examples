@@ -1,0 +1,125 @@
+
+Examples using ``sklearn.feature_extraction.text.TfidfVectorizer``
+------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Datasets can often contain components of that require different feature extraction and processi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/hetero_feature_union.png
+    :target: ./../../auto_examples/./hetero_feature_union.html
+
+    :ref:`example_hetero_feature_union.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_hetero_feature_union.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example of applying Non-negative Matrix Factorization and Latent Dirichlet Allocatio...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/topics_extraction_with_nmf_lda.png
+    :target: ./../../auto_examples/applications/topics_extraction_with_nmf_lda.html
+
+    :ref:`example_applications_topics_extraction_with_nmf_lda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_topics_extraction_with_nmf_lda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the Spectral Co-clustering algorithm on the twenty newsgroups dataset...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/bicluster/images/thumb/bicluster_newsgroups.png
+    :target: ./../../auto_examples/bicluster/bicluster_newsgroups.html
+
+    :ref:`example_bicluster_bicluster_newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_bicluster_bicluster_newsgroups.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to classify documents by topics usi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/mlcomp_sparse_document_classification.png
+    :target: ./../../auto_examples/text/mlcomp_sparse_document_classification.html
+
+    :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to cluster documents by topics usin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_clustering.png
+    :target: ./../../auto_examples/text/document_clustering.html
+
+    :ref:`example_text_document_clustering.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_clustering.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

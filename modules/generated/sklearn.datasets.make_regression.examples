@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.datasets.make_regression``
+---------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing the prediction latency of various scikit-learn estimators.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_prediction_latency.png
+    :target: ./../../auto_examples/applications/plot_prediction_latency.html
+
+    :ref:`example_applications_plot_prediction_latency.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_prediction_latency.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In this example we see how to robustly fit a linear model to faulty data using the RANSAC algor...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_ransac.png
+    :target: ./../../auto_examples/linear_model/plot_ransac.html
+
+    :ref:`example_linear_model_plot_ransac.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_ransac.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We show that linear_model.Lasso provides the same results for dense and sparse data and that in...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/lasso_dense_vs_sparse_data.png
+    :target: ./../../auto_examples/linear_model/lasso_dense_vs_sparse_data.html
+
+    :ref:`example_linear_model_lasso_dense_vs_sparse_data.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_lasso_dense_vs_sparse_data.py`

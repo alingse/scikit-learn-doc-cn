@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.decomposition.SparseCoder``
+----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Transform a signal as a sparse combination of Ricker wavelets. This example visually compares d...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_sparse_coding.png
+    :target: ./../../auto_examples/decomposition/plot_sparse_coding.html
+
+    :ref:`example_decomposition_plot_sparse_coding.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_sparse_coding.py`

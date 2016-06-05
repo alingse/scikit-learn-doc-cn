@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis``
+------------------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A comparison of a several classifiers in scikit-learn on synthetic datasets. The point of this ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classifier_comparison.png
+    :target: ./../../auto_examples/classification/plot_classifier_comparison.html
+
+    :ref:`example_classification_plot_classifier_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classifier_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the confidence ellipsoids of each class and decision boundary ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_lda_qda.png
+    :target: ./../../auto_examples/classification/plot_lda_qda.html
+
+    :ref:`example_classification_plot_lda_qda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_lda_qda.py`

@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.feature_selection.RFE``
+------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A recursive feature elimination example showing the relevance of pixels in a digit classificati...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_rfe_digits.png
+    :target: ./../../auto_examples/feature_selection/plot_rfe_digits.html
+
+    :ref:`example_feature_selection_plot_rfe_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_rfe_digits.py`

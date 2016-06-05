@@ -1,0 +1,545 @@
+
+Examples using ``sklearn.datasets.load_iris``
+---------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In many real-world examples, there are many ways to extract features from a dataset. Often it i...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/feature_stacker.png
+    :target: ./../../auto_examples/./feature_stacker.html
+
+    :ref:`example_feature_stacker.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_stacker.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the classification probability for different classifiers. We use a 3 class dataset, and we...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classification_probability.png
+    :target: ./../../auto_examples/classification/plot_classification_probability.html
+
+    :ref:`example_classification_plot_classification_probability.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classification_probability.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The plots display firstly what a K-means algorithm would yield using three clusters. It is then...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_iris.png
+    :target: ./../../auto_examples/cluster/plot_cluster_iris.html
+
+    :ref:`example_cluster_plot_cluster_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length	and P...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/datasets/images/thumb/plot_iris_dataset.png
+    :target: ./../../auto_examples/datasets/plot_iris_dataset.html
+
+    :ref:`example_datasets_plot_iris_dataset.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_datasets_plot_iris_dataset.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The Iris dataset represents 3 kind of Iris flowers (Setosa, Versicolour and Virginica) with 4 a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_pca_vs_lda.png
+    :target: ./../../auto_examples/decomposition/plot_pca_vs_lda.html
+
+    :ref:`example_decomposition_plot_pca_vs_lda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_pca_vs_lda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="=============== Incremental PCA ===============">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_incremental_pca.png
+    :target: ./../../auto_examples/decomposition/plot_incremental_pca.html
+
+    :ref:`example_decomposition_plot_incremental_pca.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_incremental_pca.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Principal Component Analysis applied to the Iris dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_pca_iris.png
+    :target: ./../../auto_examples/decomposition/plot_pca_iris.html
+
+    :ref:`example_decomposition_plot_pca_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_pca_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision boundaries of a `VotingClassifier` for two features of the Iris dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_voting_decision_regions.png
+    :target: ./../../auto_examples/ensemble/plot_voting_decision_regions.html
+
+    :ref:`example_ensemble_plot_voting_decision_regions.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_voting_decision_regions.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision surfaces of forests of randomized trees trained on pairs of features of the i...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_forest_iris.png
+    :target: ./../../auto_examples/ensemble/plot_forest_iris.html
+
+    :ref:`example_ensemble_plot_forest_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_forest_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise for using different SVM kernels.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/plot_iris_exercise.png
+    :target: ./../../auto_examples/exercises/plot_iris_exercise.html
+
+    :ref:`example_exercises_plot_iris_exercise.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_plot_iris_exercise.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In order to test if a classification score is significative a technique in repeating the classi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_permutation_test_for_classification.png
+    :target: ./../../auto_examples/feature_selection/plot_permutation_test_for_classification.html
+
+    :ref:`example_feature_selection_plot_permutation_test_for_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_permutation_test_for_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An example showing univariate feature selection.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_feature_selection.png
+    :target: ./../../auto_examples/feature_selection/plot_feature_selection.html
+
+    :ref:`example_feature_selection_plot_feature_selection.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_feature_selection.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Show below is a logistic-regression classifiers decision boundaries on the `iris <http://en.wik...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_iris_logistic.png
+    :target: ./../../auto_examples/linear_model/plot_iris_logistic.html
+
+    :ref:`example_linear_model_plot_iris_logistic.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_iris_logistic.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Computes path on IRIS dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_logistic_path.png
+    :target: ./../../auto_examples/linear_model/plot_logistic_path.html
+
+    :ref:`example_linear_model_plot_logistic_path.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_logistic_path.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot decision surface of multi-class SGD on iris dataset. The hyperplanes corresponding to the ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_iris.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_iris.html
+
+    :ref:`example_linear_model_plot_sgd_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstration of Gaussian mixture models for classification.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/mixture/images/thumb/plot_gmm_classifier.png
+    :target: ./../../auto_examples/mixture/plot_gmm_classifier.html
+
+    :ref:`example_mixture_plot_gmm_classifier.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_mixture_plot_gmm_classifier.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of confusion matrix usage to evaluate the quality of the output of a classifier on the ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_confusion_matrix.png
+    :target: ./../../auto_examples/model_selection/plot_confusion_matrix.html
+
+    :ref:`example_model_selection_plot_confusion_matrix.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_confusion_matrix.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc_crossval.png
+    :target: ./../../auto_examples/model_selection/plot_roc_crossval.html
+
+    :ref:`example_model_selection_plot_roc_crossval.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc_crossval.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Precision-Recall metric to evaluate classifier output quality.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_precision_recall.png
+    :target: ./../../auto_examples/model_selection/plot_precision_recall.html
+
+    :ref:`example_model_selection_plot_precision_recall.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_precision_recall.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc.png
+    :target: ./../../auto_examples/model_selection/plot_roc.html
+
+    :ref:`example_model_selection_plot_roc.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Sample usage of Nearest Neighbors classification. It will plot the decision boundaries for each...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_classification.png
+    :target: ./../../auto_examples/neighbors/plot_classification.html
+
+    :ref:`example_neighbors_plot_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Sample usage of Nearest Centroid classification. It will plot the decision boundaries for each ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_nearest_centroid.png
+    :target: ./../../auto_examples/neighbors/plot_nearest_centroid.html
+
+    :ref:`example_neighbors_plot_nearest_centroid.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_nearest_centroid.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Comparison for decision boundary generated on iris dataset between Label Propagation and SVM.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/semi_supervised/images/thumb/plot_label_propagation_versus_svm_iris.png
+    :target: ./../../auto_examples/semi_supervised/plot_label_propagation_versus_svm_iris.html
+
+    :ref:`example_semi_supervised_plot_label_propagation_versus_svm_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_semi_supervised_plot_label_propagation_versus_svm_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Simple usage of Support Vector Machines to classify a sample. It will plot the decision surface...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_custom_kernel.png
+    :target: ./../../auto_examples/svm/plot_custom_kernel.html
+
+    :ref:`example_svm_plot_custom_kernel.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_custom_kernel.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Comparison of different linear SVM classifiers on a 2D projection of the iris dataset. We only ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_iris.png
+    :target: ./../../auto_examples/svm/plot_iris.html
+
+    :ref:`example_svm_plot_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example illustrates the effect of the parameters ``gamma`` and ``C`` of the Radial Basis F...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_rbf_parameters.png
+    :target: ./../../auto_examples/svm/plot_rbf_parameters.html
+
+    :ref:`example_svm_plot_rbf_parameters.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_rbf_parameters.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision surface of a decision tree trained on pairs of features of the iris dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/tree/images/thumb/plot_iris.png
+    :target: ./../../auto_examples/tree/plot_iris.html
+
+    :ref:`example_tree_plot_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_tree_plot_iris.py`

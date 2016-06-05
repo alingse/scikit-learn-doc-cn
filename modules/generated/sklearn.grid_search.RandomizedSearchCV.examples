@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.grid_search.RandomizedSearchCV``
+---------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Compare randomized search and grid search for optimizing hyperparameters of a random forest. Al...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/randomized_search.png
+    :target: ./../../auto_examples/model_selection/randomized_search.html
+
+    :ref:`example_model_selection_randomized_search.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_randomized_search.py`

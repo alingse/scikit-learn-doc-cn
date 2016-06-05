@@ -1,0 +1,85 @@
+
+Examples using ``sklearn.externals.six.moves.xrange``
+-----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A simple graphical frontend for Libsvm mainly intended for didactic purposes. You can create da...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/svm_gui.png
+    :target: ./../../auto_examples/applications/svm_gui.html
+
+    :ref:`example_applications_svm_gui.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_svm_gui.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision surfaces of forests of randomized trees trained on pairs of features of the i...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_forest_iris.png
+    :target: ./../../auto_examples/ensemble/plot_forest_iris.html
+
+    :ref:`example_ensemble_plot_forest_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_forest_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example highlights the advantages of the Dirichlet Process: complexity control and dealing...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/mixture/images/thumb/plot_gmm_sin.png
+    :target: ./../../auto_examples/mixture/plot_gmm_sin.html
+
+    :ref:`example_mixture_plot_gmm_sin.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_mixture_plot_gmm_sin.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstration of Gaussian mixture models for classification.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/mixture/images/thumb/plot_gmm_classifier.png
+    :target: ./../../auto_examples/mixture/plot_gmm_classifier.html
+
+    :ref:`example_mixture_plot_gmm_classifier.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_mixture_plot_gmm_classifier.py`

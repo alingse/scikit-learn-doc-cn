@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.cluster.Birch``
+----------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example compares the timing of Birch (with and without the global clustering step) and Min...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_birch_vs_minibatchkmeans.png
+    :target: ./../../auto_examples/cluster/plot_birch_vs_minibatchkmeans.html
+
+    :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example aims at showing characteristics of different clustering algorithms on datasets tha...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_comparison.png
+    :target: ./../../auto_examples/cluster/plot_cluster_comparison.html
+
+    :ref:`example_cluster_plot_cluster_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_comparison.py`

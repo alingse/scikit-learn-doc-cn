@@ -1,0 +1,125 @@
+
+Examples using ``sklearn.neighbors.KNeighborsClassifier``
+---------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A comparison of a several classifiers in scikit-learn on synthetic datasets. The point of this ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classifier_comparison.png
+    :target: ./../../auto_examples/classification/plot_classifier_comparison.html
+
+    :ref:`example_classification_plot_classifier_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classifier_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the decision boundaries of a `VotingClassifier` for two features of the Iris dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_voting_decision_regions.png
+    :target: ./../../auto_examples/ensemble/plot_voting_decision_regions.html
+
+    :ref:`example_ensemble_plot_voting_decision_regions.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_voting_decision_regions.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise regarding the use of classification techniques on the Digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/digits_classification_exercise.png
+    :target: ./../../auto_examples/exercises/digits_classification_exercise.html
+
+    :ref:`example_exercises_digits_classification_exercise.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_digits_classification_exercise.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Sample usage of Nearest Neighbors classification. It will plot the decision boundaries for each...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_classification.png
+    :target: ./../../auto_examples/neighbors/plot_classification.html
+
+    :ref:`example_neighbors_plot_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Making sure that each Feature has approximately the same scale can be a crucial preprocessing s...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/preprocessing/images/thumb/plot_robust_scaling.png
+    :target: ./../../auto_examples/preprocessing/plot_robust_scaling.html
+
+    :ref:`example_preprocessing_plot_robust_scaling.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_preprocessing_plot_robust_scaling.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

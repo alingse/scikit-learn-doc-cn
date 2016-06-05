@@ -1,0 +1,85 @@
+
+Examples using ``sklearn.metrics.auc``
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Modeling species' geographic distributions is an important problem in conservation biology. In ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_species_distribution_modeling.png
+    :target: ./../../auto_examples/applications/plot_species_distribution_modeling.html
+
+    :ref:`example_applications_plot_species_distribution_modeling.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_species_distribution_modeling.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Given a small number of observations, we want to recover which features of X are relevant to ex...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sparse_recovery.png
+    :target: ./../../auto_examples/linear_model/plot_sparse_recovery.html
+
+    :ref:`example_linear_model_plot_sparse_recovery.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sparse_recovery.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc_crossval.png
+    :target: ./../../auto_examples/model_selection/plot_roc_crossval.html
+
+    :ref:`example_model_selection_plot_roc_crossval.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc_crossval.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Receiver Operating Characteristic (ROC) metric to evaluate classifier output quality...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_roc.png
+    :target: ./../../auto_examples/model_selection/plot_roc.html
+
+    :ref:`example_model_selection_plot_roc.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_roc.py`

@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.learning_curve.validation_curve``
+----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="In this plot you can see the training scores and validation scores of an SVM for different valu...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_validation_curve.png
+    :target: ./../../auto_examples/model_selection/plot_validation_curve.html
+
+    :ref:`example_model_selection_plot_validation_curve.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_validation_curve.py`

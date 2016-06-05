@@ -1,0 +1,265 @@
+
+Examples using ``sklearn.linear_model.LogisticRegression``
+----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The PCA does an unsupervised dimensionality reduction, while the logistic regression does the p...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_digits_pipe.png
+    :target: ./../../auto_examples/./plot_digits_pipe.html
+
+    :ref:`example_plot_digits_pipe.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_digits_pipe.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Well calibrated classifiers are probabilistic classifiers for which the output of the predict_p...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_compare_calibration.png
+    :target: ./../../auto_examples/calibration/plot_compare_calibration.html
+
+    :ref:`example_calibration_plot_compare_calibration.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_compare_calibration.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="When performing classification one often wants to predict not only the class label, but also th...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration_curve.png
+    :target: ./../../auto_examples/calibration/plot_calibration_curve.html
+
+    :ref:`example_calibration_plot_calibration_curve.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration_curve.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the classification probability for different classifiers. We use a 3 class dataset, and we...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classification_probability.png
+    :target: ./../../auto_examples/classification/plot_classification_probability.html
+
+    :ref:`example_classification_plot_classification_probability.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classification_probability.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the class probabilities of the first sample in a toy dataset predicted by three different ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_voting_probas.png
+    :target: ./../../auto_examples/ensemble/plot_voting_probas.html
+
+    :ref:`example_ensemble_plot_voting_probas.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_voting_probas.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Transform your features into a higher dimensional, sparse space. Then train a linear model on t...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_feature_transformation.png
+    :target: ./../../auto_examples/ensemble/plot_feature_transformation.html
+
+    :ref:`example_ensemble_plot_feature_transformation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_feature_transformation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise regarding the use of classification techniques on the Digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/digits_classification_exercise.png
+    :target: ./../../auto_examples/exercises/digits_classification_exercise.html
+
+    :ref:`example_exercises_digits_classification_exercise.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_digits_classification_exercise.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Show below is a logistic-regression classifiers decision boundaries on the `iris <http://en.wik...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_iris_logistic.png
+    :target: ./../../auto_examples/linear_model/plot_iris_logistic.html
+
+    :ref:`example_linear_model_plot_iris_logistic.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_iris_logistic.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Computes path on IRIS dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_logistic_path.png
+    :target: ./../../auto_examples/linear_model/plot_logistic_path.html
+
+    :ref:`example_linear_model_plot_logistic_path.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_logistic_path.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An example showing how different online solvers perform on the hand-written digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_comparison.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_comparison.html
+
+    :ref:`example_linear_model_plot_sgd_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Show in the plot is how the logistic regression would, in this synthetic dataset, classify valu...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_logistic.png
+    :target: ./../../auto_examples/linear_model/plot_logistic.html
+
+    :ref:`example_linear_model_plot_logistic.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_logistic.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Comparison of the sparsity (percentage of zero coefficients) of solutions when L1 and L2 penalt...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_logistic_l1_l2_sparsity.png
+    :target: ./../../auto_examples/linear_model/plot_logistic_l1_l2_sparsity.html
+
+    :ref:`example_linear_model_plot_logistic_l1_l2_sparsity.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_logistic_l1_l2_sparsity.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="For greyscale image data where pixel values can be interpreted as degrees of blackness on a whi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neural_networks/images/thumb/plot_rbm_logistic_classification.png
+    :target: ./../../auto_examples/neural_networks/plot_rbm_logistic_classification.html
+
+    :ref:`example_neural_networks_plot_rbm_logistic_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neural_networks_plot_rbm_logistic_classification.py`

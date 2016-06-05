@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.metrics.precision_recall_curve``
+---------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Given a small number of observations, we want to recover which features of X are relevant to ex...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sparse_recovery.png
+    :target: ./../../auto_examples/linear_model/plot_sparse_recovery.html
+
+    :ref:`example_linear_model_plot_sparse_recovery.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sparse_recovery.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Example of Precision-Recall metric to evaluate classifier output quality.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_precision_recall.png
+    :target: ./../../auto_examples/model_selection/plot_precision_recall.html
+
+    :ref:`example_model_selection_plot_precision_recall.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_precision_recall.py`

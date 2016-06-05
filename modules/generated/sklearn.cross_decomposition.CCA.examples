@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.cross_decomposition.CCA``
+--------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example simulates a multi-label document classification problem. The dataset is generated ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_multilabel.png
+    :target: ./../../auto_examples/./plot_multilabel.html
+
+    :ref:`example_plot_multilabel.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_multilabel.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Simple usage of various cross decomposition algorithms: - PLSCanonical - PLSRegression, with mu...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cross_decomposition/images/thumb/plot_compare_cross_decomposition.png
+    :target: ./../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html
+
+    :ref:`example_cross_decomposition_plot_compare_cross_decomposition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cross_decomposition_plot_compare_cross_decomposition.py`

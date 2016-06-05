@@ -1,0 +1,185 @@
+
+Examples using ``sklearn.linear_model.SGDClassifier``
+-----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstrate how model complexity influences both prediction accuracy and computational performa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_model_complexity_influence.png
+    :target: ./../../auto_examples/applications/plot_model_complexity_influence.html
+
+    :ref:`example_applications_plot_model_complexity_influence.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_model_complexity_influence.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used for classification using an out-of-core...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_out_of_core_classification.png
+    :target: ./../../auto_examples/applications/plot_out_of_core_classification.html
+
+    :ref:`example_applications_plot_out_of_core_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_out_of_core_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the maximum margin separating hyperplane within a two-class separable dataset using a line...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_separating_hyperplane.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_separating_hyperplane.html
+
+    :ref:`example_linear_model_plot_sgd_separating_hyperplane.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_separating_hyperplane.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot decision function of a weighted dataset, where the size of points is proportional to its w...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_weighted_samples.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_weighted_samples.html
+
+    :ref:`example_linear_model_plot_sgd_weighted_samples.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_weighted_samples.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An example showing how different online solvers perform on the hand-written digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_comparison.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_comparison.html
+
+    :ref:`example_linear_model_plot_sgd_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot decision surface of multi-class SGD on iris dataset. The hyperplanes corresponding to the ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_sgd_iris.png
+    :target: ./../../auto_examples/linear_model/plot_sgd_iris.html
+
+    :ref:`example_linear_model_plot_sgd_iris.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_sgd_iris.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The dataset used in this example is the 20 newsgroups dataset which will be automatically downl...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/grid_search_text_feature_extraction.png
+    :target: ./../../auto_examples/model_selection/grid_search_text_feature_extraction.html
+
+    :ref:`example_model_selection_grid_search_text_feature_extraction.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_grid_search_text_feature_extraction.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to classify documents by topics usi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/mlcomp_sparse_document_classification.png
+    :target: ./../../auto_examples/text/mlcomp_sparse_document_classification.html
+
+    :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_mlcomp_sparse_document_classification.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how scikit-learn can be used to classify documents by topics using a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_classification_20newsgroups.png
+    :target: ./../../auto_examples/text/document_classification_20newsgroups.html
+
+    :ref:`example_text_document_classification_20newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_classification_20newsgroups.py`

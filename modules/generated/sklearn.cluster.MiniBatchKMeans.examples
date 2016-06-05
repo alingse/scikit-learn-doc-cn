@@ -1,0 +1,165 @@
+
+Examples using ``sklearn.cluster.MiniBatchKMeans``
+--------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the Spectral Co-clustering algorithm on the twenty newsgroups dataset...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/bicluster/images/thumb/bicluster_newsgroups.png
+    :target: ./../../auto_examples/bicluster/bicluster_newsgroups.html
+
+    :ref:`example_bicluster_bicluster_newsgroups.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_bicluster_bicluster_newsgroups.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example uses a large dataset of faces to learn a set of 20 x 20 images patches that consti...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_dict_face_patches.png
+    :target: ./../../auto_examples/cluster/plot_dict_face_patches.html
+
+    :ref:`example_cluster_plot_dict_face_patches.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_dict_face_patches.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example compares the timing of Birch (with and without the global clustering step) and Min...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_birch_vs_minibatchkmeans.png
+    :target: ./../../auto_examples/cluster/plot_birch_vs_minibatchkmeans.html
+
+    :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_birch_vs_minibatchkmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Evaluate the ability of k-means initializations strategies to make the algorithm convergence ro...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_stability_low_dim_dense.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_stability_low_dim_dense.html
+
+    :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example aims at showing characteristics of different clustering algorithms on datasets tha...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_cluster_comparison.png
+    :target: ./../../auto_examples/cluster/plot_cluster_comparison.html
+
+    :ref:`example_cluster_plot_cluster_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_cluster_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We want to compare the performance of the MiniBatchKMeans and KMeans: the MiniBatchKMeans is fa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_mini_batch_kmeans.png
+    :target: ./../../auto_examples/cluster/plot_mini_batch_kmeans.html
+
+    :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_mini_batch_kmeans.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example applies to :ref:`olivetti_faces` different unsupervised matrix decomposition (dime...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_faces_decomposition.png
+    :target: ./../../auto_examples/decomposition/plot_faces_decomposition.html
+
+    :ref:`example_decomposition_plot_faces_decomposition.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_faces_decomposition.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to cluster documents by topics usin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_clustering.png
+    :target: ./../../auto_examples/text/document_clustering.html
+
+    :ref:`example_text_document_clustering.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_clustering.py`

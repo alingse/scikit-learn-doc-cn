@@ -1,0 +1,105 @@
+
+Examples using ``sklearn.discriminant_analysis.LinearDiscriminantAnalysis``
+---------------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Shows how shrinkage improves classification. ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_lda.png
+    :target: ./../../auto_examples/classification/plot_lda.html
+
+    :ref:`example_classification_plot_lda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_lda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A comparison of a several classifiers in scikit-learn on synthetic datasets. The point of this ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_classifier_comparison.png
+    :target: ./../../auto_examples/classification/plot_classifier_comparison.html
+
+    :ref:`example_classification_plot_classifier_comparison.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_classifier_comparison.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Plot the confidence ellipsoids of each class and decision boundary ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/classification/images/thumb/plot_lda_qda.png
+    :target: ./../../auto_examples/classification/plot_lda_qda.html
+
+    :ref:`example_classification_plot_lda_qda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_classification_plot_lda_qda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The Iris dataset represents 3 kind of Iris flowers (Setosa, Versicolour and Virginica) with 4 a...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_pca_vs_lda.png
+    :target: ./../../auto_examples/decomposition/plot_pca_vs_lda.html
+
+    :ref:`example_decomposition_plot_pca_vs_lda.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_pca_vs_lda.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of various embeddings on the digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_lle_digits.png
+    :target: ./../../auto_examples/manifold/plot_lle_digits.html
+
+    :ref:`example_manifold_plot_lle_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_lle_digits.py`

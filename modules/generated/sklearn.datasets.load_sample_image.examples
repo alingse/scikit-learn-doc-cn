@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.datasets.load_sample_image``
+-----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Performs a pixel-wise Vector Quantization (VQ) of an image of the summer palace (China), reduci...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_color_quantization.png
+    :target: ./../../auto_examples/cluster/plot_color_quantization.html
+
+    :ref:`example_cluster_plot_color_quantization.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_color_quantization.py`

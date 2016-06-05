@@ -1,0 +1,125 @@
+
+Examples using ``sklearn.datasets.load_boston``
+-----------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows how to use `cross_val_predict` to visualize prediction errors.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_cv_predict.png
+    :target: ./../../auto_examples/./plot_cv_predict.html
+
+    :ref:`example_plot_cv_predict.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_cv_predict.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows that imputing the missing values can give better results than discarding the...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/missing_values.png
+    :target: ./../../auto_examples/./missing_values.html
+
+    :ref:`example_missing_values.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_missing_values.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example illustrates the need for robust covariance estimation on a real data set. It is us...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_outlier_detection_housing.png
+    :target: ./../../auto_examples/applications/plot_outlier_detection_housing.html
+
+    :ref:`example_applications_plot_outlier_detection_housing.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_outlier_detection_housing.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstrate how model complexity influences both prediction accuracy and computational performa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_model_complexity_influence.png
+    :target: ./../../auto_examples/applications/plot_model_complexity_influence.html
+
+    :ref:`example_applications_plot_model_complexity_influence.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_model_complexity_influence.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstrate Gradient Boosting on the Boston housing dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_gradient_boosting_regression.png
+    :target: ./../../auto_examples/ensemble/plot_gradient_boosting_regression.html
+
+    :ref:`example_ensemble_plot_gradient_boosting_regression.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_gradient_boosting_regression.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Use SelectFromModel meta-transformer along with Lasso to select the best couple of features fro...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/feature_selection/images/thumb/plot_select_from_model_boston.png
+    :target: ./../../auto_examples/feature_selection/plot_select_from_model_boston.html
+
+    :ref:`example_feature_selection_plot_select_from_model_boston.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_feature_selection_plot_select_from_model_boston.py`

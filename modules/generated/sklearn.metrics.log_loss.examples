@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.metrics.log_loss``
+-------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example illustrates how sigmoid calibration changes predicted probabilities for a 3-class ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/calibration/images/thumb/plot_calibration_multiclass.png
+    :target: ./../../auto_examples/calibration/plot_calibration_multiclass.html
+
+    :ref:`example_calibration_plot_calibration_multiclass.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_calibration_plot_calibration_multiclass.py`

@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.datasets.species_distributions.construct_grids``
+-------------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Modeling species' geographic distributions is an important problem in conservation biology. In ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_species_distribution_modeling.png
+    :target: ./../../auto_examples/applications/plot_species_distribution_modeling.html
+
+    :ref:`example_applications_plot_species_distribution_modeling.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_species_distribution_modeling.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example does not perform any learning over the data (see :ref:`example_applications_plot_s...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/neighbors/images/thumb/plot_species_kde.png
+    :target: ./../../auto_examples/neighbors/plot_species_kde.html
+
+    :ref:`example_neighbors_plot_species_kde.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_neighbors_plot_species_kde.py`

@@ -1,0 +1,85 @@
+
+Examples using ``sklearn.decomposition.TruncatedSVD``
+-----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Datasets can often contain components of that require different feature extraction and processi...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/hetero_feature_union.png
+    :target: ./../../auto_examples/./hetero_feature_union.html
+
+    :ref:`example_hetero_feature_union.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_hetero_feature_union.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="RandomTreesEmbedding provides a way to map data to a very high-dimensional, sparse representati...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/ensemble/images/thumb/plot_random_forest_embedding.png
+    :target: ./../../auto_examples/ensemble/plot_random_forest_embedding.html
+
+    :ref:`example_ensemble_plot_random_forest_embedding.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_ensemble_plot_random_forest_embedding.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of various embeddings on the digits dataset.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_lle_digits.png
+    :target: ./../../auto_examples/manifold/plot_lle_digits.html
+
+    :ref:`example_manifold_plot_lle_digits.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_lle_digits.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing how the scikit-learn can be used to cluster documents by topics usin...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/text/images/thumb/document_clustering.png
+    :target: ./../../auto_examples/text/document_clustering.html
+
+    :ref:`example_text_document_clustering.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_text_document_clustering.py`

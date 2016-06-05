@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.datasets.make_s_curve``
+------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of dimensionality reduction on the S-curve dataset with various manifold learni...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_compare_methods.png
+    :target: ./../../auto_examples/manifold/plot_compare_methods.html
+
+    :ref:`example_manifold_plot_compare_methods.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_compare_methods.py`

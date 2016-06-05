@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.feature_extraction.image.extract_patches_2d``
+----------------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example uses a large dataset of faces to learn a set of 20 x 20 images patches that consti...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_dict_face_patches.png
+    :target: ./../../auto_examples/cluster/plot_dict_face_patches.html
+
+    :ref:`example_cluster_plot_dict_face_patches.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_dict_face_patches.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An example comparing the effect of reconstructing noisy fragments of the Lena image using first...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/decomposition/images/thumb/plot_image_denoising.png
+    :target: ./../../auto_examples/decomposition/plot_image_denoising.html
+
+    :ref:`example_decomposition_plot_image_denoising.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_decomposition_plot_image_denoising.py`

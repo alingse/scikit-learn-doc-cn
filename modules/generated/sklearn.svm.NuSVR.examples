@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.svm.NuSVR``
+------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Demonstrate how model complexity influences both prediction accuracy and computational performa...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_model_complexity_influence.png
+    :target: ./../../auto_examples/applications/plot_model_complexity_influence.html
+
+    :ref:`example_applications_plot_model_complexity_influence.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_model_complexity_influence.py`

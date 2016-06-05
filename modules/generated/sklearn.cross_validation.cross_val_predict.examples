@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.cross_validation.cross_val_predict``
+-------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows how to use `cross_val_predict` to visualize prediction errors.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_cv_predict.png
+    :target: ./../../auto_examples/./plot_cv_predict.html
+
+    :ref:`example_plot_cv_predict.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_cv_predict.py`

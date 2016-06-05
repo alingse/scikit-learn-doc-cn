@@ -1,0 +1,105 @@
+
+Examples using ``sklearn.utils.check_random_state``
+---------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of the isotonic regression on generated data. The isotonic regression finds a n...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_isotonic_regression.png
+    :target: ./../../auto_examples/./plot_isotonic_regression.html
+
+    :ref:`example_plot_isotonic_regression.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_isotonic_regression.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows the use of multi-output estimator to complete images. The goal is to predict...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/./images/thumb/plot_multioutput_face_completion.png
+    :target: ./../../auto_examples/./plot_multioutput_face_completion.html
+
+    :ref:`example_plot_multioutput_face_completion.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_plot_multioutput_face_completion.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Evaluate the ability of k-means initializations strategies to make the algorithm convergence ro...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/cluster/images/thumb/plot_kmeans_stability_low_dim_dense.png
+    :target: ./../../auto_examples/cluster/plot_kmeans_stability_low_dim_dense.html
+
+    :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_cluster_plot_kmeans_stability_low_dim_dense.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An application of the different :ref:`manifold` techniques on a spherical data-set. Here one ca...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_manifold_sphere.png
+    :target: ./../../auto_examples/manifold/plot_manifold_sphere.html
+
+    :ref:`example_manifold_plot_manifold_sphere.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_manifold_sphere.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The following example illustrates the effect of scaling the regularization parameter when using...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/svm/images/thumb/plot_svm_scale_c.png
+    :target: ./../../auto_examples/svm/plot_svm_scale_c.html
+
+    :ref:`example_svm_plot_svm_scale_c.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_svm_plot_svm_scale_c.py`

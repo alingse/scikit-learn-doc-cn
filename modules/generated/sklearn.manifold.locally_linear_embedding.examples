@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.manifold.locally_linear_embedding``
+------------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="An illustration of Swiss Roll reduction with locally linear embedding ">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/manifold/images/thumb/plot_swissroll.png
+    :target: ./../../auto_examples/manifold/plot_swissroll.html
+
+    :ref:`example_manifold_plot_swissroll.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_manifold_plot_swissroll.py`

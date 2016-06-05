@@ -1,0 +1,65 @@
+
+Examples using ``sklearn.preprocessing.PolynomialFeatures``
+-----------------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates how to approximate a function with a polynomial of degree n_degree by...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_polynomial_interpolation.png
+    :target: ./../../auto_examples/linear_model/plot_polynomial_interpolation.html
+
+    :ref:`example_linear_model_plot_polynomial_interpolation.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_polynomial_interpolation.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Here a sine function is fit with a polynomial of order 3, for values close to zero.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_robust_fit.png
+    :target: ./../../auto_examples/linear_model/plot_robust_fit.html
+
+    :ref:`example_linear_model_plot_robust_fit.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_robust_fit.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the problems of underfitting and overfitting and how we can use linea...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_underfitting_overfitting.png
+    :target: ./../../auto_examples/model_selection/plot_underfitting_overfitting.html
+
+    :ref:`example_model_selection_plot_underfitting_overfitting.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_underfitting_overfitting.py`

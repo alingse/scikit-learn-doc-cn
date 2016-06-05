@@ -1,0 +1,105 @@
+
+Examples using ``sklearn.linear_model.Lasso``
+---------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This example shows the reconstruction of an image from a set of parallel projections, acquired ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_tomography_l1_reconstruction.png
+    :target: ./../../auto_examples/applications/plot_tomography_l1_reconstruction.html
+
+    :ref:`example_applications_plot_tomography_l1_reconstruction.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_tomography_l1_reconstruction.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="A tutorial exercise which uses cross-validation with linear models.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/exercises/images/thumb/plot_cv_diabetes.png
+    :target: ./../../auto_examples/exercises/plot_cv_diabetes.html
+
+    :ref:`example_exercises_plot_cv_diabetes.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_exercises_plot_cv_diabetes.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="The multi-task lasso allows to fit multiple regression problems jointly enforcing the selected ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_multi_task_lasso_support.png
+    :target: ./../../auto_examples/linear_model/plot_multi_task_lasso_support.html
+
+    :ref:`example_linear_model_plot_multi_task_lasso_support.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_multi_task_lasso_support.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="We show that linear_model.Lasso provides the same results for dense and sparse data and that in...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/lasso_dense_vs_sparse_data.png
+    :target: ./../../auto_examples/linear_model/lasso_dense_vs_sparse_data.html
+
+    :ref:`example_linear_model_lasso_dense_vs_sparse_data.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_lasso_dense_vs_sparse_data.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Estimates Lasso and Elastic-Net regression models on a manually generated sparse signal corrupt...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_lasso_and_elasticnet.png
+    :target: ./../../auto_examples/linear_model/plot_lasso_and_elasticnet.html
+
+    :ref:`example_linear_model_plot_lasso_and_elasticnet.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_lasso_and_elasticnet.py`

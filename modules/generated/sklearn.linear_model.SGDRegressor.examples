@@ -1,0 +1,25 @@
+
+Examples using ``sklearn.linear_model.SGDRegressor``
+----------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="This is an example showing the prediction latency of various scikit-learn estimators.">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/applications/images/thumb/plot_prediction_latency.png
+    :target: ./../../auto_examples/applications/plot_prediction_latency.html
+
+    :ref:`example_applications_plot_prediction_latency.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_applications_plot_prediction_latency.py`

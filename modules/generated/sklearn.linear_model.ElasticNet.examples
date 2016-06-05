@@ -1,0 +1,45 @@
+
+Examples using ``sklearn.linear_model.ElasticNet``
+--------------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Estimates Lasso and Elastic-Net regression models on a manually generated sparse signal corrupt...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/linear_model/images/thumb/plot_lasso_and_elasticnet.png
+    :target: ./../../auto_examples/linear_model/plot_lasso_and_elasticnet.html
+
+    :ref:`example_linear_model_plot_lasso_and_elasticnet.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_linear_model_plot_lasso_and_elasticnet.py`
+
+.. raw:: html
+
+    <div class="thumbnailContainer" tooltip="Illustration of how the performance of an estimator on unseen data (test data) is not the same ...">
+
+.. only:: html
+
+  .. figure:: ../../auto_examples/model_selection/images/thumb/plot_train_error_vs_test_error.png
+    :target: ./../../auto_examples/model_selection/plot_train_error_vs_test_error.html
+
+    :ref:`example_model_selection_plot_train_error_vs_test_error.py`
+
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+  * :ref:`example_model_selection_plot_train_error_vs_test_error.py`
