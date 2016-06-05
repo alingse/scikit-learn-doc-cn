@@ -1,8 +1,0 @@
-**Script output**::
-
-  SVR complexity and bandwidth selected and model fitted in 0.846 s
-  KRR complexity and bandwidth selected and model fitted in 0.199 s
-  Support vector ratio: 0.320
-  SVR prediction for 100000 inputs in 0.105 s
-  KRR prediction for 100000 inputs in 0.362 s
-

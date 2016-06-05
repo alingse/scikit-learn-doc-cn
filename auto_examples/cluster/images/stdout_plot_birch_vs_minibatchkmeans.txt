@@ -1,8 +1,0 @@
-**Script output**::
-
-  Birch without global clustering as the final step took 5.44 seconds
-  n_clusters : 158
-  Birch with global clustering as the final step took 4.35 seconds
-  n_clusters : 100
-  Time taken to run MiniBatchKMeans 5.99 seconds
-
