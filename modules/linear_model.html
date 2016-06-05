@@ -172,13 +172,13 @@
 <li><a class="reference internal" href="#mathematical-formulation">1.1.7.1. Mathematical formulation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#orthogonal-matching-pursuit-omp">1.1.8. Orthogonal Matching Pursuit (OMP)</a></li>
-<li><a class="reference internal" href="#bayesian-regression">1.1.9. Bayesian Regression</a><ul>
-<li><a class="reference internal" href="#bayesian-ridge-regression">1.1.9.1. Bayesian Ridge Regression</a></li>
+<li><a class="reference internal" href="#orthogonal-matching-pursuit-omp">1.1.8. Orthogonal Matching Pursuit (OMP) 正交匹配跟踪</a></li>
+<li><a class="reference internal" href="#bayesian-regression">1.1.9. Bayesian Regression 贝叶斯回归</a><ul>
+<li><a class="reference internal" href="#bayesian-ridge-regression">1.1.9.1. Bayesian Ridge Regression 贝叶斯岭回归</a></li>
 <li><a class="reference internal" href="#automatic-relevance-determination-ard">1.1.9.2. Automatic Relevance Determination - ARD</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#logistic-regression">1.1.10. Logistic regression</a></li>
+<li><a class="reference internal" href="#logistic-regression">1.1.10. Logistic regression逻辑回归</a></li>
 <li><a class="reference internal" href="#stochastic-gradient-descent-sgd">1.1.11. Stochastic Gradient Descent - SGD</a></li>
 <li><a class="reference internal" href="#perceptron">1.1.12. Perceptron</a></li>
 <li><a class="reference internal" href="#passive-aggressive-algorithms">1.1.13. Passive Aggressive Algorithms</a></li>
@@ -223,7 +223,7 @@
 Across the module, we designate the vector <img class="math" src="../_images/math/eb9ab421187ecd58130545c735c34483dc037fe1.png" alt="w = (w_1,
 ..., w_p)"/> as <code class="docutils literal"><span class="pre">coef_</span></code> and <img class="math" src="../_images/math/87a0c2ec97d8b8f22868ec1242d2417f25d62240.png" alt="w_0"/> as <code class="docutils literal"><span class="pre">intercept_</span></code>.</p>
 <p>使用广义线性模型来处理分类问题(classification)请参考
-<a class="reference internal" href="#logistic-regression"><span class="std std-ref">Logistic regression</span></a>.</p>
+<a class="reference internal" href="#logistic-regression"><span class="std std-ref">Logistic regression逻辑回归</span></a>.</p>
 <div class="section" id="ordinary-least-squares">
 <span id="id1"></span><h2>1.1.1. 普通最小二乘法<a class="headerlink" href="#ordinary-least-squares" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression" title="sklearn.linear_model.LinearRegression"><code class="xref py py-class docutils literal"><span class="pre">LinearRegression</span></code></a> 用系数 ：math:<cite>w = (w_1,...,w_p)</cite> 来拟合一个线性模型,
@@ -477,12 +477,9 @@ the regularization parameter almost for free, thus a common operation
 consist of retrieving the path with function <a class="reference internal" href="generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path" title="sklearn.linear_model.lars_path"><code class="xref py py-func docutils literal"><span class="pre">lars_path</span></code></a></p>
 <div class="section" id="mathematical-formulation">
 <h3>1.1.7.1. Mathematical formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this headline">¶</a></h3>
-<p>这个算法和逐步回归很相似，但是除了在每一步包含变量之外，估计的参数沿着每一个对应的残差的对角方向增长。（待校正）</p>
-<p>Instead of giving a vector result, the LARS solution consists of a
-curve denoting the solution for each value of the L1 norm of the
-parameter vector. The full coefficients path is stored in the array
-<code class="docutils literal"><span class="pre">coef_path_</span></code>, which has size (n_features, max_features+1). The first
-column is always zero.</p>
+<p>这个算法和逐步回归很相似，但是除了在每一步包含变量之外，估计的参数沿着每一个对应的残差的对角方向增长。（待校正）。
+并不是给出一个向量结果，而是在LARS的解中包含了一个曲线，用来表示每个参数向量的L1-norm 值的解，
+所有系数路径存在 <code class="docutils literal"><span class="pre">coef_path_</span></code> 数组中，大小为(n_features,max_features+1)，其中第一列总是0.</p>
 <div class="topic">
 <p class="topic-title first">References:</p>
 <ul class="simple">
@@ -493,26 +490,19 @@ by Hastie et al.</li>
 </div>
 </div>
 <div class="section" id="orthogonal-matching-pursuit-omp">
-<span id="omp"></span><h2>1.1.8. Orthogonal Matching Pursuit (OMP)<a class="headerlink" href="#orthogonal-matching-pursuit-omp" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="generated/sklearn.linear_model.OrthogonalMatchingPursuit.html#sklearn.linear_model.OrthogonalMatchingPursuit" title="sklearn.linear_model.OrthogonalMatchingPursuit"><code class="xref py py-class docutils literal"><span class="pre">OrthogonalMatchingPursuit</span></code></a> and <a class="reference internal" href="generated/sklearn.linear_model.orthogonal_mp.html#sklearn.linear_model.orthogonal_mp" title="sklearn.linear_model.orthogonal_mp"><code class="xref py py-func docutils literal"><span class="pre">orthogonal_mp</span></code></a> implements the OMP
-algorithm for approximating the fit of a linear model with constraints imposed
-on the number of non-zero coefficients (ie. the L <sub>0</sub> pseudo-norm).</p>
-<p>Being a forward feature selection method like <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression最小角回归</span></a>,
-orthogonal matching pursuit can approximate the optimum solution vector with a
-fixed number of non-zero elements:</p>
+<span id="omp"></span><h2>1.1.8. Orthogonal Matching Pursuit (OMP) 正交匹配跟踪<a class="headerlink" href="#orthogonal-matching-pursuit-omp" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="generated/sklearn.linear_model.OrthogonalMatchingPursuit.html#sklearn.linear_model.OrthogonalMatchingPursuit" title="sklearn.linear_model.OrthogonalMatchingPursuit"><code class="xref py py-class docutils literal"><span class="pre">OrthogonalMatchingPursuit</span></code></a> and <a class="reference internal" href="generated/sklearn.linear_model.orthogonal_mp.html#sklearn.linear_model.orthogonal_mp" title="sklearn.linear_model.orthogonal_mp"><code class="xref py py-func docutils literal"><span class="pre">orthogonal_mp</span></code></a> 实现了一个用来逼近在非零系数的个数上加约束的线性模型的拟合的OMP算法(比如L <sub>0</sub> pseudo-norm)</p>
+<p>和 <a class="reference internal" href="#least-angle-regression"><span class="std std-ref">Least Angle Regression最小角回归</span></a> 一样，作为一个前向特征选择方法，OMP可以用一个固定非零的数来逼近最优的解向量:</p>
 <div class="math">
 <p><img src="../_images/math/5df591a96f7b30ca22967aa8066b025332c104e0.png" alt="\text{arg\,min\,} ||y - X\gamma||_2^2 \text{ subject to } \
 ||\gamma||_0 \leq n_{nonzero\_coefs}"/></p>
-</div><p>Alternatively, orthogonal matching pursuit can target a specific error instead
-of a specific number of non-zero coefficients. This can be expressed as:</p>
+</div><p>或者说正交匹配算法可以针对一个特殊的误差而不是一个特殊的非零系数的个数，这一过程可以表达为:</p>
 <div class="math">
 <p><img src="../_images/math/0170e84380c5fc3ce1afe36f8b55f3514ec6ec1c.png" alt="\text{arg\,min\,} ||\gamma||_0 \text{ subject to } ||y-X\gamma||_2^2 \
 \leq \text{tol}"/></p>
-</div><p>OMP is based on a greedy algorithm that includes at each step the atom most
-highly correlated with the current residual. It is similar to the simpler
-matching pursuit (MP) method, but better in that at each iteration, the
-residual is recomputed using an orthogonal projection on the space of the
-previously chosen dictionary elements.</p>
+</div><p>OMP是基于贪婪算法,包括在每一步原子(归一化的向量)与当前残差高度相关。它类似于简单
+匹配追踪(MP)方法,但更好的,在每一次迭代中，通过使用的在前一个选择的字典元素的空间的正交投影重新计算残差。
+参考 * <a class="reference external" href="http://chunqiu.blog.ustc.edu.cn/?p=634">http://chunqiu.blog.ustc.edu.cn/?p=634</a> *</p>
 <div class="topic">
 <p class="topic-title first">Examples:</p>
 <ul class="simple">
@@ -529,27 +519,15 @@ S. G. Mallat, Z. Zhang,</li>
 </div>
 </div>
 <div class="section" id="bayesian-regression">
-<span id="id14"></span><h2>1.1.9. Bayesian Regression<a class="headerlink" href="#bayesian-regression" title="Permalink to this headline">¶</a></h2>
-<p>可以在估计过程中使用贝叶斯回归技术包含正则化参数：正则化参数不是硬编码设置的而是手动调节适合数据的值
-Bayesian regression techniques can be used to include regularization
-parameters in the estimation procedure: the regularization parameter is
-not set in a hard sense but tuned to the data at hand.</p>
-<p>可以通过引入 <a class="reference external" href="http://en.wikipedia.org/wiki/Non-informative_prior#Uninformative_priors">uninformative priors</a></p>
-<p>This can be done by introducing <a class="reference external" href="http://en.wikipedia.org/wiki/Non-informative_prior#Uninformative_priors">uninformative priors</a>
-over the hyper parameters of the model.
-The <img class="math" src="../_images/math/3c1bc04a0c8dc5a927a0ee5a8ac22c87f3a9dd06.png" alt="\ell_{2}"/> regularization used in <a href="#id26"><span class="problematic" id="id27">`Ridge Regression`_</span></a> is equivalent
-to finding a maximum a-postiori solution under a Gaussian prior over the
-parameters <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> with precision <img class="math" src="../_images/math/a3723c8c34eb2d8596b820f622d120ba0bc06d21.png" alt="\lambda^-1"/>.  Instead of setting
-<cite>lambda</cite> manually, it is possible to treat it as a random variable to be
-estimated from the data.</p>
-<p>为了获得一个完整的概率模型，输出 <img class="math" src="../_images/math/b124ff74afb0914bb434e8fb849eb56d734412f8.png" alt="y"/> 假设为关于 <img class="math" src="../_images/math/8dfdd5edae5a6b7ef2c77d131dfb3f8bc2ad87c6.png" alt="X w"/> 的高斯分布
-To obtain a fully probabilistic model, the output <img class="math" src="../_images/math/b124ff74afb0914bb434e8fb849eb56d734412f8.png" alt="y"/> is assumed
-to be Gaussian distributed around <img class="math" src="../_images/math/8dfdd5edae5a6b7ef2c77d131dfb3f8bc2ad87c6.png" alt="X w"/>:</p>
+<span id="id14"></span><h2>1.1.9. Bayesian Regression 贝叶斯回归<a class="headerlink" href="#bayesian-regression" title="Permalink to this headline">¶</a></h2>
+<p>可以在估计过程中使用贝叶斯回归技术包含正则化参数：正则化参数不是硬编码设置的而是手动调节适合数据的值</p>
+<p>可以通过在模型的超参数上引入 <a class="reference external" href="http://en.wikipedia.org/wiki/Non-informative_prior#Uninformative_priors">uninformative priors</a></p>
+<p><a href="#id26"><span class="problematic" id="id27">`Ridge Regression`_</span></a> 中 <img class="math" src="../_images/math/3c1bc04a0c8dc5a927a0ee5a8ac22c87f3a9dd06.png" alt="\ell_{2}"/> 使用的正则化项等价于在一个参数为 <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> 且精度为 <img class="math" src="../_images/math/a3723c8c34eb2d8596b820f622d120ba0bc06d21.png" alt="\lambda^-1"/> 的高斯先验下寻找
+一个最大的后验的解。而且并不是手动设置 <cite>lambda</cite> ，而是有可能把它看做一个随机变量来从从数据中估计。</p>
+<p>为了获得一个完整的概率模型，输出 <img class="math" src="../_images/math/b124ff74afb0914bb434e8fb849eb56d734412f8.png" alt="y"/> 假设为关于 <img class="math" src="../_images/math/8dfdd5edae5a6b7ef2c77d131dfb3f8bc2ad87c6.png" alt="X w"/> 的高斯分布</p>
 <div class="math">
 <p><img src="../_images/math/7773a3df283e6d44b384630a549394257b70d271.png" alt="p(y|X,w,\alpha) = \mathcal{N}(y|X w,\alpha)"/></p>
-</div><p>Alpha 同样被看做是随机变量，需要从数据中来估计
-Alpha is again treated as a random variable that is to be estimated from the
-data.</p>
+</div><p>Alpha 同样被看做是随机变量，需要从数据中来估计</p>
 <p>贝叶斯回归的优势：</p>
 <blockquote>
 <div><ul class="simple">
@@ -560,36 +538,28 @@ data.</p>
 <p>贝叶斯回归劣势:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Inference of the model can be time consuming.</li>
+<li>模型的推理比较耗时</li>
 </ul>
 </div></blockquote>
 <div class="topic">
 <p class="topic-title first">References</p>
 <ul class="simple">
-<li>A good introduction to Bayesian methods is given in C. Bishop: Pattern
-Recognition and Machine learning</li>
-<li>Original Algorithm is detailed in the  book <cite>Bayesian learning for neural
-networks</cite> by Radford M. Neal</li>
+<li>关于贝叶斯方法一个非常好的说明可以参考  C. Bishop: Pattern Recognition and Machine learning (经典的PRML书籍)</li>
+<li>而原始的算法在 <cite>Bayesian learning for neural networks</cite> by Radford M. Neal 中有详细描述。</li>
 </ul>
 </div>
 <div class="section" id="bayesian-ridge-regression">
-<span id="id15"></span><h3>1.1.9.1. Bayesian Ridge Regression<a class="headerlink" href="#bayesian-ridge-regression" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference internal" href="generated/sklearn.linear_model.BayesianRidge.html#sklearn.linear_model.BayesianRidge" title="sklearn.linear_model.BayesianRidge"><code class="xref py py-class docutils literal"><span class="pre">BayesianRidge</span></code></a> estimates a probabilistic model of the
-regression problem as described above.
-The prior for the parameter <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> is given by a spherical Gaussian:</p>
+<span id="id15"></span><h3>1.1.9.1. Bayesian Ridge Regression 贝叶斯岭回归<a class="headerlink" href="#bayesian-ridge-regression" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="generated/sklearn.linear_model.BayesianRidge.html#sklearn.linear_model.BayesianRidge" title="sklearn.linear_model.BayesianRidge"><code class="xref py py-class docutils literal"><span class="pre">BayesianRidge</span></code></a> 对上述的回归问题估计了一个概率模型。先验参数 <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> 由下面的球形高斯给出：</p>
 <div class="math">
 <p><img src="../_images/math/5fd79766495b2402512d882d4a4ce1a7cc3c53c9.png" alt="p(w|\lambda) =
 \mathcal{N}(w|0,\lambda^{-1}\bold{I_{p}})"/></p>
-</div><p>The priors over <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> and <img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/> are chosen to be <a class="reference external" href="http://en.wikipedia.org/wiki/Gamma_distribution">gamma
-distributions</a>, the
-conjugate prior for the precision of the Gaussian.</p>
-<p>The resulting model is called <em>Bayesian Ridge Regression</em>, and is similar to the
-classical <a class="reference internal" href="generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge" title="sklearn.linear_model.Ridge"><code class="xref py py-class docutils literal"><span class="pre">Ridge</span></code></a>.  The parameters <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/>, <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> and
-<img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/> are estimated jointly during the fit of the model.  The
-remaining hyperparameters are the parameters of the gamma priors over
-<img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> and <img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/>.  These are usually chosen to be
-<em>non-informative</em>.  The parameters are estimated by maximizing the <em>marginal
-log likelihood</em>.</p>
+</div><p>先验参数  <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 和 <img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/> 的选择满足 <a class="reference external" href="http://en.wikipedia.org/wiki/Gamma_distribution">gamma
+distributions</a> ，即高斯函数精度的共轭先验</p>
+<p>生成的模型称为  <em>Bayesian Ridge Regression</em> ,和经典的  <a class="reference internal" href="generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge" title="sklearn.linear_model.Ridge"><code class="xref py py-class docutils literal"><span class="pre">Ridge</span></code></a> 类似。
+参数 <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/>, <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 以及 <img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/> 在模型的拟合中被共同估计。
+其他的参数是 <img class="math" src="../_images/math/ad59b6e24a4a00ac621801f8d7513d68be654ab5.png" alt="\alpha"/> 和 <img class="math" src="../_images/math/1ab0134b6e0837594649c75a2ed83cfd85a2d03d.png" alt="\lambda"/> 的gamma 先验的参数。（待校正）
+这些通常被选择为 <em>non-informative*（参考贝叶斯无信息先验）。参数统计通过最大化 *marginal log likelihood</em>.</p>
 <p>By default <img class="math" src="../_images/math/5ad6bfdf9e562f74e46b76f28df8f60b983e2a91.png" alt="\alpha_1 = \alpha_2 =  \lambda_1 = \lambda_2 = 1.e^{-6}"/>.</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_bayesian_ridge.html"><img alt="../_images/plot_bayesian_ridge_0011.png" src="../_images/plot_bayesian_ridge_0011.png" style="width: 300.0px; height: 250.0px;" /></a>
@@ -615,9 +585,7 @@ log likelihood</em>.</p>
 <span class="go">array([ 0.49999993,  0.49999993])</span>
 </pre></div>
 </div>
-<p>Due to the Bayesian framework, the weights found are slightly different to the
-ones found by <a class="reference internal" href="#ordinary-least-squares"><span class="std std-ref">普通最小二乘法</span></a>. However, Bayesian Ridge Regression
-is more robust to ill-posed problem.</p>
+<p>由于贝叶斯框架，权重的发现同  <a class="reference internal" href="#ordinary-least-squares"><span class="std std-ref">普通最小二乘法</span></a> 略有不同。然而Bayesian Ridge Regression 对于病态问题更具有鲁棒性。</p>
 <div class="topic">
 <p class="topic-title first">Examples:</p>
 <ul class="simple">
@@ -634,21 +602,15 @@ by MacKay, David J. C.</li>
 </div>
 <div class="section" id="automatic-relevance-determination-ard">
 <h3>1.1.9.2. Automatic Relevance Determination - ARD<a class="headerlink" href="#automatic-relevance-determination-ard" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference internal" href="generated/sklearn.linear_model.ARDRegression.html#sklearn.linear_model.ARDRegression" title="sklearn.linear_model.ARDRegression"><code class="xref py py-class docutils literal"><span class="pre">ARDRegression</span></code></a> is very similar to <a class="reference internal" href="#id15">Bayesian Ridge Regression</a>,
-but can lead to sparser weights <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> <a class="footnote-reference" href="#id18" id="id16">[1]</a> <a class="footnote-reference" href="#id19" id="id17">[2]</a>.
-<a class="reference internal" href="generated/sklearn.linear_model.ARDRegression.html#sklearn.linear_model.ARDRegression" title="sklearn.linear_model.ARDRegression"><code class="xref py py-class docutils literal"><span class="pre">ARDRegression</span></code></a> poses a different prior over <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/>, by dropping the
-assumption of the Gaussian being spherical.</p>
-<p>Instead, the distribution over <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> is assumed to be an axis-parallel,
-elliptical Gaussian distribution.</p>
-<p>This means each weight <img class="math" src="../_images/math/d3dc4f3acdee37990d156185ebe2e4eb8dd6e87f.png" alt="w_{i}"/> is drawn from a Gaussian distribution,
-centered on zero and with a precision <img class="math" src="../_images/math/3d9a1fde3ad183d72319e293ff637c7528c831a4.png" alt="\lambda_{i}"/>:</p>
+<p><a class="reference internal" href="generated/sklearn.linear_model.ARDRegression.html#sklearn.linear_model.ARDRegression" title="sklearn.linear_model.ARDRegression"><code class="xref py py-class docutils literal"><span class="pre">ARDRegression</span></code></a> 和  <a href="#id28"><span class="problematic" id="id29">`Bayesian Ridge Regression`_</span></a> 非常相似，但是主要针对稀疏权重  <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> <a class="footnote-reference" href="#id18" id="id16">[1]</a> <a class="footnote-reference" href="#id19" id="id17">[2]</a> 。
+<a class="reference internal" href="generated/sklearn.linear_model.ARDRegression.html#sklearn.linear_model.ARDRegression" title="sklearn.linear_model.ARDRegression"><code class="xref py py-class docutils literal"><span class="pre">ARDRegression</span></code></a> 提出一个不同于  <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> 的先验，通过弱化高斯分布为球形的假设。</p>
+<p>相反， <img class="math" src="../_images/math/8659700e6646cd91bc02c32affaa5ec046ee9935.png" alt="w"/> 的分布假设为一个平行轴的椭圆高斯分布。(同axis-alignen)</p>
+<p>也就是说，每个权重  <img class="math" src="../_images/math/d3dc4f3acdee37990d156185ebe2e4eb8dd6e87f.png" alt="w_{i}"/> 来自于一个中心在0点，精度为 <img class="math" src="../_images/math/3d9a1fde3ad183d72319e293ff637c7528c831a4.png" alt="\lambda_{i}"/> 的高斯分布:</p>
 <div class="math">
 <p><img src="../_images/math/981be8824d7f35ca38c2cd81f6e3bc582743b18e.png" alt="p(w|\lambda) = \mathcal{N}(w|0,A^{-1})"/></p>
 </div><p>with <img class="math" src="../_images/math/13f995fd0de4d863d93b62211954f6da80bde589.png" alt="diag \; (A) = \lambda = \{\lambda_{1},...,\lambda_{p}\}"/>.</p>
-<p>In contrast to <a class="reference internal" href="#id15">Bayesian Ridge Regression</a>, each coordinate of <img class="math" src="../_images/math/d3dc4f3acdee37990d156185ebe2e4eb8dd6e87f.png" alt="w_{i}"/>
-has its own standard deviation <img class="math" src="../_images/math/3b765ea6939f1eba2541e91f870cb3c078aa29be.png" alt="\lambda_i"/>. The prior over all
-<img class="math" src="../_images/math/3b765ea6939f1eba2541e91f870cb3c078aa29be.png" alt="\lambda_i"/> is chosen to be the same gamma distribution given by
-hyperparameters <img class="math" src="../_images/math/18cbd415b1a8e3f19977c5d04d046d41c585c7de.png" alt="\lambda_1"/> and <img class="math" src="../_images/math/2bc2d2b207f861ff1c70724ebb8a9cd6831c0d52.png" alt="\lambda_2"/>.</p>
+<p>同 <a href="#id30"><span class="problematic" id="id31">`Bayesian Ridge Regression`_</span></a> 形成对比， <img class="math" src="../_images/math/d3dc4f3acdee37990d156185ebe2e4eb8dd6e87f.png" alt="w_{i}"/> 每一维都有一个标准差  <img class="math" src="../_images/math/3b765ea6939f1eba2541e91f870cb3c078aa29be.png" alt="\lambda_i"/> ，
+所有 <img class="math" src="../_images/math/3b765ea6939f1eba2541e91f870cb3c078aa29be.png" alt="\lambda_i"/> 的先验选择 和 由给定超参数 <img class="math" src="../_images/math/18cbd415b1a8e3f19977c5d04d046d41c585c7de.png" alt="\lambda_1"/> 和 <img class="math" src="../_images/math/2bc2d2b207f861ff1c70724ebb8a9cd6831c0d52.png" alt="\lambda_2"/> 的gamma分布一样。</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_ard.html"><img alt="../_images/plot_ard_0011.png" src="../_images/plot_ard_0011.png" style="width: 300.0px; height: 250.0px;" /></a>
 </div>
@@ -676,49 +638,1778 @@ hyperparameters <img class="math" src="../_images/math/18cbd415b1a8e3f19977c5d04
 </div>
 </div>
 <div class="section" id="logistic-regression">
-<span id="id20"></span><h2>1.1.10. Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h2>
-<p>Logistic regression, despite its name, is a linear model for classification
-rather than regression. Logistic regression is also known in the literature as
-logit regression, maximum-entropy classification (MaxEnt)
-or the log-linear classifier. In this model, the probabilities describing the possible outcomes of a single trial are modeled using a <a class="reference external" href="http://en.wikipedia.org/wiki/Logistic_function">logistic function</a>.</p>
-<p>The implementation of logistic regression in scikit-learn can be accessed from
-class <a class="reference internal" href="generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">LogisticRegression</span></code></a>. This
-implementation can fit a multiclass (one-vs-rest) logistic regression with optional
-L2 or L1 regularization.</p>
-<p>As an optimization problem, binary class L2 penalized logistic regression minimizes
-the following cost function:</p>
+<span id="id20"></span><h2>1.1.10. Logistic regression逻辑回归<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h2>
+<p>逻辑回归形如其名，是一个线性分类模型而不是回归模型。逻辑回归在文献中也称为logit回归、最大熵分类(MaxEnt) 或者 log-linear classifier。
+在这个模型中，描述单次可能结果输出概率使用  <a class="reference external" href="http://en.wikipedia.org/wiki/Logistic_function">logistic function</a> 来建模。</p>
+<p>scikit-learn中逻辑回归的实现为 <a class="reference internal" href="generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">LogisticRegression</span></code></a> 类。它可以拟合含L2或者L1正则化项的多类逻辑回归问题。</p>
+<p>作为一个优化问题，二分类L2 通过下方的代价函数来惩罚逻辑回归：</p>
 <div class="math">
 <p><img src="../_images/math/7924565b6447a7ef1f423d6fbb95946fe90455ba.png" alt="\underset{w, c}{min\,} \frac{1}{2}w^T w + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1) ."/></p>
-</div><p>Similarly, L1 regularized logistic regression solves the following optimization problem</p>
-<div class="math">
-<p><img src="../_images/math/61756d9563c84ac7ba3b3d322d8990fae5aa0627.png" alt="\underset{w, c}{min\,} \|w\|_1 + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1) ."/></p>
-</div><p>The solvers implemented in the class <a class="reference internal" href="generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">LogisticRegression</span></code></a>
-are &#8220;liblinear&#8221; (which is a wrapper around the C++ library,
-LIBLINEAR), &#8220;newton-cg&#8221;, &#8220;lbfgs&#8221; and &#8220;sag&#8221;.</p>
-<p>The &#8220;lbfgs&#8221; and &#8220;newton-cg&#8221; solvers only support L2 penalization and are found
-to converge faster for some high dimensional data. L1 penalization yields
-sparse predicting weights.</p>
-<p>The solver &#8220;liblinear&#8221; uses a coordinate descent (CD) algorithm based on
-Liblinear. For L1 penalization <a class="reference internal" href="generated/sklearn.svm.l1_min_c.html#sklearn.svm.l1_min_c" title="sklearn.svm.l1_min_c"><code class="xref py py-func docutils literal"><span class="pre">sklearn.svm.l1_min_c</span></code></a> allows to
-calculate the lower bound for C in order to get a non &#8220;null&#8221; (all feature weights to
-zero) model. This relies on the excellent
-<a class="reference external" href="http://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR library</a>,
-which is shipped with scikit-learn. However, the CD algorithm implemented in
-liblinear cannot learn a true multinomial (multiclass) model;
-instead, the optimization problem is decomposed in a &#8220;one-vs-rest&#8221; fashion
-so separate binary classifiers are trained for all classes.
-This happens under the hood, so <a class="reference internal" href="generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">LogisticRegression</span></code></a> instances
-using this solver behave as multiclass classifiers.</p>
-<p>Setting <cite>multi_class</cite> to &#8220;multinomial&#8221; with the &#8220;lbfgs&#8221; or &#8220;newton-cg&#8221; solver
-in <a class="reference internal" href="generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">LogisticRegression</span></code></a> learns a true multinomial logistic
-regression model, which means that its probability estimates should
-be better calibrated than the default &#8220;one-vs-rest&#8221; setting.
-&#8220;lbfgs&#8221;, &#8220;newton-cg&#8221; and &#8220;sag&#8221; solvers cannot optimize L1-penalized models, though, so the &#8220;multinomial&#8221; setting does not learn sparse models.</p>
-<p>The solver &#8220;sag&#8221; uses a Stochastic Average Gradient descent <a class="footnote-reference" href="#id22" id="id21">[3]</a>. It does not
-handle &#8220;multinomial&#8221; case, and is limited to L2-penalized models, yet it is
-often faster than other solvers for large datasets, when both the number of
-samples and the number of features are large.</p>
-<p>In a nutshell, one may choose the solver with the following rules:</p>
+</div><p>类似的，L1 正则化逻辑回归解决下述的优化问题：</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">\underset{w, c}{min\,} \|w\|_1 + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1) .
+
+:class:`LogisticRegression` 中的实现是 &quot;liblinear&quot; (一个扩展的C++ library,LIBLINEAR), &quot;newton-cg&quot;, &quot;lbfgs&quot; and &quot;sag&quot;。
+
+&quot;lbfgs&quot; 和 &quot;newton-cg&quot; 只支持L2罚项，并且对于一些高维数据收敛非常快。L1罚项产生稀疏预测的权重。
+
+&quot;liblinear&quot; 使用了基于Liblinear的坐标下降法(CD)。对于F1罚项， :func:`sklearn.svm.l1_min_c` 允许计算C的下界以获得一个非&quot;null&quot; 的
+模型（所有特征权重为0）。这依赖于非常棒的一个库 `LIBLINEAR library &lt;http://www.csie.ntu.edu.tw/~cjlin/liblinear/&gt;`_ ,用在scikit-learn中。
+然而，CD算法在liblinear中的实现无法学习一个真正的多维（多类）的模型。反而，最优问题被分解为 &quot;one-vs-rest&quot; 多个二分类问题来解决多分类。
+由于底层是这样实现的，所以使用了该库的  :class:`LogisticRegression` 类就作为多类分类器了。
+
+:class:`LogisticRegression` 使用  &quot;lbfgs&quot; 或者 &quot;newton-cg&quot; 程序 来设置 `multi_class` 为 &quot;multinomial&quot;，则该类学习
+了一个真正的多类逻辑回归模型，也就是说这种概率估计应该比默认 &quot;one-vs-rest&quot; 设置要更加准确。但是 &quot;lbfgs&quot;, &quot;newton-cg&quot; 和 &quot;sag&quot;
+程序无法优化 含L1罚项的模型，所以&quot;multinomial&quot; 的设置无法学习稀疏模型。</tt>)</p>
+latex exited with error
+[stdout]
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2015/01/01&gt;
+Babel &lt;3.9l&gt; and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?&#8217; option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/bm.sty)
+No file math.aux.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20013 = U+4E2D,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-118.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-118.def)
+
+! Package ucs Error: Unknown Unicode character 30340 = U+7684,
+(ucs)                possibly declared in uni-118.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-91.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-91.def)
+
+! Package ucs Error: Unknown Unicode character 23454 = U+5B9E,
+(ucs)                possibly declared in uni-91.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-115.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-115.def)
+
+! Package ucs Error: Unknown Unicode character 29616 = U+73B0,
+(ucs)                possibly declared in uni-115.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-102.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-102.def)
+
+! Package ucs Error: Unknown Unicode character 26159 = U+662F,
+(ucs)                possibly declared in uni-102.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 19968 = U+4E00,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20010 = U+4E2A,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-98.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-98.def)
+
+! Package ucs Error: Unknown Unicode character 25193 = U+6269,
+(ucs)                possibly declared in uni-98.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-92.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-92.def)
+
+! Package ucs Error: Unknown Unicode character 23637 = U+5C55,
+(ucs)                possibly declared in uni-92.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-48.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-48.def)
+
+! Package ucs Error: Unknown Unicode character 12290 = U+3002,
+(ucs)                possibly declared in uni-48.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-84.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-84.def)
+
+! Package ucs Error: Unknown Unicode character 21644 = U+548C,
+(ucs)                possibly declared in uni-84.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-83.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-83.def)
+
+! Package ucs Error: Unknown Unicode character 21482 = U+53EA,
+(ucs)                possibly declared in uni-83.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+
+! Package ucs Error: Unknown Unicode character 25903 = U+652F,
+(ucs)                possibly declared in uni-101.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-99.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-99.def)
+
+! Package ucs Error: Unknown Unicode character 25345 = U+6301,
+(ucs)                possibly declared in uni-99.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-127.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-127.def)
+
+! Package ucs Error: Unknown Unicode character 32602 = U+7F5A,
+(ucs)                possibly declared in uni-127.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-152.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-152.def)
+
+! Package ucs Error: Unknown Unicode character 39033 = U+9879,
+(ucs)                possibly declared in uni-152.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-255.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-255.def)
+
+! Package ucs Error: Unknown Unicode character 65292 = U+FF0C,
+(ucs)                possibly declared in uni-255.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-94.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-94.def)
+
+! Package ucs Error: Unknown Unicode character 24182 = U+5E76,
+(ucs)                possibly declared in uni-94.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 19988 = U+4E14,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-91.def)
+
+! Package ucs Error: Unknown Unicode character 23545 = U+5BF9,
+(ucs)                possibly declared in uni-91.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20110 = U+4E8E,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 19968 = 0x4E00 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20123 = U+4E9B,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-154.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-154.def)
+
+! Package ucs Error: Unknown Unicode character 39640 = U+9AD8,
+(ucs)                possibly declared in uni-154.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-126.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-126.def)
+
+! Package ucs Error: Unknown Unicode character 32500 = U+7EF4,
+(ucs)                possibly declared in uni-126.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+
+! Package ucs Error: Unknown Unicode character 25968 = U+6570,
+(ucs)                possibly declared in uni-101.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-99.def)
+
+! Package ucs Error: Unknown Unicode character 25454 = U+636E,
+(ucs)                possibly declared in uni-99.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+
+! Package ucs Error: Unknown Unicode character 25910 = U+6536,
+(ucs)                possibly declared in uni-101.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+
+! Package ucs Error: Unknown Unicode character 25947 = U+655B,
+(ucs)                possibly declared in uni-101.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-151.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-151.def)
+
+! Package ucs Error: Unknown Unicode character 38750 = U+975E,
+(ucs)                possibly declared in uni-151.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-94.def)
+
+! Package ucs Error: Unknown Unicode character 24120 = U+5E38,
+(ucs)                possibly declared in uni-94.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-95.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-95.def)
+
+! Package ucs Error: Unknown Unicode character 24555 = U+5FEB,
+(ucs)                possibly declared in uni-95.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 32602 = 0x7F5A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 39033 = 0x9879 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20135 = U+4EA7,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+
+! Package ucs Error: Unknown Unicode character 29983 = U+751F,
+(ucs)                possibly declared in uni-117.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-122.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-122.def)
+
+! Package ucs Error: Unknown Unicode character 31232 = U+7A00,
+(ucs)                possibly declared in uni-122.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+
+! Package ucs Error: Unknown Unicode character 30095 = U+758F,
+(ucs)                possibly declared in uni-117.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-152.def)
+
+! Package ucs Error: Unknown Unicode character 39044 = U+9884,
+(ucs)                possibly declared in uni-152.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-109.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-109.def)
+
+! Package ucs Error: Unknown Unicode character 27979 = U+6D4B,
+(ucs)                possibly declared in uni-109.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-103.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-103.def)
+
+! Package ucs Error: Unknown Unicode character 26435 = U+6743,
+(ucs)                possibly declared in uni-103.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-145.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-145.def)
+
+! Package ucs Error: Unknown Unicode character 37325 = U+91CD,
+(ucs)                possibly declared in uni-145.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-79.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-79.def)
+
+! Package ucs Error: Unknown Unicode character 20351 = U+4F7F,
+(ucs)                possibly declared in uni-79.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+
+! Package ucs Error: Unknown Unicode character 29992 = U+7528,
+(ucs)                possibly declared in uni-117.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20102 = U+4E86,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-87.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-87.def)
+
+! Package ucs Error: Unknown Unicode character 22522 = U+57FA,
+(ucs)                possibly declared in uni-87.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20110 = 0x4E8E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-87.def)
+
+! Package ucs Error: Unknown Unicode character 22352 = U+5750,
+(ucs)                possibly declared in uni-87.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-104.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-104.def)
+
+! Package ucs Error: Unknown Unicode character 26631 = U+6807,
+(ucs)                possibly declared in uni-104.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 19979 = U+4E0B,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-150.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-150.def)
+
+! Package ucs Error: Unknown Unicode character 38477 = U+964D,
+(ucs)                possibly declared in uni-150.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-108.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-108.def)
+
+! Package ucs Error: Unknown Unicode character 27861 = U+6CD5,
+(ucs)                possibly declared in uni-108.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 23545 = 0x5BF9 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20110 = 0x4E8E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 32602 = 0x7F5A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 39033 = 0x9879 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 65292 = 0xFF0C appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-81.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-81.def)
+
+! Package ucs Error: Unknown Unicode character 20801 = U+5141,
+(ucs)                possibly declared in uni-81.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-139.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-139.def)
+
+! Package ucs Error: Unknown Unicode character 35768 = U+8BB8,
+(ucs)                possibly declared in uni-139.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-139.def)
+
+! Package ucs Error: Unknown Unicode character 35745 = U+8BA1,
+(ucs)                possibly declared in uni-139.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-123.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-123.def)
+
+! Package ucs Error: Unknown Unicode character 31639 = U+7B97,
+(ucs)                possibly declared in uni-123.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 19979 = 0x4E0B appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+
+! Package ucs Error: Unknown Unicode character 30028 = U+754C,
+(ucs)                possibly declared in uni-117.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20197 = U+4EE5,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-131.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-131.def)
+
+! Package ucs Error: Unknown Unicode character 33719 = U+83B7,
+(ucs)                possibly declared in uni-131.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-95.def)
+
+! Package ucs Error: Unknown Unicode character 24471 = U+5F97,
+(ucs)                possibly declared in uni-95.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 19968 = 0x4E00 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20010 = 0x4E2A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 38750 = 0x975E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-106.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-106.def)
+
+! Package ucs Error: Unknown Unicode character 27169 = U+6A21,
+(ucs)                possibly declared in uni-106.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-87.def)
+
+! Package ucs Error: Unknown Unicode character 22411 = U+578B,
+(ucs)                possibly declared in uni-87.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-255.def)
+
+! Package ucs Error: Unknown Unicode character 65288 = U+FF08,
+(ucs)                possibly declared in uni-255.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-98.def)
+
+! Package ucs Error: Unknown Unicode character 25152 = U+6240,
+(ucs)                possibly declared in uni-98.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-103.def)
+
+! Package ucs Error: Unknown Unicode character 26377 = U+6709,
+(ucs)                possibly declared in uni-103.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-114.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-114.def)
+
+! Package ucs Error: Unknown Unicode character 29305 = U+7279,
+(ucs)                possibly declared in uni-114.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-95.def)
+
+! Package ucs Error: Unknown Unicode character 24449 = U+5F81,
+(ucs)                possibly declared in uni-95.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 26435 = 0x6743 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 37325 = 0x91CD appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20026 = U+4E3A,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-255.def)
+
+! Package ucs Error: Unknown Unicode character 65289 = U+FF09,
+(ucs)                possibly declared in uni-255.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-143.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-143.def)
+
+! Package ucs Error: Unknown Unicode character 36825 = U+8FD9,
+(ucs)                possibly declared in uni-143.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-79.def)
+
+! Package ucs Error: Unknown Unicode character 20381 = U+4F9D,
+(ucs)                possibly declared in uni-79.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-141.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-141.def)
+
+! Package ucs Error: Unknown Unicode character 36182 = U+8D56,
+(ucs)                possibly declared in uni-141.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20110 = 0x4E8E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 38750 = 0x975E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 24120 = 0x5E38 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-104.def)
+
+! Package ucs Error: Unknown Unicode character 26834 = U+68D2,
+(ucs)                possibly declared in uni-104.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 19968 = 0x4E00 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20010 = 0x4E2A appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-94.def)
+
+! Package ucs Error: Unknown Unicode character 24211 = U+5E93,
+(ucs)                possibly declared in uni-94.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 29992 = 0x7528 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-87.def)
+
+! Package ucs Error: Unknown Unicode character 22312 = U+5728,
+(ucs)                possibly declared in uni-87.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20013 = 0x4E2D appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-113.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-113.def)
+
+! Package ucs Error: Unknown Unicode character 28982 = U+7136,
+(ucs)                possibly declared in uni-113.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-128.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-128.def)
+
+! Package ucs Error: Unknown Unicode character 32780 = U+800C,
+(ucs)                possibly declared in uni-128.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 65292 = 0xFF0C appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31639 = 0x7B97 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 27861 = 0x6CD5 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 22312 = 0x5728 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20013 = 0x4E2D appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 23454 = 0x5B9E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 29616 = 0x73B0 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-101.def)
+
+! Package ucs Error: Unknown Unicode character 26080 = U+65E0,
+(ucs)                possibly declared in uni-101.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 27861 = 0x6CD5 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-91.def)
+
+! Package ucs Error: Unknown Unicode character 23398 = U+5B66,
+(ucs)                possibly declared in uni-91.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20064 = U+4E60,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 19968 = 0x4E00 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20010 = 0x4E2A appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-119.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-119.def)
+
+! Package ucs Error: Unknown Unicode character 30495 = U+771F,
+(ucs)                possibly declared in uni-119.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-107.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-107.def)
+
+! Package ucs Error: Unknown Unicode character 27491 = U+6B63,
+(ucs)                possibly declared in uni-107.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-89.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-89.def)
+
+! Package ucs Error: Unknown Unicode character 22810 = U+591A,
+(ucs)                possibly declared in uni-89.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 32500 = 0x7EF4 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 65288 = 0xFF08 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 22810 = 0x591A appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-124.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-124.def)
+
+! Package ucs Error: Unknown Unicode character 31867 = U+7C7B,
+(ucs)                possibly declared in uni-124.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 65289 = 0xFF09 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 27169 = 0x6A21 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 22411 = 0x578B appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-83.def)
+
+! Package ucs Error: Unknown Unicode character 21453 = U+53CD,
+(ucs)                possibly declared in uni-83.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 32780 = 0x800C appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 65292 = 0xFF0C appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-103.def)
+
+! Package ucs Error: Unknown Unicode character 26368 = U+6700,
+(ucs)                possibly declared in uni-103.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-79.def)
+
+! Package ucs Error: Unknown Unicode character 20248 = U+4F18,
+(ucs)                possibly declared in uni-79.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-149.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-149.def)
+
+! Package ucs Error: Unknown Unicode character 38382 = U+95EE,
+(ucs)                possibly declared in uni-149.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-152.def)
+
+! Package ucs Error: Unknown Unicode character 39064 = U+9898,
+(ucs)                possibly declared in uni-152.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-136.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-136.def)
+
+! Package ucs Error: Unknown Unicode character 34987 = U+88AB,
+(ucs)                possibly declared in uni-136.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-82.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-82.def)
+
+! Package ucs Error: Unknown Unicode character 20998 = U+5206,
+(ucs)                possibly declared in uni-82.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-137.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-137.def)
+
+! Package ucs Error: Unknown Unicode character 35299 = U+89E3,
+(ucs)                possibly declared in uni-137.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20026 = 0x4E3A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 22810 = 0x591A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20010 = 0x4E2A appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-78.def)
+
+! Package ucs Error: Unknown Unicode character 20108 = U+4E8C,
+(ucs)                possibly declared in uni-78.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20998 = 0x5206 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31867 = 0x7C7B appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 38382 = 0x95EE appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 39064 = 0x9898 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-103.def)
+
+! Package ucs Error: Unknown Unicode character 26469 = U+6765,
+(ucs)                possibly declared in uni-103.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 35299 = 0x89E3 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-81.def)
+
+! Package ucs Error: Unknown Unicode character 20915 = U+51B3,
+(ucs)                possibly declared in uni-81.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 22810 = 0x591A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20998 = 0x5206 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31867 = 0x7C7B appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-117.def)
+
+! Package ucs Error: Unknown Unicode character 30001 = U+7531,
+(ucs)                possibly declared in uni-117.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20110 = 0x4E8E appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-94.def)
+
+! Package ucs Error: Unknown Unicode character 24213 = U+5E95,
+(ucs)                possibly declared in uni-94.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-92.def)
+
+! Package ucs Error: Unknown Unicode character 23618 = U+5C42,
+(ucs)                possibly declared in uni-92.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 26159 = 0x662F appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 36825 = 0x8FD9 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-104.def)
+
+! Package ucs Error: Unknown Unicode character 26679 = U+6837,
+(ucs)                possibly declared in uni-104.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 23454 = 0x5B9E appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 29616 = 0x73B0 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 65292 = 0xFF0C appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 25152 = 0x6240 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20197 = 0x4EE5 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20351 = 0x4F7F appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 29992 = 0x7528 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20102 = 0x4E86 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-139.def)
+
+! Package ucs Error: Unknown Unicode character 35813 = U+8BE5,
+(ucs)                possibly declared in uni-139.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 24211 = 0x5E93 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 30340 = 0x7684 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31867 = 0x7C7B appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-92.def)
+
+! Package ucs Error: Unknown Unicode character 23601 = U+5C31,
+(ucs)                possibly declared in uni-92.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-79.def)
+
+! Package ucs Error: Unknown Unicode character 20316 = U+4F5C,
+(ucs)                possibly declared in uni-79.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20026 = 0x4E3A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 22810 = 0x591A appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31867 = 0x7C7B appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20998 = 0x5206 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 31867 = 0x7C7B appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-86.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-86.def)
+
+! Package ucs Error: Unknown Unicode character 22120 = U+5668,
+(ucs)                possibly declared in uni-86.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+
+Package ucs Warning: Unknown character 20102 = 0x4E86 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 12290 = 0x3002 appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 20351 = 0x4F7F appeared again. on input 
+line 23.
+
+
+Package ucs Warning: Unknown character 29992 = 0x7528 appeared again. on input 
+line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uninames.dat)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-98.def)
+
+! Package ucs Error: Unknown Unicode character 25110 = U+6216,
+(ucs)                possibly declared in uni-98.def.
+(ucs)                Type H to see if it is available with options.
+
+See the ucs package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{aligned}\end{align*}
+                              
+(That makes 100 errors; please try again.)
+No pages of output.
+Transcript written on math.log.
+</div>
+<p>&#8220;sag&#8221; 程序使用了随机平均梯度下降（ Stochastic Average Gradient descent <a class="footnote-reference" href="#id22" id="id21">[3]</a>）。它无法解决多分类问题，而且对于含L2罚项的模型有局限性。
+然而在超大数据集下计算要比其他程序快很多，当样本数量和特征数量都非常大的时候。</p>
+<p>简单概括下，可以按照以下规则来选择solver:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="55%" />
@@ -741,7 +2432,7 @@ samples and the number of features are large.</p>
 </tr>
 </tbody>
 </table>
-<p>For large dataset, you may also consider using <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier" title="sklearn.linear_model.SGDClassifier"><code class="xref py py-class docutils literal"><span class="pre">SGDClassifier</span></code></a> with &#8216;log&#8217; loss.</p>
+<p>对于超大数据集，你同样可以考虑使用带log损失的 <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier" title="sklearn.linear_model.SGDClassifier"><code class="xref py py-class docutils literal"><span class="pre">SGDClassifier</span></code></a></p>
 <div class="topic">
 <p class="topic-title first">Examples:</p>
 <ul class="simple">
