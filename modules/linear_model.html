@@ -785,11 +785,8 @@ The passive-aggressive algorithms are a family of algorithms for large-scale
 learning. They are similar to the Perceptron in that they do not require a
 learning rate. However, contrary to the Perceptron, they include a
 regularization parameter <code class="docutils literal"><span class="pre">C</span></code>.</p>
-<p>For classification, <a class="reference internal" href="generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier" title="sklearn.linear_model.PassiveAggressiveClassifier"><code class="xref py py-class docutils literal"><span class="pre">PassiveAggressiveClassifier</span></code></a> can be used with
-<code class="docutils literal"><span class="pre">loss='hinge'</span></code> (PA-I) or <code class="docutils literal"><span class="pre">loss='squared_hinge'</span></code> (PA-II).  For regression,
-<a class="reference internal" href="generated/sklearn.linear_model.PassiveAggressiveRegressor.html#sklearn.linear_model.PassiveAggressiveRegressor" title="sklearn.linear_model.PassiveAggressiveRegressor"><code class="xref py py-class docutils literal"><span class="pre">PassiveAggressiveRegressor</span></code></a> can be used with
-<code class="docutils literal"><span class="pre">loss='epsilon_insensitive'</span></code> (PA-I) or
-<code class="docutils literal"><span class="pre">loss='squared_epsilon_insensitive'</span></code> (PA-II).</p>
+<p>对于分类问题, <a class="reference internal" href="generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier" title="sklearn.linear_model.PassiveAggressiveClassifier"><code class="xref py py-class docutils literal"><span class="pre">PassiveAggressiveClassifier</span></code></a> 可以通过设置 <code class="docutils literal"><span class="pre">loss='hinge'</span></code> (PA-I) 或者 <code class="docutils literal"><span class="pre">loss='squared_hinge'</span></code> (PA-II)来处理。
+对于回归问题,  <a class="reference internal" href="generated/sklearn.linear_model.PassiveAggressiveRegressor.html#sklearn.linear_model.PassiveAggressiveRegressor" title="sklearn.linear_model.PassiveAggressiveRegressor"><code class="xref py py-class docutils literal"><span class="pre">PassiveAggressiveRegressor</span></code></a> 可以通过设置 <code class="docutils literal"><span class="pre">loss='epsilon_insensitive'</span></code> (PA-I) 或者 <code class="docutils literal"><span class="pre">loss='squared_epsilon_insensitive'</span></code> (PA-II)来处理。</p>
 <div class="topic">
 <p class="topic-title first">References:</p>
 <ul class="simple">
@@ -800,15 +797,14 @@ K. Crammer, O. Dekel, J. Keshat, S. Shalev-Shwartz, Y. Singer - JMLR 7 (2006)</l
 </div>
 <div class="section" id="robustness-regression-outliers-and-modeling-errors">
 <h2>1.1.14. Robustness regression: outliers and modeling errors<a class="headerlink" href="#robustness-regression-outliers-and-modeling-errors" title="Permalink to this headline">¶</a></h2>
-<p>Robust regression is interested in fitting a regression model in the
-presence of corrupt data: either outliers, or error in the model.</p>
+<p>Robust regression(稳健回归) 主要思路是对异常值十分敏感的经典最小二乘回归目标函数的修改。
+它主要用来拟合含异常数据(要么是异常数据,要么是模型错误) 的回归模型。</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_theilsen.html"><img alt="../_images/plot_theilsen_0011.png" src="../_images/plot_theilsen_0011.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="different-scenario-and-useful-concepts">
 <h3>1.1.14.1. Different scenario and useful concepts<a class="headerlink" href="#different-scenario-and-useful-concepts" title="Permalink to this headline">¶</a></h3>
-<p>There are different things to keep in mind when dealing with data
-corrupted by outliers:</p>
+<p>下面是在处理由outliers引起的数据异常时需要谨记的几个问题:</p>
 <ul>
 <li><p class="first"><strong>Outliers in X or in y</strong>?</p>
 <table border="1" class="docutils">
@@ -849,12 +845,10 @@ outliers.</p>
 </table>
 </li>
 </ul>
-<p>An important notion of robust fitting is that of breakdown point: the
+<p>rubust fitting 中一个重要概念是 breakdown point: the
 fraction of data that can be outlying for the fit to start missing the
 inlying data.</p>
-<p>Note that in general, robust fitting in high-dimensional setting (large
-<cite>n_features</cite>) is very hard. The robust models here will probably not work
-in these settings.</p>
+<p>注意在通常情况下，robust fitting在高维(<cite>n_features</cite> 非常大)下是难以处理的,robust模型在下列设置下可能无法工作。</p>
 <div class="topic">
 <p class="topic-title first"><strong>Trade-offs: which estimator?</strong></p>
 <blockquote>
@@ -880,14 +874,14 @@ disappear in large dimensional settings.</li>
 </div>
 <div class="section" id="ransac-random-sample-consensus">
 <span id="ransac-regression"></span><h3>1.1.14.2. RANSAC: RANdom SAmple Consensus<a class="headerlink" href="#ransac-random-sample-consensus" title="Permalink to this headline">¶</a></h3>
-<p>RANSAC (RANdom SAmple Consensus) fits a model from random subsets of
+<p>RANSAC (RANdom SAmple Consensus) 是从完整数据集的随机选择一个子集来拟合模型的方法,该子集被假设为局内点。
+RANSAC (RANdom SAmple Consensus) fits a model from random subsets of
 inliers from the complete data set.</p>
-<p>RANSAC is a non-deterministic algorithm producing only a reasonable result with
-a certain probability, which is dependent on the number of iterations (see
-<cite>max_trials</cite> parameter). It is typically used for linear and non-linear
-regression problems and is especially popular in the fields of photogrammetric
-computer vision.</p>
-<p>The algorithm splits the complete input sample data into a set of inliers,
+<p>RANSAC 是一个非确定的算法，它仅仅用一个确定的概率来产生一个合理的结果，和迭代的次数无关（参考 <cite>max_trials</cite> 参数）。
+它通常用于线性和非线性回归问题，尤其在摄影计算机视觉领域非常流行。</p>
+<p>该算法把一个完整的样本数据集拆分成一系列局内点集合，这些内点可能属于噪声和局外点，比如由测量误差或者无效假设的数据。
+最终的模型最终只从确定的局内点中估计出来。
+The algorithm splits the complete input sample data into a set of inliers,
 which may be subject to noise, and outliers, which are e.g. caused by erroneous
 measurements or invalid hypotheses about the data. The resulting model is then
 estimated only from the determined inliers.</p>
@@ -896,7 +890,7 @@ estimated only from the determined inliers.</p>
 </div>
 <div class="section" id="details-of-the-algorithm">
 <h4>1.1.14.2.1. Details of the algorithm<a class="headerlink" href="#details-of-the-algorithm" title="Permalink to this headline">¶</a></h4>
-<p>Each iteration performs the following steps:</p>
+<p>每一轮迭代过程如下:</p>
 <ol class="arabic simple">
 <li>Select <code class="docutils literal"><span class="pre">min_samples</span></code> random samples from the original data and check
 whether the set of data is valid (see <code class="docutils literal"><span class="pre">is_data_valid</span></code>).</li>
@@ -1063,9 +1057,9 @@ of a given degree.  It can be used as follows:</p>
 <span class="go">       [  1.,   4.,   5.,  16.,  20.,  25.]])</span>
 </pre></div>
 </div>
-<p>The features of <code class="docutils literal"><span class="pre">X</span></code> have been transformed from <img class="math" src="../_images/math/96c49711bb53eae5b3697f1835b6eb50a9313fa8.png" alt="[x_1, x_2]"/> to
-<img class="math" src="../_images/math/ef3b1509f6875e9429212166fde17194086bdd4e.png" alt="[1, x_1, x_2, x_1^2, x_1 x_2, x_2^2]"/>, and can now be used within
-any linear model.</p>
+<p>特征向量 <code class="docutils literal"><span class="pre">X</span></code> 已经从 <img class="math" src="../_images/math/ef3b1509f6875e9429212166fde17194086bdd4e.png" alt="[1, x_1, x_2, x_1^2, x_1 x_2, x_2^2]"/> 转换为 <img class="math" src="../_images/math/96c49711bb53eae5b3697f1835b6eb50a9313fa8.png" alt="[x_1, x_2]"/> ，
+并且可以使用任何线性模型来处理。</p>
+<p>这类预处理可以使用 <a class="reference internal" href="pipeline.html#pipeline"><span class="std std-ref">Pipeline</span></a> 工具来 streamline。表达一个简单的多项式的单一的对象可以通过下列来创建和使用:</p>
 <p>This sort of preprocessing can be streamlined with the
 <a class="reference internal" href="pipeline.html#pipeline"><span class="std std-ref">Pipeline</span></a> tools. A single object representing a simple
 polynomial regression can be created and used as follows:</p>
@@ -1083,7 +1077,8 @@ polynomial regression can be created and used as follows:</p>
 <span class="go">array([ 3., -2.,  1., -1.])</span>
 </pre></div>
 </div>
-<p>The linear model trained on polynomial features is able to exactly recover
+<p>在多项式特征上训练的模型可以精确地恢复输入的多项式系数。
+The linear model trained on polynomial features is able to exactly recover
 the input polynomial coefficients.</p>
 <p>In some cases it&#8217;s not necessary to include higher powers of any single feature,
 but only the so-called <em>interaction features</em>
