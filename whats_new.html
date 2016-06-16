@@ -2304,7 +2304,7 @@ now support multi-output classification and regression problems, by
 <li>Added <a class="reference internal" href="modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder" title="sklearn.preprocessing.LabelEncoder"><code class="xref py py-class docutils literal"><span class="pre">preprocessing.LabelEncoder</span></code></a>, a simple utility class to
 normalize labels or transform non-numerical labels, by <a class="reference external" href="http://www.mblondel.org">Mathieu Blondel</a>.</li>
 <li>Added the epsilon-insensitive loss and the ability to make probabilistic
-predictions with the modified huber loss in <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a>, by
+predictions with the modified huber loss in <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a>, by
 <a class="reference external" href="http://www.mblondel.org">Mathieu Blondel</a>.</li>
 <li>Added <a class="reference internal" href="modules/manifold.html#multidimensional-scaling"><span class="std std-ref">Multi-dimensional Scaling (MDS)</span></a>, by Nelle Varoquaux.</li>
 <li>SVMlight file format loader now detects compressed (gzip/bzip2) files and
@@ -2487,12 +2487,12 @@ classification</strong>, by <a class="reference external" href="http://www.twitt
 <h4>Other changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
-<li>Merged dense and sparse implementations of <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a> module and
+<li>Merged dense and sparse implementations of <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a> module and
 exposed utility extension types for sequential
 datasets <code class="docutils literal"><span class="pre">seq_dataset</span></code> and weight vectors <code class="docutils literal"><span class="pre">weight_vector</span></code>
 by <a class="reference external" href="http://sites.google.com/site/peterprettenhofer/">Peter Prettenhofer</a>.</li>
 <li>Added <code class="docutils literal"><span class="pre">partial_fit</span></code> (support for online/minibatch learning) and
-warm_start to the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a> module by <a class="reference external" href="http://www.mblondel.org">Mathieu Blondel</a>.</li>
+warm_start to the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a> module by <a class="reference external" href="http://www.mblondel.org">Mathieu Blondel</a>.</li>
 <li>Dense and sparse implementations of <a class="reference internal" href="modules/svm.html#svm"><span class="std std-ref">Support Vector Machines</span></a> classes and
 <a class="reference internal" href="modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression" title="sklearn.linear_model.LogisticRegression"><code class="xref py py-class docutils literal"><span class="pre">linear_model.LogisticRegression</span></code></a> merged by <a class="reference external" href="https://github.com/larsmans">Lars Buitinck</a>.</li>
 <li>Regressors can now be used as base estimator in the <a class="reference internal" href="modules/multiclass.html#multiclass"><span class="std std-ref">Multiclass and multilabel algorithms</span></a>
@@ -2535,7 +2535,7 @@ instead.</p>
 <code class="xref py py-class docutils literal"><span class="pre">RadiusNeighborsClassifier</span></code>, <code class="xref py py-class docutils literal"><span class="pre">KNeighborsRegressor</span></code>
 and/or <code class="xref py py-class docutils literal"><span class="pre">RadiusNeighborsRegressor</span></code> instead.</p>
 </li>
-<li><p class="first">Sparse classes in the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a> module are now deprecated.</p>
+<li><p class="first">Sparse classes in the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a> module are now deprecated.</p>
 </li>
 <li><p class="first">In <a class="reference internal" href="modules/generated/sklearn.mixture.GMM.html#sklearn.mixture.GMM" title="sklearn.mixture.GMM"><code class="xref py py-class docutils literal"><span class="pre">mixture.GMM</span></code></a>, <a class="reference internal" href="modules/generated/sklearn.mixture.DPGMM.html#sklearn.mixture.DPGMM" title="sklearn.mixture.DPGMM"><code class="xref py py-class docutils literal"><span class="pre">mixture.DPGMM</span></code></a> and <a class="reference internal" href="modules/generated/sklearn.mixture.VBGMM.html#sklearn.mixture.VBGMM" title="sklearn.mixture.VBGMM"><code class="xref py py-class docutils literal"><span class="pre">mixture.VBGMM</span></code></a>,
 parameters must be passed to an object when initialising it and not through
@@ -2694,7 +2694,7 @@ documentation and examples.</li>
 <li>Fixed a bug in <a class="reference internal" href="modules/clustering.html#k-means"><span class="std std-ref">K-means</span></a> in the handling of the <code class="docutils literal"><span class="pre">n_init</span></code> parameter:
 the clustering algorithm used to be run <code class="docutils literal"><span class="pre">n_init</span></code> times but the last
 solution was retained instead of the best solution by <a class="reference external" href="http://twitter.com/ogrisel">Olivier Grisel</a>.</li>
-<li>Minor refactoring in <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a> module; consolidated dense and sparse
+<li>Minor refactoring in <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a> module; consolidated dense and sparse
 predict methods; Enhanced test time performance by converting model
 parameters to fortran-style arrays after fitting (only multi-class).</li>
 <li>Adjusted Mutual Information metric added as
@@ -2751,7 +2751,7 @@ The default behavior is still to copy everything passed in.</p>
 longer supports loading two files at once; use <code class="docutils literal"><span class="pre">load_svmlight_files</span></code>
 instead. Also, the (unused) <code class="docutils literal"><span class="pre">buffer_mb</span></code> parameter is gone.</p>
 </li>
-<li><p class="first">Sparse estimators in the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent</span></a> module use dense parameter vector
+<li><p class="first">Sparse estimators in the <a class="reference internal" href="modules/sgd.html#sgd"><span class="std std-ref">Stochastic Gradient Descent随机梯度下降</span></a> module use dense parameter vector
 <code class="docutils literal"><span class="pre">coef_</span></code> instead of <code class="docutils literal"><span class="pre">sparse_coef_</span></code>. This significantly improves
 test time performance.</p>
 </li>

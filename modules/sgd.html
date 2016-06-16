@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
   
-    <title>1.5. Stochastic Gradient Descent &mdash; scikit-learn 0.17.1 documentation</title>
+    <title>1.5. Stochastic Gradient Descent随机梯度下降 &mdash; scikit-learn 0.17.1 documentation</title>
   <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../_static/css/bootstrap.min.css" media="screen" />
@@ -147,7 +147,7 @@
       <p class="doc-version">This documentation is for scikit-learn <strong>version 0.17.1</strong> &mdash; <a href="http://scikit-learn.org/stable/support.html#documentation-resources">Other versions</a></p>
     <p class="citing">If you use the software, please consider <a href="../about.html#citing-scikit-learn">citing scikit-learn</a>.</p>
     <ul>
-<li><a class="reference internal" href="#">1.5. Stochastic Gradient Descent</a><ul>
+<li><a class="reference internal" href="#">1.5. Stochastic Gradient Descent随机梯度下降</a><ul>
 <li><a class="reference internal" href="#classification">1.5.1. Classification</a></li>
 <li><a class="reference internal" href="#regression">1.5.2. Regression</a></li>
 <li><a class="reference internal" href="#stochastic-gradient-descent-for-sparse-data">1.5.3. Stochastic Gradient Descent for sparse data</a></li>
@@ -178,32 +178,30 @@
           <div class="body" role="main">
             
   <div class="section" id="stochastic-gradient-descent">
-<span id="sgd"></span><h1>1.5. Stochastic Gradient Descent<a class="headerlink" href="#stochastic-gradient-descent" title="Permalink to this headline">¶</a></h1>
-<p><strong>Stochastic Gradient Descent (SGD)</strong> is a simple yet very efficient
-approach to discriminative learning of linear classifiers under
-convex loss functions such as (linear) <a class="reference external" href="http://en.wikipedia.org/wiki/Support_vector_machine">Support Vector Machines</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/Logistic_regression">Logistic
+<span id="sgd"></span><h1>1.5. Stochastic Gradient Descent随机梯度下降<a class="headerlink" href="#stochastic-gradient-descent" title="Permalink to this headline">¶</a></h1>
+<p><strong>Stochastic Gradient Descent (SGD)</strong> 是一种简单但又非常高效的方式判别式学习方法，比如凸损失函数的线性分类器如
+<a class="reference external" href="http://en.wikipedia.org/wiki/Support_vector_machine">Support Vector Machines</a> 和 <a class="reference external" href="http://en.wikipedia.org/wiki/Logistic_regression">Logistic
 Regression</a>.
-Even though SGD has been around in the machine learning community for
-a long time, it has received a considerable amount of attention just
-recently in the context of large-scale learning.</p>
-<p>SGD has been successfully applied to large-scale and sparse machine
+虽然SGD已经在机器学习社区出现很长时间，但是在近期在大规模机器学习上受到了相当大数量的关注。</p>
+<p>SGD 已经被成功应用到大规模和稀疏机器学习问题上，通常为文本分类和自然语言处理。如果给定数据是稀疏的，那么该模块中的分类器
+很容易把问题规模缩放到超过10^5训练样本和超过10^5的特征数量。
+SGD has been successfully applied to large-scale and sparse machine
 learning problems often encountered in text classification and natural
 language processing.  Given that the data is sparse, the classifiers
 in this module easily scale to problems with more than 10^5 training
 examples and more than 10^5 features.</p>
-<p>The advantages of Stochastic Gradient Descent are:</p>
+<p>SGD的优势如下：</p>
 <blockquote>
 <div><ul class="simple">
-<li>Efficiency.</li>
-<li>Ease of implementation (lots of opportunities for code tuning).</li>
+<li>高效性.</li>
+<li>容易实现 (lots of opportunities for code tuning大量代码调整的机会).</li>
 </ul>
 </div></blockquote>
-<p>The disadvantages of Stochastic Gradient Descent include:</p>
+<p>SGD缺点如下：</p>
 <blockquote>
 <div><ul class="simple">
-<li>SGD requires a number of hyperparameters such as the regularization
-parameter and the number of iterations.</li>
-<li>SGD is sensitive to feature scaling.</li>
+<li>SGD需要许多超参数,比如正则化参数、迭代次数</li>
+<li>SGD 对特征规模比较敏感(应该是特征维数)</li>
 </ul>
 </div></blockquote>
 <div class="section" id="classification">
