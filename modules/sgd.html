@@ -208,19 +208,14 @@ examples and more than 10^5 features.</p>
 <h2>1.5.1. Classification<a class="headerlink" href="#classification" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Make sure you permute (shuffle) your training data before fitting the
-model or use <code class="docutils literal"><span class="pre">shuffle=True</span></code> to shuffle after each iterations.</p>
+<p class="last">请确保在拟合模型之前把训练数据打乱(shuffle)或者使用 <code class="docutils literal"><span class="pre">shuffle=True</span></code> 设置项来在每次迭代后打乱训练数据。</p>
 </div>
-<p>The class <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier" title="sklearn.linear_model.SGDClassifier"><code class="xref py py-class docutils literal"><span class="pre">SGDClassifier</span></code></a> implements a plain stochastic gradient
-descent learning routine which supports different loss functions and
-penalties for classification.</p>
+<p>类 <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier" title="sklearn.linear_model.SGDClassifier"><code class="xref py py-class docutils literal"><span class="pre">SGDClassifier</span></code></a> 实现了一个简单的随机梯度下降的程序，该程序支持分类中不同的损失函数和罚项</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../auto_examples/linear_model/plot_sgd_separating_hyperplane.html"><img alt="../_images/plot_sgd_separating_hyperplane_0011.png" src="../_images/plot_sgd_separating_hyperplane_0011.png" style="width: 600.0px; height: 450.0px;" /></a>
 </div>
-<p>As other classifiers, SGD has to be fitted with two arrays: an array X
-of size [n_samples, n_features] holding the training samples, and an
-array Y of size [n_samples] holding the target values (class labels)
-for the training samples:</p>
+<p>同其他分类器一样，SGD需要拟合两个数组(向量): X为存储训练样本的数组，大小为[n_samples,n_features]，另一个是Y,大小为[n_samples],
+用来存放对于每个输入的目标值(或者类标label)</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">SGDClassifier</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -233,25 +228,23 @@ for the training samples:</p>
 <span class="go">       verbose=0, warm_start=False)</span>
 </pre></div>
 </div>
-<p>After being fitted, the model can then be used to predict new values:</p>
+<p>拟合之后，模型就可以用来预测新的输入:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">]])</span>
 <span class="go">array([1])</span>
 </pre></div>
 </div>
-<p>SGD fits a linear model to the training data. The member <code class="docutils literal"><span class="pre">coef_</span></code> holds
-the model parameters:</p>
+<p>SGD为训练数据拟合了一个线性模型。成员变量 <code class="docutils literal"><span class="pre">coef_</span></code> 存储的是模型的参数:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span>                                         
 <span class="go">array([[ 9.9...,  9.9...]])</span>
 </pre></div>
 </div>
-<p>Member <code class="docutils literal"><span class="pre">intercept_</span></code> holds the intercept (aka offset or bias):</p>
+<p>成员变量 <code class="docutils literal"><span class="pre">intercept_</span></code> 存储的是截距 (又称为 offset 或者 bias,偏置):</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span>                                    
 <span class="go">array([-9.9...])</span>
 </pre></div>
 </div>
-<p>Whether or not the model should use an intercept, i.e. a biased
-hyperplane, is controlled by the parameter <code class="docutils literal"><span class="pre">fit_intercept</span></code>.</p>
-<p>To get the signed distance to the hyperplane use <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier.decision_function" title="sklearn.linear_model.SGDClassifier.decision_function"><code class="xref py py-meth docutils literal"><span class="pre">SGDClassifier.decision_function</span></code></a>:</p>
+<p>无论模型是否使用截距，比如 一个有偏置的超平面，是由 <code class="docutils literal"><span class="pre">fit_intercept</span></code> 参数来控制(待校正)。</p>
+<p>获取到超平面的符号距离使用 <a class="reference internal" href="generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier.decision_function" title="sklearn.linear_model.SGDClassifier.decision_function"><code class="xref py py-meth docutils literal"><span class="pre">SGDClassifier.decision_function</span></code></a>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">decision_function</span><span class="p">([[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">]])</span>                 
 <span class="go">array([ 29.6...])</span>
 </pre></div>
