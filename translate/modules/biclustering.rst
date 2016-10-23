@@ -18,27 +18,19 @@
            [21, 22],
            [31, 32]])
 
-For visualization purposes, given a bicluster, the rows and columns of
-the data matrix may be rearranged to make the bicluster contiguous.
+为了可以可视化，给定一个双向聚类结果，数据矩阵的行和列可能会被重排以便让双向聚类连续。
 
-Algorithms differ in how they define biclusters. Some of the
-common types include:
+算法在怎么定义双向聚类有区别。一些常见的类型包含:
 
-* constant values, constant rows, or constant columns
-* unusually high or low values
-* submatrices with low variance
-* correlated rows or columns
+* 固定数值，固定行，固定列
+* 异常高的或低数值
+* 具有低方差的子矩阵
+* 相关的行或相关的列
 
-Algorithms also differ in how rows and columns may be assigned to
-biclusters, which leads to different bicluster structures. Block
-diagonal or checkerboard structures occur when rows and columns are
-divided into partitions.
+算法也在行和列如何分配给聚类上有差别，这样会导致不同的聚类结构。行和列分配给不同的分区时，会出现快对角线或者棋盘结构。
 
-If each row and each column belongs to exactly one bicluster, then
-rearranging the rows and columns of the data matrix reveals the
-biclusters on the diagonal. Here is an example of this structure
-where biclusters have higher average values than the other rows and
-columns:
+如果每行或者每一列仅属于某个聚类时，重新排列数据矩阵的行和列会展示出对角线上的双聚类结果。
+这儿有一个这种结构的例子，双聚类结果比其他的行或列有更高的平均值:
 
 .. figure:: ../auto_examples/bicluster/images/plot_spectral_coclustering_003.png
    :target: ../auto_examples/bicluster/images/plot_spectral_coclustering_003.png
