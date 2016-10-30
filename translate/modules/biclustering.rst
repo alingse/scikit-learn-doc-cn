@@ -37,25 +37,18 @@
    :align: center
    :scale: 50
 
-   An example of biclusters formed by partitioning rows and columns.
+   一个双向聚类的例子，由分块的行和列组成。
 
-In the checkerboard case, each row belongs to all column clusters, and
-each column belongs to all row clusters. Here is an example of this
-structure where the variance of the values within each bicluster is
-small:
+在棋盘模式下，每个行属于所有的列向聚类，每个列属于所有的行聚类（译者：大致是任一行可以划成若干个部分属于所有的列方向聚类，反之亦然）。 这里是一个这种结构的例子，每个聚类结果里的值的方差都小:
 
 .. figure:: ../auto_examples/bicluster/images/plot_spectral_biclustering_003.png
    :target: ../auto_examples/bicluster/images/plot_spectral_biclustering_003.png
    :align: center
    :scale: 50
 
-   An example of checkerboard biclusters.
+   一个棋盘的双向聚类集例子.
 
-After fitting a model, row and column cluster membership can be found
-in the ``rows_`` and ``columns_`` attributes. ``rows_[i]`` is a binary vector
-with nonzero entries corresponding to rows that belong to bicluster
-``i``. Similarly, ``columns_[i]`` indicates which columns belong to
-bicluster ``i``.
+适配一个模型之后，行和列的聚合关系能够由 ``rows_`` and ``columns_`` 属性发现， ``rows_[i]`` 是一个二值向量，非零的条目对应该行属于双聚类结果``i``。相似的，``columns_[i]`` 表明哪一列属于双聚类结果``i``。
 
 Some models also have ``row_labels_`` and ``column_labels_`` attributes.
 These models partition the rows and columns, such as in the block
