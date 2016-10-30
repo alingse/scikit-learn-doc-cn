@@ -48,19 +48,18 @@
 
    一个棋盘的双向聚类集例子.
 
-适配一个模型之后，行和列的聚合关系能够由 ``rows_`` and ``columns_`` 属性发现， ``rows_[i]`` 是一个二值向量，非零的条目对应该行属于双聚类结果``i``。相似的，``columns_[i]`` 表明哪一列属于双聚类结果``i``。
+适配一个模型之后，行和列的聚合关系能够由 ``rows_`` and ``columns_`` 属性发现， ``rows_[i]`` 是一个二值向量，非零的条目对应该行属于双向聚类结果 ``i`` 。相似的，``columns_[i]`` 表明哪一列属于双向聚类结果 ``i`` 。
 
-Some models also have ``row_labels_`` and ``column_labels_`` attributes.
-These models partition the rows and columns, such as in the block
-diagonal and checkerboard bicluster structures.
+一些模型也会有 ``row_labels_`` 和 ``column_labels_`` 属性。
+这些模型分割行和列，就和块对角和棋盘 双向聚类结构一样。
 
 .. note::
 
-    Biclustering has many other names in different fields including
-    co-clustering, two-mode clustering, two-way clustering, block
-    clustering, coupled two-way clustering, etc. The names of some
-    algorithms, such as the Spectral Co-Clustering algorithm, reflect
-    these alternate names.
+    双向聚类在不同的领域有许多其他的名字，包括
+    联合聚类(co-clustering),双模式聚类(two-mode clustering), 
+    两路聚类(two-way clustering),块聚类(block clustering),
+    耦合两路聚类(coupled two-way clustering), 等等。一些算法的名字，比如
+    谱联合聚类,反映出这些替代的名字。
 
 
 .. currentmodule:: sklearn.cluster.bicluster
@@ -68,7 +67,7 @@ diagonal and checkerboard bicluster structures.
 
 .. _spectral_coclustering:
 
-Spectral Co-Clustering
+谱联合聚类(Spectral Co-Clustering)
 ======================
 
 The :class:`SpectralCoclustering` algorithm finds biclusters with
