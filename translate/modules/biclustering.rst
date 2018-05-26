@@ -56,10 +56,10 @@
 .. note::
 
     双向聚类在不同的领域有许多其他的名字，包括
-    联合聚类(co-clustering),双模式聚类(two-mode clustering), 
+    联合聚类(co-clustering),双模式聚类(two-mode clustering),
     两路聚类(two-way clustering),块聚类(block clustering),
     耦合两路聚类(coupled two-way clustering), 等等。一些算法的名字，比如
-    谱联合聚类,反映出这些替代的名字。
+    谱联合聚类,反映出这些替代的名字(原文：The names of some algorithms reflect these alternate names.)。
 
 
 .. currentmodule:: sklearn.cluster.bicluster
@@ -68,34 +68,28 @@
 .. _spectral_coclustering:
 
 谱联合聚类(Spectral Co-Clustering)
-======================
+===================================
 
-The :class:`SpectralCoclustering` algorithm finds biclusters with
-values higher than those in the corresponding other rows and columns.
-Each row and each column belongs to exactly one bicluster, so
-rearranging the rows and columns to make partitions contiguous reveals
-these high values along the diagonal:
+谱联合聚类 :class:`SpectralCoclustering` 算法会找出
+那些值高于相应的其他行和列中的值的聚类结构，由于每行和每列只会属于某一个聚类结构的，
+所以重新排列行和列以使较高的值分块连续显示在这个聚类矩阵的对角线上。
 
 .. note::
 
-    The algorithm treats the input data matrix as a bipartite graph: the
-    rows and columns of the matrix correspond to the two sets of vertices,
-    and each entry corresponds to an edge between a row and a column. The
-    algorithm approximates the normalized cut of this graph to find heavy
-    subgraphs.
+  该算法将输入数据矩阵视为二分图(bipartite graph)：矩阵的行和列对应于两组顶点，
+  并且每个条目对应于行和列之间的一条边。
+  该算法逼近该图的归一化切分(normalized cut)以找到重子图(heavy subgraphs)。
 
 
-Mathematical formulation
-------------------------
+数学描述(Mathematical formulation)
+---------------------------------
 
-An approximate solution to the optimal normalized cut may be found via
-the generalized eigenvalue decomposition of the Laplacian of the
-graph. Usually this would mean working directly with the Laplacian
-matrix. If the original data matrix :math:`A` has shape :math:`m
-\times n`, the Laplacian matrix for the corresponding bipartite graph
-has shape :math:`(m + n) \times (m + n)`. However, in this case it is
-possible to work directly with :math:`A`, which is smaller and more
-efficient.
+通过二分图的拉普拉斯算子的广义特征值分解，可以找到一种最佳归一化切分(optimal normalized cut)的近似解决方案。
+通常这意味着要直接使用拉普拉斯算子矩阵(Laplacian matrix)。
+
+如果原始数据矩阵 :math:`A` 尺寸为 :math:`m \times n`, 那么对应二分图的拉普拉斯算子矩阵(Laplacian matrix)
+的尺寸为 :math:`(m + n) \times (m + n)`。但是，在这种情况下
+可能直接使用矩阵 ：math：`A`，它的尺寸更小且更高效。
 
 The input matrix :math:`A` is preprocessed as follows:
 
